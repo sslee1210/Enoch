@@ -3,62 +3,69 @@ import { Link } from 'react-router-dom';
 import styles from './Nav.module.css';
 
 const Nav = () => {
-    // 각 메뉴 항목에 대한 상태를 개별적으로 관리합니다.
-    const [isOpenAbout, setIsOpenAbout] = useState(false);
-    const [isOpenAS, setIsOpenAS] = useState(false);
-    const [isOpenSupport, setIsOpenSupport] = useState(false);
+    // 드롭다운 상태 관리를 위한 useState
+    // 각 메뉴의 드롭다운 상태를 false로 초기화합니다.
+    const [dropdownOpen, setDropdownOpen] = useState({
+        about: false,
+        as: false,
+        support: false,
+    });
+
+    // 메뉴 토글 함수
+    const toggleDropdown = (menu) => {
+        setDropdownOpen((prevState) => ({
+            ...prevState,
+            [menu]: !prevState[menu],
+        }));
+    };
+
+    // 메뉴 아이템 정의
+    const menuItems = {
+        about: [
+            { path: '/intro', label: '회사 소개' },
+            { path: '/history', label: 'HISTORY' },
+            { path: '/global', label: '해외법인' },
+            { path: '/contact', label: 'CONTACT US' },
+        ],
+        as: [
+            { path: '/as', label: 'A/S 접수' },
+            { path: '/qs', label: '자주 묻는 질문' },
+        ],
+        support: [
+            { path: '/Download', label: 'Download File' },
+            { path: '/use', label: '사용설명법' },
+        ],
+    };
 
     return (
         <nav className={styles.navbar}>
-            <h1>Logo</h1>
-            <ul className={styles.nav_links}>
-                <li onClick={() => setIsOpenAbout(!isOpenAbout)} className={styles.dropdownButton}>
-                    About
-                    {isOpenAbout && (
-                        <ul className={styles.dropdownMenu}>
-                            <li>
-                                <Link to="/intro">회사 소개</Link>
-                            </li>
-                            <li>
-                                <Link to="/history">HISTORY</Link>
-                            </li>
-                            <li>
-                                <Link to="/global">해외법인</Link>
-                            </li>
-                            <li>
-                                <Link to="/contact">CONTACT US</Link>
-                            </li>
-                        </ul>
-                    )}
-                </li>
-                <li onClick={() => setIsOpenAS(!isOpenAS)} className={styles.dropdownButton}>
-                    A/S
-                    {isOpenAS && (
-                        <ul className={styles.dropdownMenu}>
-                            <li>
-                                <Link to="/as">A/S 접수</Link>
-                            </li>
-                            <li>
-                                <Link to="/qs">자주 묻는 질문</Link>
-                            </li>
-                        </ul>
-                    )}
-                </li>
-                <li onClick={() => setIsOpenSupport(!isOpenSupport)} className={styles.dropdownButton}>
-                    Support
-                    {isOpenSupport && (
-                        <ul className={styles.dropdownMenu}>
-                            <li>
-                                <Link to="/Download">Download File</Link>
-                            </li>
-                            <li>
-                                <Link to="/use">사용설명법</Link>
-                            </li>
-                        </ul>
-                    )}
-                </li>
-            </ul>
-            <a href="/">Shop</a>
+            <div className={styles.logoAndMenus}>
+                <h1>Logo</h1>
+                <ul className={styles.nav_links}>
+                    {Object.entries(menuItems).map(([menuKey, items]) => (
+                        <li key={menuKey} onClick={() => toggleDropdown(menuKey)} className={styles.dropdownButton}>
+                            {menuKey.charAt(0).toUpperCase() + menuKey.slice(1)}
+                            {dropdownOpen[menuKey] && (
+                                <ul className={styles.dropdownMenu}>
+                                    {items.map((item) => (
+                                        <li key={item.path}>
+                                            <Link to={item.path}>{item.label}</Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            )}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+            <a
+                href="https://swit2019.cafe24.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.shopLink}
+            >
+                Shop
+            </a>
         </nav>
     );
 };

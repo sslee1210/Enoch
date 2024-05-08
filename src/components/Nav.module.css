@@ -2,55 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: ;
-    color: ;
+    background-color: #333; /* 배경색 추가 */
+    color: #fff; /* 글자색 추가 */
     padding: 0.5rem 1rem;
 }
 
 .nav_links {
     list-style: none;
     display: flex;
+    margin: 0; /* 리스트의 기본 마진 제거 */
+    padding: 0; /* 리스트의 기본 패딩 제거 */
 }
 
 .nav_links li {
-    padding: 0 15px;
-    position: relative; /* 드롭다운 메뉴를 위한 위치 기준 */
+    padding: 0 20px; /* 기존 100px에서 변경 */
     cursor: pointer;
 }
 
-.dropdownButton {
-    display: inline-block;
-}
-
-.dropdownMenu {
-    display: none; /* 기본적으로 드롭다운 메뉴는 보이지 않음 */
-    position: absolute;
-    background-color: ;
-    min-width: 160px;
-    z-index: 1;
-    top: 100%;
-    left: 0;
-}
-
-.dropdownMenu li {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdownMenu li:hover {
-    background-color: #f1f1f1;
-}
-
-/* CSS 클래스를 이용하여 드롭다운 메뉴가 보이도록 하는 스타일 */
-.nav_links li:hover .dropdownMenu {
-    display: block;
-}
-
 a {
-    list-style: none;
     text-decoration: none;
-    color: #000;
+    color: inherit; /* a 태그가 상속받은 색상을 사용하도록 함 */
 }
