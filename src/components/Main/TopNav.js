@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavStyles from './Nav.module.css';
+import NavStyles from './TopNav.module.css';
 
-const Nav = () => {
+const TopNav = () => {
     return (
         <div>
+            <h1>
+                {' '}
+                <Link to="/">로고</Link>
+            </h1>
             <nav>
                 <ul>
                     <li>
@@ -12,27 +16,27 @@ const Nav = () => {
                         <Link to="/about">About</Link>
                         <ul>
                             <li>
-                                <Link to="/about/company">회사 소개</Link>
+                                <Link to="/about">회사 소개</Link>
                             </li>
                             <li>
-                                <Link to="/about/history">HISTORY</Link>
+                                <Link to="/history">HISTORY</Link>
                             </li>
                             <li>
-                                <Link to="/about/international">해외 법인</Link>
+                                <Link to="/global">해외 법인</Link>
                             </li>
                             <li>
-                                <Link to="/about/contact">CONTACT US</Link>
+                                <Link to="/contact">CONTACT US</Link>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <Link to="/service">A/S</Link>
+                        <Link to="/as">A/S</Link>
                         <ul>
                             <li>
-                                <Link to="/service/registration">A/S 접수</Link>
+                                <Link to="/as">A/S 접수</Link>
                             </li>
                             <li>
-                                <Link to="/service/faq">자주 묻는 질문</Link>
+                                <Link to="/qna">자주 묻는 질문</Link>
                             </li>
                         </ul>
                     </li>
@@ -40,10 +44,10 @@ const Nav = () => {
                         <Link to="/support">Support</Link>
                         <ul>
                             <li>
-                                <Link to="/support/downloads">Download File</Link>
+                                <Link to="/support">Download File</Link>
                             </li>
                             <li>
-                                <Link to="/support/manuals">사용설명법</Link>
+                                <Link to="/guide">사용설명법</Link>
                             </li>
                         </ul>
                     </li>
@@ -53,4 +57,4 @@ const Nav = () => {
     );
 };
 
-export default Nav;
+export default TopNav;
