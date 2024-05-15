@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Qna = () => {
-    return <div></div>;
+    return (
+        <div>
+            <h1>qna</h1>
+        </div>
+    );
 };
 
 export default Qna;
