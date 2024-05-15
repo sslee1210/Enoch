@@ -65,29 +65,39 @@
 ## 문제 및 해결
 
 ### 상황 1
-  - #### 문제 발생:
-     ``
-
-      
-  - #### 원인 파악:
-     ``
-
-      
-  - #### 문제 해결:
-     ``
-
-
-
-**1. ``**
-
-```
+  - #### 문제 발생: swiper 라이브러리를 사용하여 메인 페이지 슬라이드 배너를 만들어야 되는데 export 'Pagination' (imported as 'Pagination') was not found in 'swiper' 라는 오류가 자꾸 뜸
+    
+  - #### 원인 파악: swiper 버전 문제인듯 싶어서 스택 오버플로우를 찾아보거나 구글링 함
   
+  - #### 문제 해결: swiper를 임포트 하는 부분이 살짝 달라졌다는걸 알아챔. swiper/modules로 직접 임포트 야함
+
+
+`문제가 난 코드 부분`**
+
+```
+// Swiper의 React 버전과 필요한 CSS를 임포트합니다.
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay'; // autoplay를 위한 CSS 임포트
+
+import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper';
+
+// Swiper 모듈에 Autoplay를 사용하도록 설정합니다.
+SwiperCore.use([Autoplay, Navigation, Pagination]);  
 ```
 
 
-**1-1. ``**
+**1-1. `해결한 코드`**
 ```
-
+// Swiper의 React 버전과 필요한 CSS를 임포트합니다.
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 ```
 
 
