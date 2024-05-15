@@ -53,6 +53,9 @@ const TopNav = () => {
                     </li>
                 </ul>
             </nav>
+            <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                Shop
+            </a>
         </div>
     );
 };
