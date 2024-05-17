@@ -143,7 +143,6 @@ const NavigationWrapper = () => {
     return (
         <>
             <TopNav />
-            {location.pathname !== '/Enoch' && <NavBar />}
         </>
     );
 };
