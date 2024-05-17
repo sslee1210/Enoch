@@ -11,7 +11,7 @@ const NavBar = () => {
                 <ul className={NavBarStyles.menu}>
                     <li>
                         <Link to="/about">About</Link>
-                        <ol className={NavBarStyles.smenu}>
+                        <ol>
                             <li>
                                 <Link to="/about">회사소개</Link>
                             </li>
