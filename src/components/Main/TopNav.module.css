@@ -3,14 +3,16 @@
     padding: 0;
     list-style: none;
 }
+
 a {
     text-decoration: none;
-    color: #2c4d5e;
 }
-body {
-    background-color: #fbfbff;
+
+.nav nav ul li a {
+    text-decoration: none;
     color: #263238;
 }
+
 /*nav전체를 감싸는 div*/
 .nav {
     display: flex;
@@ -24,12 +26,13 @@ body {
     align-items: flex-start;
     transition: all ease 0.4s;
     z-index: 1000;
-    background-color: #fff;
 }
 .nav:hover {
     height: 200px;
 }
-
+.nav:hover .nav > nav > ul > li > ul {
+    display: flex;
+}
 /*로고 스타일*/
 .nav > h1 a {
     display: block;
@@ -52,7 +55,6 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
-
 .nav nav ul {
     display: flex;
     width: 100%;
@@ -76,24 +78,36 @@ body {
     width: 100%;
     max-width: 123px;
     transition: all ease 0.3s;
+    background-color: #ddd;
 }
 
 .nav:hover > nav > ul > li > ul {
+    display: flex;
     opacity: 1;
     visibility: visible;
-}
-.nav:hover > nav > ul > li > ul > li a {
-    color: #777777;
-}
-.nav:hover > nav > ul > li > ul > li:hover a {
-    color: orange;
 }
 
 /*shop 스타일*/
 .nav nav + a {
     font-weight: bold;
     font-size: 1.3vw;
+    position: absolute;
+    right: 20px;
+    top: 40px;
 }
 .nav nav + a:hover {
     color: rgb(233, 125, 24);
+}
+.nav li ul {
+    padding: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.5s ease;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+/* 마우스 오버 시 드롭다운 메뉴의 상태 */
+.nav li:hover ul {
+    transform: scaleY(1);
 }

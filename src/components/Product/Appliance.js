@@ -5,7 +5,7 @@ const Appliance = () => {
     return (
         <div>
             <div>
-                <img src={process.env.PUBLIC_URL + '/images/Robot.png'} alt="Robot" />
+                <img src={process.env.PUBLIC_URL + '/images/Robot.jpg'} alt="Robot" />
                 <p>
                     A Flagship Product Born for the Industry X30 quadruped robot, a flagship product designed to meet
                     core industry needs in multiple fields including inspection, investigation, security, surveying and

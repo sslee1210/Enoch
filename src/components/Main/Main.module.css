@@ -21,16 +21,16 @@
 .main .product {
     padding: 60px 0;
     display: flex;
-    align-items: center;
+
     flex-direction: column;
     width: 100%;
-    height: 100%;
     max-width: 1200px;
-    max-height: 500px;
     margin: auto;
-
-    border: 1px solid red;
 }
+.main .product > h1 {
+    font-size: 1.5vw;
+}
+
 /*사진들 묶은 div컨테이너*/
 .main .product .product_container {
     display: flex;
@@ -38,19 +38,23 @@
     justify-content: space-between;
     width: 100%;
     height: 100%;
-    border: 1px solid salmon;
+    margin-top: 60px;
 }
 .main .product .product_container > div {
-    width: 100%;
-    height: 100%;
-    max-width: 200px;
-    max-height: 250px;
+    max-height: 310px;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .main .product .product_container img {
     width: 100%;
     height: 100%;
     object-fit: contain; /*가로세로 비율 안깨지고 확대 축소 가능*/
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.main .product .product_container > div > a:hover img {
+    transform: scale(1.1); /* 이미지를 10% 확대 */
+    filter: brightness(0.7); /* 이미지를 어둡게 */
 }
 
 .main .footer {

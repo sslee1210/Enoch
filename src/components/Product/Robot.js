@@ -1,35 +1,41 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import RobotStyles from './Robot.module.css';
 
 const Robot = () => {
     return (
         <div>
-            <div>
-                <img src={process.env.PUBLIC_URL + '/images/Robot.png'} alt="Robot" />
-                <p>
-                    A Flagship Product Born for the Industry X30 quadruped robot, a flagship product designed to meet
-                    core industry needs in multiple fields including inspection, investigation, security, surveying and
-                    mapping.
+            <div className={RobotStyles.productbanner}>
+                <img src={process.env.PUBLIC_URL + '/images/Robot.jpg'} alt="Robot" />
+
+                <p className={RobotStyles.imgtitle}>A Flagship Product Born for the Industry</p>
+                <p className={RobotStyles.imgtext}>
+                    X30 quadruped robot, a flagship product designed to meet core industry needs in multiple fields
+                    including
+                    <br /> inspection, investigation, security, surveying and mapping.
                 </p>
             </div>
-            <div>
-                <ul>
-                    <li>
-                        <Link to="/robot">Robot</Link>
-                    </li>
-                    <li>
-                        <Link to="/pc">Pc</Link>
-                    </li>
-                    <li>
-                        <Link to="/living">Living Product</Link>
-                    </li>
-                    <li>
-                        <Link to="/appliance">생활가전</Link>
-                    </li>
-                    <li>
-                        <Link to="/etc">Etc</Link>
-                    </li>
-                </ul>
+
+            <div className={RobotStyles.menuwrap}>
+                <div className={RobotStyles.menu}>
+                    <ul className={RobotStyles.clearfix}>
+                        <li className={RobotStyles.submenu}>
+                            <Link to="/robot">Robot</Link>
+                        </li>
+                        <li className={RobotStyles.submenu}>
+                            <Link to="/pc">Pc</Link>
+                        </li>
+                        <li className={RobotStyles.submenu}>
+                            <Link to="/living">Living Product</Link>
+                        </li>
+                        <li className={RobotStyles.submenu}>
+                            <Link to="/appliance">생활가전</Link>
+                        </li>
+                        <li className={RobotStyles.submenu}>
+                            <Link to="/etc">Etc</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
             <div>
                 <img src={process.env.PUBLIC_URL + '/images/Robot1.png'} alt="Robot1" />

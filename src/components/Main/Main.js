@@ -39,31 +39,31 @@ const Main = () => {
                 <h1>Product</h1>
                 <div className={MainStyles.product_container}>
                     <div>
-                        <Link to={process.env.PUBLIC_URL + '/Robot'}>
+                        <Link to="/robot">
                             <img src={process.env.PUBLIC_URL + '/images/로봇.png'} alt="로봇" />
                         </Link>
                     </div>
 
                     <div>
-                        <Link to={process.env.PUBLIC_URL + '/PC'}>
+                        <Link to="/PC">
                             <img src={process.env.PUBLIC_URL + '/images/컴퓨터.png'} alt="컴퓨터" />
                         </Link>
                     </div>
 
                     <div>
-                        <Link to={process.env.PUBLIC_URL + '/Living Product'}>
+                        <Link to="/Living">
                             <img src={process.env.PUBLIC_URL + '/images/리빙.png'} alt="리빙" />
                         </Link>
                     </div>
 
                     <div>
-                        <Link to={process.env.PUBLIC_URL + '/생활가전'}>
+                        <Link to="/appliance">
                             <img src={process.env.PUBLIC_URL + '/images/생활.png'} alt="생활가전" />
                         </Link>
                     </div>
 
                     <div>
-                        <Link to={process.env.PUBLIC_URL + '/Etc'}>
+                        <Link to="/Etc">
                             <img src={process.env.PUBLIC_URL + '/images/기타.png'} alt="기타" />
                         </Link>
                     </div>
