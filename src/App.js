@@ -20,7 +20,7 @@ const App = () => {
             <>
                 <Routes>
                     <Route
-                        path="/"
+                        path="/Enoch"
                         element={
                             <>
                                 <NavigationWrapper />
