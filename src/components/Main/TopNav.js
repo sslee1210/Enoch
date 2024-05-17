@@ -7,7 +7,7 @@ const TopNav = () => {
         <div className={NavStyles.nav}>
             <h1>
                 {' '}
-                <Link to="/">로고</Link>
+                <Link to="/Enoch">로고</Link>
             </h1>
             <nav>
                 <ul>

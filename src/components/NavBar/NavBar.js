@@ -6,7 +6,7 @@ const NavBar = () => {
         <div>
             <nav>
                 <h1>
-                    <Link to="/">로고</Link>
+                    <Link to="/Enoch">로고</Link>
                 </h1>
                 <ul>
                     <li>
