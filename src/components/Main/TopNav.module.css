@@ -5,9 +5,10 @@
 }
 a {
     text-decoration: none;
-    color: #263238;
+    color: #2c4d5e;
 }
 body {
+    background-color: #fbfbff;
     color: #263238;
 }
 /*nav전체를 감싸는 div*/
@@ -23,13 +24,12 @@ body {
     align-items: flex-start;
     transition: all ease 0.4s;
     z-index: 1000;
+    background-color: #fff;
 }
 .nav:hover {
     height: 200px;
 }
-.nav:hover .nav > nav > ul > li > ul {
-    display: flex;
-}
+
 /*로고 스타일*/
 .nav > h1 a {
     display: block;
@@ -52,6 +52,7 @@ body {
     justify-content: center;
     margin-top: 20px;
 }
+
 .nav nav ul {
     display: flex;
     width: 100%;
@@ -78,9 +79,14 @@ body {
 }
 
 .nav:hover > nav > ul > li > ul {
-    display: flex;
     opacity: 1;
     visibility: visible;
+}
+.nav:hover > nav > ul > li > ul > li a {
+    color: #777777;
+}
+.nav:hover > nav > ul > li > ul > li:hover a {
+    color: orange;
 }
 
 /*shop 스타일*/

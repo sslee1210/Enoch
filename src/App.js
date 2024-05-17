@@ -13,6 +13,10 @@ import Qna from './components/As/Qna';
 import Support from './components/Support/Support';
 import Guide from './components/Support/Guide';
 import Robot from './components/Product/Robot';
+import Pc from './components/Product/Pc';
+import Living from './components/Product/Living';
+import Appliance from './components/Product/Appliance';
+import Etc from './components/Product/Etc';
 
 const App = () => {
     return (
@@ -114,6 +118,46 @@ const App = () => {
                             </>
                         }
                     />
+
+                    <Route
+                        path="/pc"
+                        element={
+                            <>
+                                <NavigationWrapper />
+                                <Pc />
+                            </>
+                        }
+                    />
+
+                    <Route
+                        path="/living"
+                        element={
+                            <>
+                                <NavigationWrapper />
+                                <Living />
+                            </>
+                        }
+                    />
+
+                    <Route
+                        path="/appliance"
+                        element={
+                            <>
+                                <NavigationWrapper />
+                                <Appliance />
+                            </>
+                        }
+                    />
+
+                    <Route
+                        path="/etc"
+                        element={
+                            <>
+                                <NavigationWrapper />
+                                <Etc />
+                            </>
+                        }
+                    />
                 </Routes>
             </>
         </Router>
@@ -124,7 +168,7 @@ const NavigationWrapper = () => {
     let location = useLocation(); // 현재 경로를 가져옴
 
     // NavBar를 렌더링하지 않을 경로 목록에 '/robot' 추가
-    const pathsWithoutNavBar = ['/robot'];
+    const pathsWithoutNavBar = ['/robot', '/pc', '/living', '/appliance', '/etc'];
 
     // TopNav를 렌더링하지 않을 경로 목록
     const pathsWithoutTopNav = ['/about', '/history', '/global', '/contact', '/as', '/qna', '/guide', '/support'];

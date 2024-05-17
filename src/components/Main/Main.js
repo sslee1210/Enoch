@@ -5,66 +5,72 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
-import { Link } from 'react-router-dom'; // 여기에 Link 컴포넌트를 임포트합니다.
+import { Link } from 'react-router-dom';
+import MainStyles from './Main.module.css';
 
 const Main = () => {
     return (
-        <div>
-            <Swiper
-                modules={[Navigation, Pagination, Autoplay]}
-                spaceBetween={50}
-                slidesPerView={1}
-                navigation
-                pagination={{ clickable: true }}
-                autoplay={{
-                    delay: 2000,
-                    disableOnInteraction: false,
-                }}
-            >
-                <SwiperSlide>
-                    <img src={process.env.PUBLIC_URL + '/images/배너1.png'} alt="Image 1" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={process.env.PUBLIC_URL + '/images/배너2.png'} alt="Image 2" />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img src={process.env.PUBLIC_URL + '/images/배너3.png'} alt="Image 3" />
-                </SwiperSlide>
-            </Swiper>
-            <div>
+        <div className={MainStyles.main}>
+            <div className={MainStyles.SwiperSlide}>
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
+                >
+                    <SwiperSlide>
+                        <img src={process.env.PUBLIC_URL + '/images/배너1.png'} alt="Image 1" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={process.env.PUBLIC_URL + '/images/배너2.png'} alt="Image 2" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img src={process.env.PUBLIC_URL + '/images/배너3.png'} alt="Image 3" />
+                    </SwiperSlide>
+                </Swiper>
+            </div>
+
+            <div className={MainStyles.product}>
                 <h1>Product</h1>
-                <div>
-                    <Link to="/robot">
-                        {/* <a> 대신 <Link>를 사용합니다. */}
-                        <img src={process.env.PUBLIC_URL + '/images/로봇.png'} alt="로봇" />
-                    </Link>
-                </div>
+                <div className={MainStyles.product_container}>
+                    <div>
+                        <Link to={process.env.PUBLIC_URL + '/Robot'}>
+                            <img src={process.env.PUBLIC_URL + '/images/로봇.png'} alt="로봇" />
+                        </Link>
+                    </div>
 
-                <div>
-                    <Link to="/PC">
-                        <img src={process.env.PUBLIC_URL + '/images/컴퓨터.png'} alt="컴퓨터" />
-                    </Link>
-                </div>
+                    <div>
+                        <Link to={process.env.PUBLIC_URL + '/PC'}>
+                            <img src={process.env.PUBLIC_URL + '/images/컴퓨터.png'} alt="컴퓨터" />
+                        </Link>
+                    </div>
 
-                <div>
-                    <Link to="/Living Product">
-                        <img src={process.env.PUBLIC_URL + '/images/리빙.png'} alt="리빙" />
-                    </Link>
-                </div>
+                    <div>
+                        <Link to={process.env.PUBLIC_URL + '/Living Product'}>
+                            <img src={process.env.PUBLIC_URL + '/images/리빙.png'} alt="리빙" />
+                        </Link>
+                    </div>
 
-                <div>
-                    <Link to="/생활가전">
-                        <img src={process.env.PUBLIC_URL + '/images/생활.png'} alt="생활가전" />
-                    </Link>
+                    <div>
+                        <Link to={process.env.PUBLIC_URL + '/생활가전'}>
+                            <img src={process.env.PUBLIC_URL + '/images/생활.png'} alt="생활가전" />
+                        </Link>
+                    </div>
+
+                    <div>
+                        <Link to={process.env.PUBLIC_URL + '/Etc'}>
+                            <img src={process.env.PUBLIC_URL + '/images/기타.png'} alt="기타" />
+                        </Link>
+                    </div>
                 </div>
             </div>
 
-            <div>
-                <Link to="/Etc">
-                    <img src={process.env.PUBLIC_URL + '/images/기타.png'} alt="기타" />
-                </Link>
-            </div>
-            <div>
+            <div className={MainStyles.footer}>
                 <p>
                     상호명 : 이노치코리아 대표 : 정경영 전화 : 02-2268-8770 팩스 : 0504-163-8775 주소 :04316 서울특별시
                     용산구 원효로89길 3-4 (원효로1가) 석선빌딩 101호

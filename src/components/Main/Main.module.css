@@ -1,42 +1,58 @@
-.menu {
-    font: bold 16px 'malgun gothic';
-    margin: 0 auto;
+.main {
+    padding: 0 20px;
+    height: 100%;
 }
 
-.menu ul {
+.main .SwiperSlide {
     display: flex;
     justify-content: center;
+    align-items: center;
+    padding-top: 150px;
+    max-width: 1200px; /*수치만 나중에 에쁜걸로 수정*/
+    margin: auto; /*가운데정렬*/
 }
 
-.menu ul li {
-    list-style: none;
+.main .SwiperSlide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.menu ul li a {
-    color: #000;
-    text-decoration: none;
+.main .product {
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 1200px;
+    max-height: 500px;
+    margin: auto;
+
+    border: 1px solid red;
+}
+/*사진들 묶은 div컨테이너*/
+.main .product .product_container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    border: 1px solid salmon;
+}
+.main .product .product_container > div {
+    width: 100%;
+    height: 100%;
+    max-width: 200px;
+    max-height: 250px;
 }
 
-.about li {
+.main .product .product_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /*가로세로 비율 안깨지고 확대 축소 가능*/
+}
+
+.main .footer {
     display: none;
-}
-
-.about:hover li {
-    display: block;
-}
-
-.as li {
-    display: none;
-}
-
-.as:hover li {
-    display: block;
-}
-
-.support li {
-    display: none;
-}
-
-.support:hover li {
-    display: block;
 }

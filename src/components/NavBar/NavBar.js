@@ -1,17 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import NavBarStyles from './NavBar.module.css';
 const NavBar = () => {
     return (
-        <div>
+        <div className={NavBarStyles.subnav}>
             <nav>
-                <h1>
+                <h1 className={NavBarStyles.logo}>
                     <Link to="/Enoch">로고</Link>
                 </h1>
-                <ul>
+                <ul className={NavBarStyles.menu}>
                     <li>
                         <Link to="/about">About</Link>
-                        <ol>
+                        <ol className={NavBarStyles.smenu}>
                             <li>
                                 <Link to="/about">회사소개</Link>
                             </li>

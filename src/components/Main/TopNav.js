@@ -1,18 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import NavStyles from './TopNav.module.css';
+import TopNavStyles from './TopNav.module.css';
 
 const TopNav = () => {
     return (
-        <div className={NavStyles.nav}>
+        <div className={TopNavStyles.nav}>
             <h1>
-                {' '}
                 <Link to="/Enoch">로고</Link>
             </h1>
             <nav>
                 <ul>
                     <li>
-                        {/* 여기서는 `Link` 컴포넌트의 `to` prop을 사용하여 경로를 지정합니다. */}
                         <Link to="/about">About</Link>
                         <ul>
                             <li>
