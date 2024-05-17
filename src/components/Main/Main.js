@@ -34,7 +34,7 @@ const Main = () => {
             <div>
                 <h1>Product</h1>
                 <div>
-                    <Link to="/Robot">
+                    <Link to="/robot">
                         {' '}
                         {/* <a> 대신 <Link>를 사용합니다. */}
                         <img src="/images/로봇.png" alt="로봇" />

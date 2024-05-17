@@ -12,6 +12,7 @@ import As from './components/As/As';
 import Qna from './components/As/Qna';
 import Support from './components/Support/Support';
 import Guide from './components/Support/Guide';
+import Robot from './components/Product/Robot';
 
 const App = () => {
     return (
@@ -104,6 +105,15 @@ const App = () => {
                             </>
                         }
                     />
+                    <Route
+                        path="/robot"
+                        element={
+                            <>
+                                <NavigationWrapper />
+                                <Robot />
+                            </>
+                        }
+                    />
                 </Routes>
             </>
         </Router>
@@ -113,21 +123,29 @@ const App = () => {
 const NavigationWrapper = () => {
     let location = useLocation(); // 현재 경로를 가져옴
 
+    // NavBar를 렌더링하지 않을 경로 목록에 '/robot' 추가
+    const pathsWithoutNavBar = ['/robot'];
+
     // TopNav를 렌더링하지 않을 경로 목록
     const pathsWithoutTopNav = ['/about', '/history', '/global', '/contact', '/as', '/qna', '/guide', '/support'];
+
+    // 현재 경로가 NavBar를 렌더링하지 않을 경로 목록에 속한다면, TopNav만 렌더링
+    if (pathsWithoutNavBar.includes(location.pathname)) {
+        return <TopNav />;
+    }
 
     // 현재 경로가 TopNav를 렌더링하지 않을 경로 목록에 속한다면, NavBar만 렌더링
     if (pathsWithoutTopNav.includes(location.pathname)) {
         return <NavBar />;
-    } else {
-        // 그 외의 경우에는 TopNav와 NavBar 모두 렌더링 (단, 메인 페이지('/')에서는 NavBar를 제외)
-        return (
-            <>
-                <TopNav />
-                {location.pathname !== '/' && <NavBar />}
-            </>
-        );
     }
+
+    // 그 외의 경우에는 TopNav와 NavBar 모두 렌더링 (단, 메인 페이지('/')에서는 NavBar를 제외)
+    return (
+        <>
+            <TopNav />
+            {location.pathname !== '/' && <NavBar />}
+        </>
+    );
 };
 
 export default App;

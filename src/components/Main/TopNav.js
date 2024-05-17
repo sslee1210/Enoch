@@ -4,7 +4,7 @@ import NavStyles from './TopNav.module.css';
 
 const TopNav = () => {
     return (
-        <div>
+        <div className={NavStyles.nav}>
             <h1>
                 {' '}
                 <Link to="/">로고</Link>
