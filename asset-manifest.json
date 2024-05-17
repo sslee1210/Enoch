@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Enoch/static/css/main.c0773498.css",
+    "main.js": "/Enoch/static/js/main.384e673e.js",
+    "index.html": "/Enoch/index.html",
+    "main.c0773498.css.map": "/Enoch/static/css/main.c0773498.css.map",
+    "main.384e673e.js.map": "/Enoch/static/js/main.384e673e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c0773498.css",
+    "static/js/main.384e673e.js"
+  ]
+}
