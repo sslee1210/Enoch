@@ -80,7 +80,7 @@
   - #### 문제 해결: swiper를 임포트 하는 부분이 살짝 달라졌다는걸 알아챔. swiper/modules로 직접 임포트 야함
 
 
-`문제가 난 코드 부분`**
+`문제가 난 코드 부분`
 
 ```
 // Swiper의 React 버전과 필요한 CSS를 임포트합니다.
@@ -97,7 +97,7 @@ SwiperCore.use([Autoplay, Navigation, Pagination]);
 ```
 
 
-**1-1. `해결한 코드`**
+`해결한 코드`
 ```
 // Swiper의 React 버전과 필요한 CSS를 임포트합니다.
 import { Swiper, SwiperSlide } from 'swiper/react';
