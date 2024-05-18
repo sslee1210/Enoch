@@ -11,7 +11,6 @@
 #### **WEB FRAMEWORK:** `HTML5` `CSS3` `JavaScript`
 
 #### **LIBRARY:** ``
-
 ---
 
 # 🚀 프로젝트 진행
@@ -19,9 +18,9 @@
 
   | 페이지        | 목표                                           | 이미지                                                      |
   |------------------------|--------------------------------------------|---------------------------------------------------------------|
-  | **Home**   | 명시성 중요<br/>회사가 추구하는 방향성을 돋보이게<br/>스크롤, 복잡한 이벤트 사용 x | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/af5f32a1-5b5e-41b6-9e71-6fc27f4e77e6"  width="230" height="auto"/></p> |
-  | **Sub Page**    | Box형 틀, 최대한 basic하게 | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/a9fcb6ef-8b15-49f2-a3ed-612e8fcae360"  width="230" height="auto"/></p>|
-  | **Product**    | 사용자의 눈높이에 맞게<br/>구매 목적 의식에 맞게 실용성과 편의성 챙기기 <br/>심플하고 깔끔하게 | |
+  | **Home**   | 명시성 중요<br/>회사가 추구하는 방향성을 돋보이게<br/>스크롤, 복잡한 이벤트 사용 x | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/af5f32a1-5b5e-41b6-9e71-6fc27f4e77e6"  width="300" height="auto"/></p> |
+  | **Sub Page**    | Box형 틀, 최대한 basic하게 | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/a9fcb6ef-8b15-49f2-a3ed-612e8fcae360"  width="300" height="auto"/></p>|
+  | **Product**    | 사용자의 눈높이에 맞게<br/>구매 목적 의식에 맞게 실용성과 편의성 챙기기 <br/>심플하고 깔끔하게 | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/b1ea9c87-f003-4032-88c9-d59f212fee1c"  width="300" height="auto"/></p> |
   ---
 
  
@@ -36,14 +35,22 @@
 
 ### 코딩 가이드
 
-    1. 
-    2. 
-    3. 
-    4. 
-    5. 
-
+    1. 클래스 네임은 카멜 표기법으로 쉽게 알아볼 수 있는 이름으로 작성하고 네 단어 이상의 사용을 지양한다.
+    2. const 선언방식을 사용한다.
+    3. 이벤트 핸들러 함수를 사용한다.
+    4. 설명이 필요한 부분은 주석을 통해 작성한다.
+    5. 특별한 기능이 없는 곳에 사용하는 태그는 `<div>`로 통일한다.
+    6. 로고 작업 시 , 기본적으로 img 태그를 사용하나, 필요에 따라 background image로 처리한다.
+    7. 선언 시 이름은 html에서 사용한 선택자 명을 바탕으로 카멜 표기법으로 작성한다.
+    8. 필요한 경우 코드 옆에 주석을 달아 현재 코드가 어떤 기능을 하고 있는지 설명한다.
+    
 ### 디자인 소개
-
+    1. 기본 배경색: #FBFBFF 텍스트 색상: 263238
+    2. 컬러는 #컬러코드와 소문자를 이용하여 작성
+    3.사이즈 값은 상황에 따라 rem, vw를 혼용하여 사용한다
+    4. 선택자 작성 시 하위 선택자 작성 방식을 사용한다
+    5. css 임포트는 파일 이름+styles로 지정한다
+    6. 선택자 명은 페이지 내용을 바탕으로 의미 있고 알아보기 쉬운 이름을 사용한다.
 ---
     
 ## 7. 페이지 기능 구현: 앱 내 각 페이지의 기능을 구현
