@@ -6,15 +6,33 @@
     padding: 1%;
 }
 
-.logo {
+.subnav nav .logo {
     background-color: lightcoral;
     width: 200px;
     height: 80px;
     margin: auto;
 }
 
-.menu {
-    background-color: gray;
+.subnav nav .menu {
+    background-color: rgb(255, 255, 255);
     margin-top: 2vh;
-    font-size: 1.2rem;
+    font-size: 1.2rem; /* 기본 메뉴 항목의 폰트 크기를 설정합니다. */
+}
+
+.subnav nav .menu li a {
+    color: #000;
+    font-size: 18px; /* 링크의 폰트 크기를 설정합니다. */
+    text-decoration: none; /* 텍스트 밑줄을 제거합니다. */
+    display: block; /* 링크가 블록 요소처럼 동작하도록 설정합니다. */
+    padding: 10px; /* 링크 내부에 패딩을 추가하여 클릭 영역을 확장합니다. */
+}
+
+/* 메인 메뉴 항목의 스타일을 추가합니다. */
+.subnav nav .menu .mainMenuItem a {
+    font-size: 30px; /* 메인 메뉴 항목의 폰트 크기를 설정합니다. */
+}
+
+/* 서브 메뉴 항목의 스타일을 추가합니다. */
+.subnav nav .menu .subMenuItem a {
+    font-size: 18px; /* 서브 메뉴 항목의 폰트 크기를 설정합니다. */
 }

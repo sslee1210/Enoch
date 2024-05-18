@@ -8,7 +8,7 @@
     justify-content: center;
     align-items: center;
     padding-top: 150px;
-    max-width: 1200px; /*수치만 나중에 에쁜걸로 수정*/
+    max-width: 1500px; /*수치만 나중에 에쁜걸로 수정*/
     margin: auto; /*가운데정렬*/
 }
 
@@ -24,7 +24,7 @@
 
     flex-direction: column;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: auto;
 }
 .main .product > h1 {
@@ -53,7 +53,6 @@
     transition: transform 0.3s ease, filter 0.3s ease;
 }
 .main .product .product_container > div > a:hover img {
-    transform: scale(1.1); /* 이미지를 10% 확대 */
     filter: brightness(0.7); /* 이미지를 어둡게 */
 }
 
