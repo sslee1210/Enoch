@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Enoch/static/css/main.36e832ce.css",
-    "main.js": "/Enoch/static/js/main.3f8d0677.js",
+    "main.css": "/Enoch/static/css/main.7f6f6ca7.css",
+    "main.js": "/Enoch/static/js/main.52f6b3cd.js",
     "index.html": "/Enoch/index.html",
-    "main.36e832ce.css.map": "/Enoch/static/css/main.36e832ce.css.map",
-    "main.3f8d0677.js.map": "/Enoch/static/js/main.3f8d0677.js.map"
+    "main.7f6f6ca7.css.map": "/Enoch/static/css/main.7f6f6ca7.css.map",
+    "main.52f6b3cd.js.map": "/Enoch/static/js/main.52f6b3cd.js.map"
   },
   "entrypoints": [
-    "static/css/main.36e832ce.css",
-    "static/js/main.3f8d0677.js"
+    "static/css/main.7f6f6ca7.css",
+    "static/js/main.52f6b3cd.js"
   ]
 }
