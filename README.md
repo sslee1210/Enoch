@@ -114,28 +114,90 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 
 ### 상황 2
-  - #### 문제 발생:
-     ``
+  - #### 문제 발생: 사이드 메뉴바를 클릭하거나 해당 페이지가 활성화 되어 있을 시 글자 색상과 굵기가 변경되게 구현하려 NavLink를 사용하던 중 오류가 남
       
-  - #### 원인 파악:
-     ``
+  - #### 원인 파악: 코드를 아무리 고쳐봐도 내가 원하는걸 구현하지 못했다
       
-  - #### 문제 해결:
-     ``
+  - #### 문제 해결: activeStyle 타입 오류인줄 알았지만 NavLink 공식 문서를 확인한 결과 이젠 activeStyle이 없어서 activeStyle이 -> isActive로 수정하면 해결된다
     
-**2. ``**
+`문제가 난 코드 부분`
+```
+import React from 'react';
+import { NavLink } from 'react-router-dom'; // Link 대신 NavLink를 import
+import NavBarStyles from './NavBar.module.css';
+
+const NavBar = () => {
+    return (
+        <div className={NavBarStyles.subnav}>
+            <nav>
+                <h1 className={NavBarStyles.logo}>
+                    <NavLink to="/Enoch" activeClassName={NavBarStyles.active}>로고</NavLink>
+                </h1>
+                <ul className={NavBarStyles.menu}>
+                    <li>
+                        <NavLink to="/about" className={NavBarStyles.bigmenu} activeClassName={NavBarStyles.active}>
+                            About
+                        </NavLink>
+                        <ol>
+                            {/* 하위 메뉴에도 동일하게 적용 */}
+                            <li>
+                                <NavLink to="/about" activeClassName={NavBarStyles.active}>회사소개</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/history" activeClassName={NavBarStyles.active}>HISTORY</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/global" activeClassName={NavBarStyles.active}>해외법인</NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/contact" activeClassName={NavBarStyles.active}>CONTACT US</NavLink>
+                            </li>
+                        </ol>
+                    </li>
+                    {/* 다른 메뉴 항목에도 동일하게 적용 */}
+                </ul>
+            </nav>
+        </div>
+    );
+};
+
+export default NavBar;
 ```
 
+`해결한 코드`
 ```
+import React from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
+import NavBarStyles from './NavBar.module.css';
 
-**2-1. ``**
-```
+const NavBar = () => {
+    const activeStyle = {
+        color: 'rgb(8, 71, 8)',
+        fontWeight: 'bold',
+    };
 
-```
+    const location = useLocation();
 
-**2-2. ``**
-```
+    // 상위 메뉴 항목이 활성화되어야 하는지 확인
+    const isActiveAbout = ['/about', '/history', '/global', '/contact'].includes(location.pathname);
+    const isActiveAs = ['/as', '/qna'].includes(location.pathname);
+    const isActiveSupport = ['/support', '/guide'].includes(location.pathname);
 
+    return (
+        <div className={NavBarStyles.subnav}>
+            <nav>
+                <h1 className={NavBarStyles.logo}>
+                    <NavLink to="/Enoch" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                        로고
+                    </NavLink>
+                </h1>
+                <ul className={NavBarStyles.menu}>
+                    <li className={NavBarStyles.mainMenuItem}>
+                        <NavLink to="/about" style={isActiveAbout ? activeStyle : {}}>
+                            About
+                        </NavLink>
+                        <ol>
+                            {/* 하위 메뉴에도 동일하게 적용 */}
 ```
 
 
