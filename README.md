@@ -54,7 +54,7 @@
 
 ## 5. 디렉토리 구조 분석 : 프로젝트 구조
     
-   ![디렉토리구조](https://github.com/sslee1210/ReactTeamProject/assets/142865231/0ab31b02-7c2b-4291-aaef-63aabd620e69)
+   ![directory](https://github.com/sslee1210/Enoch/assets/142865231/fae22bda-bede-468b-9394-5e13318659bd)
    
 ---
 
