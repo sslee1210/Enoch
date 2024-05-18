@@ -118,7 +118,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
       
   - #### 원인 파악: 코드를 아무리 고쳐봐도 내가 원하는걸 구현하지 못했다
       
-  - #### 문제 해결: activeStyle 타입 오류인줄 알았지만 NavLink 공식 문서를 확인한 결과 이젠 activeStyle이 없어서 activeStyle이 -> isActive로 수정하면 해결된다
+  - #### 문제 해결: activeStyle 타입 오류인줄 알았지만 NavLink 공식 문서를 확인한 결과 이젠 activeStyle이 없어서 activeStyle -> isActive로 수정하면 해결된다
     
 `문제가 난 코드 부분`
 ```
