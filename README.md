@@ -53,20 +53,20 @@
 ---
 
 ## 5. 디렉토리 구조 분석 : 프로젝트 구조
-   <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/fae22bda-bede-468b-9394-5e13318659bd"  width="700" height="auto"/></p> 
+   <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/fae22bda-bede-468b-9394-5e13318659bd"  width="500" height="auto"/></p> 
    
 ---
 
 ## 8. UI/UX 디자인: 사용자 인터페이스 및 디자인 적용
     
 ### - 이노치 코리아 메인 페이지
-<img src="https://github.com/sslee1210/Enoch/assets/142865231/af5f32a1-5b5e-41b6-9e71-6fc27f4e77e6"  width="500" height="auto"/></p>
+<img src="https://github.com/sslee1210/Enoch/assets/142865231/af5f32a1-5b5e-41b6-9e71-6fc27f4e77e6"  width="350" height="auto"/></p>
 
 ### - 이노치 코리아 서브 페이지
-<img src="https://github.com/sslee1210/Enoch/assets/142865231/a9fcb6ef-8b15-49f2-a3ed-612e8fcae360"  width="500" height="auto"/></p>
+<img src="https://github.com/sslee1210/Enoch/assets/142865231/a9fcb6ef-8b15-49f2-a3ed-612e8fcae360"  width="350" height="auto"/></p>
 
 ### - 이노치 코리아 Product
-<img src="https://github.com/sslee1210/Enoch/assets/142865231/b1ea9c87-f003-4032-88c9-d59f212fee1c"  width="500" height="auto"/></p>
+<img src="https://github.com/sslee1210/Enoch/assets/142865231/b1ea9c87-f003-4032-88c9-d59f212fee1c"  width="350" height="auto"/></p>
 
 ---
     
