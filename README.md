@@ -53,8 +53,7 @@
 ---
 
 ## 5. 디렉토리 구조 분석 : 프로젝트 구조
-    
-   ![directory](https://github.com/sslee1210/Enoch/assets/142865231/fae22bda-bede-468b-9394-5e13318659bd)
+   <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/fae22bda-bede-468b-9394-5e13318659bd"  width="700" height="auto"/></p> 
    
 ---
 
