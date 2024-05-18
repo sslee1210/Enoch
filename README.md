@@ -174,7 +174,7 @@ import { Navigation, Pagination, Autoplay } from 'swiper/modules';
   #### 1. ``
   #### 2. ``
 # 작업일지 바로가기
-### [**🔗 작업일지**](https://neighborly-goal-bcc.notion.site/c66bbd1cac0c49a9bc6394b6aca945a7?v=400add0062334f1099509a05901452af&pvs=4)
+## [**🔗 작업일지**](https://neighborly-goal-bcc.notion.site/c66bbd1cac0c49a9bc6394b6aca945a7?v=400add0062334f1099509a05901452af&pvs=4)
 
 # 프로젝트 바로가기
 ## [🔗 이노치코리아 ]
