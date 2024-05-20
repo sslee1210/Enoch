@@ -2,9 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #2c3e50; /* 네비게이션 바의 배경색 */
     padding: 1rem 2rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav .logo {
 }
 
 .nav nav ul {
@@ -26,9 +27,8 @@
     left: 0;
     right: auto;
     width: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     padding: 10px 0;
+    background-color: rgba(255, 255, 255, 0.8); /* 불투명한 배경색 추가 */
 }
 
 .nav nav ul li:hover ul {
@@ -41,18 +41,24 @@
 
 .nav nav a,
 a {
-    color: #ecf0f1;
+    color: #000;
     text-decoration: none;
-    padding: 10px 80px;
+    padding: 10px 50px;
+    font-size: 1.1vw;
     display: block;
 }
 
 .nav nav ul li ul li a {
-    color: #2c3e50; /* 소메뉴 텍스트 색상 */
+    color: #000; /* 소메뉴 텍스트 색상 */
     white-space: nowrap; /* 줄 바뀜 방지 */
     display: block; /* 블록 요소로 만들어 전체 너비를 차지하게 함 */
     text-align: center; /* 텍스트를 중앙 정렬 */
     padding: 10px 0; /* 상하 패딩을 추가하여 글씨와 경계 사이 여백을 줌 */
+    font-size: 0.8vw;
+}
+
+.nav nav ul li ul li a:hover {
+    text-decoration: underline; /* 마우스를 올렸을 때 밑줄 추가 */
 }
 
 .nav h1 a {
@@ -60,6 +66,17 @@ a {
     font-size: 1.5rem;
 }
 
-.nav a:hover {
-    background-color: #34495e;
+.nav nav ul li a {
+    transition: color 0.3s ease;
+}
+
+.nav a.link,
+.nav a.link:visited {
+    transition: color 0.3s ease; /* 색상 변경에 대한 애니메이션 적용 */
+    /* 다른 스타일 설정 */
+}
+
+.nav a.link:hover {
+    color: #1abc9c; /* 마우스를 올렸을 때의 색상 */
+    background-color: transparent; /* 배경색을 투명하게 설정하여 호버 효과 제거 */
 }

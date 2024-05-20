@@ -6,7 +6,9 @@ const TopNav = () => {
     return (
         <div className={TopNavStyles.nav}>
             <h1>
-                <Link to="/Enoch">로고</Link>
+                <Link to="/Enoch" className={TopNavStyles.logo}>
+                    로고
+                </Link>
             </h1>
             <nav>
                 <ul>
@@ -51,7 +53,7 @@ const TopNav = () => {
                     </li>
                 </ul>
             </nav>
-            <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+            <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer" className={TopNavStyles.link}>
                 Shop
             </a>
         </div>

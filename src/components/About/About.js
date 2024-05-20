@@ -1,8 +1,9 @@
 import React from 'react';
+import AboutStyles from './About.module.css';
 
 const About = () => {
     return (
-        <div>
+        <div className={AboutStyles.About}>
             <h2>회사 소개</h2>
             <h3>최초가 되기 보다는 제대로 하는 기업</h3>
 

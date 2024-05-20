@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Main from './components/Main/Main';
-import NavBar from './components/NavBar/NavBar';
+import NavBar from './components/Subpage/NavBar';
 import TopNav from './components/Main/TopNav';
 import About from './components/About/About';
 import History from './components/About/History';
@@ -17,6 +17,7 @@ import Pc from './components/Product/Pc';
 import Living from './components/Product/Living';
 import Appliance from './components/Product/Appliance';
 import Etc from './components/Product/Etc';
+import Header from './components/Subpage/Header';
 
 const App = () => {
     return (
@@ -32,6 +33,17 @@ const App = () => {
                             </>
                         }
                     />
+
+                    <Route
+                        path="/header"
+                        element={
+                            <>
+                                <NavigationWrapper />
+                                <Header />
+                            </>
+                        }
+                    />
+
                     <Route
                         path="/about"
                         element={
@@ -167,26 +179,45 @@ const App = () => {
 const NavigationWrapper = () => {
     let location = useLocation(); // 현재 경로를 가져옴
 
-    // NavBar를 렌더링하지 않을 경로 목록에 '/robot' 추가
+    // NavBar를 렌더링하지 않을 경로 목록
     const pathsWithoutNavBar = ['/robot', '/pc', '/living', '/appliance', '/etc'];
 
     // TopNav를 렌더링하지 않을 경로 목록
     const pathsWithoutTopNav = ['/about', '/history', '/global', '/contact', '/as', '/qna', '/guide', '/support'];
 
-    // 현재 경로가 NavBar를 렌더링하지 않을 경로 목록에 속한다면, TopNav만 렌더링
+    // Header 컴포넌트를 렌더링할 경로 목록
+    const pathsWithHeader = ['/about', '/history', '/global', '/contact', '/as', '/qna', '/guide', '/support'];
+
+    // Header 컴포넌트를 조건부로 렌더링
+    const renderHeader = pathsWithHeader.includes(location.pathname);
+
+    // 현재 경로가 NavBar를 렌더링하지 않을 경로 목록에 속한다면, TopNav만 렌더링 (Header 조건부 포함)
     if (pathsWithoutNavBar.includes(location.pathname)) {
-        return <TopNav />;
+        return (
+            <>
+                {renderHeader && <Header />}
+                <TopNav />
+            </>
+        );
     }
 
-    // 현재 경로가 TopNav를 렌더링하지 않을 경로 목록에 속한다면, NavBar만 렌더링
+    // 현재 경로가 TopNav를 렌더링하지 않을 경로 목록에 속한다면, NavBar만 렌더링 (Header 조건부 포함)
     if (pathsWithoutTopNav.includes(location.pathname)) {
-        return <NavBar />;
+        return (
+            <>
+                {renderHeader && <Header />}
+                <NavBar />
+            </>
+        );
     }
 
-    // 그 외의 경우에는 TopNav와 NavBar 모두 렌더링 (단, 메인 페이지('/')에서는 NavBar를 제외)
+    // 그 외의 경우에는 TopNav와 NavBar 모두 렌더링 (단, 메인 페이지('/')에서는 NavBar를 제외) (Header 조건부 포함)
     return (
         <>
+            {renderHeader && <Header />}
             <TopNav />
+            {/* 메인 페이지가 아닌 경우 NavBar 추가 */}
+            {location.pathname !== '/Enoch' && <NavBar />}
         </>
     );
 };

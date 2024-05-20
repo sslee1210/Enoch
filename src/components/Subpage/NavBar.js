@@ -51,6 +51,7 @@ const NavBar = () => {
                             </li>
                         </ol>
                     </li>
+                    <hr />
                     <li className={NavBarStyles.mainMenuItem}>
                         <NavLink to="/as" style={isActiveAs ? activeStyle : {}}>
                             A/S
@@ -68,6 +69,7 @@ const NavBar = () => {
                             </li>
                         </ol>
                     </li>
+                    <hr />
                     <li className={NavBarStyles.mainMenuItem}>
                         <NavLink to="/support" style={isActiveSupport ? activeStyle : {}}>
                             Support

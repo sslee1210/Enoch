@@ -1,6 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .subnav {
-    background-color: lightblue;
-    height: 100vh;
+    border: 1px solid rebeccapurple;
     width: 13vw;
     float: left;
     padding: 1%;
@@ -14,25 +18,36 @@
 }
 
 .subnav nav .menu {
-    background-color: rgb(255, 255, 255);
     margin-top: 2vh;
     font-size: 1.2rem; /* 기본 메뉴 항목의 폰트 크기를 설정합니다. */
+    padding: 0;
 }
 
 .subnav nav .menu li a {
     color: #000;
-    font-size: 18px; /* 링크의 폰트 크기를 설정합니다. */
+    font-size: 0.9vw; /* 링크의 폰트 크기를 설정합니다. */
     text-decoration: none; /* 텍스트 밑줄을 제거합니다. */
     display: block; /* 링크가 블록 요소처럼 동작하도록 설정합니다. */
     padding: 10px; /* 링크 내부에 패딩을 추가하여 클릭 영역을 확장합니다. */
 }
 
+.subnav nav .menu .mainMenuItem {
+    list-style: none;
+    padding: 3vh 0px;
+}
+
 /* 메인 메뉴 항목의 스타일을 추가합니다. */
 .subnav nav .menu .mainMenuItem a {
-    font-size: 30px; /* 메인 메뉴 항목의 폰트 크기를 설정합니다. */
+    /* font-size: 30px; 메인 메뉴 항목의 폰트 크기를 설정합니다. */
+    font-size: 1.8vw;
+}
+
+.subnav nav .menu .subMenuItem {
+    list-style: disc;
+    margin-left: 3.5vw;
 }
 
 /* 서브 메뉴 항목의 스타일을 추가합니다. */
 .subnav nav .menu .subMenuItem a {
-    font-size: 18px; /* 서브 메뉴 항목의 폰트 크기를 설정합니다. */
+    font-size: 0.9vw; /* 서브 메뉴 항목의 폰트 크기를 설정합니다. */
 }
