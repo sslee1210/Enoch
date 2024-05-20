@@ -18,11 +18,6 @@ const NavBar = () => {
     return (
         <div className={NavBarStyles.subnav}>
             <nav>
-                <h1 className={NavBarStyles.logo}>
-                    <NavLink to="/Enoch" style={({ isActive }) => (isActive ? activeStyle : {})}>
-                        로고
-                    </NavLink>
-                </h1>
                 <ul className={NavBarStyles.menu}>
                     <li className={NavBarStyles.mainMenuItem}>
                         <NavLink to="/about" style={isActiveAbout ? activeStyle : {}}>

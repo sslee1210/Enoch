@@ -4,17 +4,10 @@
 }
 
 .subnav {
-    border: 1px solid rebeccapurple;
     width: 13vw;
     float: left;
     padding: 1%;
-}
-
-.subnav nav .logo {
-    background-color: lightcoral;
-    width: 200px;
-    height: 80px;
-    margin: auto;
+    background-color: #fff;
 }
 
 .subnav nav .menu {

@@ -1,4 +1,56 @@
 .About {
-    margin-top: 40px;
+    margin-top: 4vh;
     background-color: #fff;
+    margin-left: calc(100vw - 80vw); /* 브라우저의 오른쪽에 붙임 */
+    overflow-y: hidden;
+    max-height: 87.2vh;
+}
+
+.About h1 {
+    padding-left: 1.5vw;
+    padding-top: 1.5vw;
+    font-size: 2vw;
+}
+
+.About .alltext {
+    margin-left: 10vw; /* 기존 12vw에서 줄임 */
+}
+
+.About .alltext .Subtit {
+    padding-left: 2.5vw; /* 기존 2.8vw에서 줄임 */
+    padding-top: 2vw; /* 기존 2.2vw에서 줄임 */
+    font-size: 1.2vw;
+}
+
+.About .alltext .Text {
+    width: 62%; /* 기존 61%에서 줄임 */
+    padding-left: 2.5vw; /* 기존 2.8vw에서 줄임 */
+    padding-right: 2.5vw; /* 기존 2.8vw에서 줄임 */
+    padding-top: 2vw; /* 기존 2.2vw에서 줄임 */
+    font-size: 0.9vw;
+    line-height: 1.4;
+}
+
+.About .alltext .RightText {
+    text-align: left;
+    padding-top: 2vw; /* 기존 2.2vw에서 줄임 */
+    padding-bottom: 2vw; /* 기존 2.2vw에서 줄임 */
+    padding-left: 35vw; /* 기존 33vw에서 줄임 */
+    font-size: 0.9vw;
+    font-weight: bold;
+    line-height: 1.7;
+}
+
+.About .footer {
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 2vw; /* 패딩을 추가하여 여백을 조정 */
+}
+
+.About .footer p {
+    font-size: 0.8vw;
+    padding-top: 1.3vw;
+    padding-right: 2vw; /* 기존 2.5vw에서 줄임 */
+    padding-left: 2vw; /* 기존 2.5vw에서 줄임 */
 }
