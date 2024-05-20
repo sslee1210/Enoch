@@ -1,0 +1,58 @@
+img {
+    width: 100%;
+    display: block;
+}
+
+.Global {
+    margin-top: 4vh;
+    background-color: lightblue;
+    margin-left: 19vw;
+    height: 87vh;
+}
+
+.Global .Wrap {
+    text-align: center;
+}
+
+.Global .Container {
+    width: 28vw;
+    display: inline-block;
+    padding: 1.5vw 0vw;
+}
+
+.Global .Container .Title {
+    background-color: lightpink;
+    padding: 0.2vw;
+    border-radius: 0.5vw;
+    width: 8.5vw;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.Global .Container .SubTitle {
+    background-color: lightgreen;
+    padding: 0.2vw;
+    border-radius: 0.5vw;
+    width: 8.5vw;
+    text-align: center;
+    margin: 0.3vw auto;
+}
+
+.Global .Container .GlobalImg {
+    width: 20vw;
+    height: 55vh;
+    margin: 0 auto;
+}
+
+.Global .footer {
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Global .footer p {
+    padding-top: 1.3vw;
+    padding-bottom: 1.2vw;
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+}

@@ -1,33 +1,39 @@
 .About {
-    margin-top: 4vh;
-    background-color: #fff;
+    margin-top: 3vh;
+    background-color: #a34e4e;
     margin-left: calc(100vw - 80vw); /* 브라우저의 오른쪽에 붙임 */
     overflow-y: hidden;
-    max-height: 87.2vh;
+    height: calc(100vh - 110px);
+}
+
+.About .About1 {
+    background-color: #ddd;
+    max-width: 1200px;
+    height: 100%;
 }
 
 .About h1 {
-    padding-left: 1.5vw;
-    padding-top: 1.5vw;
-    font-size: 2vw;
+    padding-left: 0.5vw;
+    padding-top: 0.5vw;
+    font-size: 1.5vw;
 }
 
 .About .alltext {
-    margin-left: 10vw; /* 기존 12vw에서 줄임 */
+    margin-left: 3vw; /* 기존 12vw에서 줄임 */
 }
 
 .About .alltext .Subtit {
-    padding-left: 2.5vw; /* 기존 2.8vw에서 줄임 */
-    padding-top: 2vw; /* 기존 2.2vw에서 줄임 */
-    font-size: 1.2vw;
+    padding-left: 1vw; /* 기존 2.8vw에서 줄임 */
+    padding-top: 1vw; /* 기존 2.2vw에서 줄임 */
+    font-size: 1.3vw;
 }
 
 .About .alltext .Text {
     width: 62%; /* 기존 61%에서 줄임 */
-    padding-left: 2.5vw; /* 기존 2.8vw에서 줄임 */
-    padding-right: 2.5vw; /* 기존 2.8vw에서 줄임 */
-    padding-top: 2vw; /* 기존 2.2vw에서 줄임 */
-    font-size: 0.9vw;
+    padding-left: 1vw; /* 기존 2.8vw에서 줄임 */
+    padding-right: 1vw; /* 기존 2.8vw에서 줄임 */
+    padding-top: 1vw; /* 기존 2.2vw에서 줄임 */
+    font-size: 0.8vw;
     line-height: 1.4;
 }
 
@@ -36,7 +42,7 @@
     padding-top: 2vw; /* 기존 2.2vw에서 줄임 */
     padding-bottom: 2vw; /* 기존 2.2vw에서 줄임 */
     padding-left: 35vw; /* 기존 33vw에서 줄임 */
-    font-size: 0.9vw;
+    font-size: 0.8vw;
     font-weight: bold;
     line-height: 1.7;
 }
@@ -49,7 +55,7 @@
 }
 
 .About .footer p {
-    font-size: 0.8vw;
+    font-size: 0.5vw;
     padding-top: 1.3vw;
     padding-right: 2vw; /* 기존 2.5vw에서 줄임 */
     padding-left: 2vw; /* 기존 2.5vw에서 줄임 */

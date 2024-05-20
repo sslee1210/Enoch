@@ -1,0 +1,31 @@
+.Contact {
+    margin-top: 4vh;
+    background-color: lightblue;
+    margin-left: 19vw;
+    height: 87vh;
+}
+
+.Contact .ContactText {
+    border: 1px solid blue;
+    display: inline-block;
+}
+
+.Contact .ContactText .ContactTitle {
+    padding: 0 0 2vw 0;
+}
+
+.Contact .Map {
+}
+
+.Contact .footer {
+    border-top: 1px solid #000;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Contact .footer p {
+    padding-top: 1.3vw;
+    padding-bottom: 1.2vw;
+    padding-right: 2.5vw;
+    padding-left: 2.5vw;
+}
