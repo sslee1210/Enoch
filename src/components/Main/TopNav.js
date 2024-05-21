@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TopNavStyles from './TopNav.module.css';
 
 const TopNav = () => {
+    const [isHovered, setIsHovered] = useState(false);
+
     return (
-        <div className={TopNavStyles.nav}>
-            <h1>
-                <Link to="/Enoch" className={TopNavStyles.logo}>
-                    로고
-                </Link>
-            </h1>
+        <div
+            className={TopNavStyles.nav}
+            style={{
+                backgroundColor: isHovered ? '#000' : 'white',
+                transition: 'background-color 0.5s ease',
+            }}
+        >
+            <Link to="/Enoch" className={`${TopNavStyles.logo} ${isHovered ? TopNavStyles.hoveredLink : ''}`}>
+                로고
+            </Link>
             <nav>
-                <ul>
+                <button className={TopNavStyles.hamburger}>
+                    <span className={TopNavStyles.bar}></span>
+                    <span className={TopNavStyles.bar}></span>
+                    <span className={TopNavStyles.bar}></span>
+                </button>
+                <ul onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
                     <li>
                         <Link to="/about">About</Link>
-                        <ul>
+                        {/* 조건부 스타일링을 적용하여, isHovered 상태에 따라 클래스를 동적으로 변경합니다. */}
+                        <ul className={isHovered ? TopNavStyles.subMenu : ''}>
                             <li>
                                 <Link to="/about">회사 소개</Link>
                             </li>
@@ -31,7 +43,7 @@ const TopNav = () => {
                     </li>
                     <li>
                         <Link to="/as">A/S</Link>
-                        <ul>
+                        <ul className={isHovered ? TopNavStyles.subMenu : ''}>
                             <li>
                                 <Link to="/as">A/S 접수</Link>
                             </li>
@@ -42,7 +54,7 @@ const TopNav = () => {
                     </li>
                     <li>
                         <Link to="/support">Support</Link>
-                        <ul>
+                        <ul className={isHovered ? TopNavStyles.subMenu : ''}>
                             <li>
                                 <Link to="/support">Download File</Link>
                             </li>
@@ -52,10 +64,15 @@ const TopNav = () => {
                         </ul>
                     </li>
                 </ul>
+                <a
+                    href="https://swit2019.cafe24.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className={`${TopNavStyles.link} ${isHovered ? TopNavStyles.hoveredLink : ''}`}
+                >
+                    Shop
+                </a>
             </nav>
-            <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer" className={TopNavStyles.link}>
-                Shop
-            </a>
         </div>
     );
 };

@@ -1,14 +1,17 @@
 .main {
-    height: 100%;
+    height: calc(100vh - 75px);
+    border: 1px solid;
 }
 
 .main .SwiperSlide {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 1500px; /*수치만 나중에 에쁜걸로 수정*/
+    max-width: 1200px; /*수치만 나중에 에쁜걸로 수정*/
     margin: auto; /*가운데정렬*/
-    padding: 45px 20px;
+    padding: 0 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     box-sizing: border-box;
 }
 
@@ -20,7 +23,6 @@
 }
 
 .main .product {
-    padding: 60px 0;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -30,14 +32,15 @@
     box-sizing: border-box;
 }
 .main .product > h1 {
-    font-size: 1.4rem;
+    font-size: 2rem;
+    margin-bottom: 0;
 }
 
 /*사진들 묶은 div컨테이너*/
 .main .product .product_container {
     display: flex;
     justify-content: space-between;
-    margin: 25px 0;
+    margin: 20px 0 0 0;
     gap: 20px;
 }
 .main .product .product_container > div {

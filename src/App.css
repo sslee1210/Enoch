@@ -1,7 +1,12 @@
 html {
-    background-color: #fbfbff;
     color: #263238;
     font-weight: bold;
+}
+
+div {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 .borderTop {

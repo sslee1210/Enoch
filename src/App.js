@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Main from './components/Main/Main';
 import NavBar from './components/Subpage/NavBar';
@@ -17,7 +16,7 @@ import Pc from './components/Product/Pc';
 import Living from './components/Product/Living';
 import Appliance from './components/Product/Appliance';
 import Etc from './components/Product/Etc';
-import Header from './components/Subpage/Header';
+// import Header from './components/Subpage/Header';
 
 const App = () => {
     return (
@@ -34,7 +33,7 @@ const App = () => {
                         }
                     />
 
-                    <Route
+                    {/* <Route
                         path="/header"
                         element={
                             <>
@@ -42,83 +41,83 @@ const App = () => {
                                 <Header />
                             </>
                         }
-                    />
+                    /> */}
 
                     <Route
                         path="/about"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <About />
-                            </>
+                            </FlexWrapper>
                         }
                     />
                     <Route
                         path="/history"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <History />
-                            </>
+                            </FlexWrapper>
                         }
                     />
                     <Route
                         path="/global"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <Global />
-                            </>
+                            </FlexWrapper>
                         }
                     />
 
                     <Route
                         path="/contact"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <Contact />
-                            </>
+                            </FlexWrapper>
                         }
                     />
 
                     <Route
                         path="/as"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <As />
-                            </>
+                            </FlexWrapper>
                         }
                     />
 
                     <Route
                         path="/qna"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <Qna />
-                            </>
+                            </FlexWrapper>
                         }
                     />
 
                     <Route
                         path="/guide"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <Guide />
-                            </>
+                            </FlexWrapper>
                         }
                     />
 
                     <Route
                         path="/support"
                         element={
-                            <>
+                            <FlexWrapper>
                                 <NavigationWrapper />
                                 <Support />
-                            </>
+                            </FlexWrapper>
                         }
                     />
                     <Route
@@ -195,7 +194,7 @@ const NavigationWrapper = () => {
     if (pathsWithoutNavBar.includes(location.pathname)) {
         return (
             <>
-                {renderHeader && <Header />}
+                {/* {renderHeader && <Header />} */}
                 <TopNav />
             </>
         );
@@ -205,7 +204,7 @@ const NavigationWrapper = () => {
     if (pathsWithoutTopNav.includes(location.pathname)) {
         return (
             <>
-                {renderHeader && <Header />}
+                {/* {renderHeader && <Header />} */}
                 <NavBar />
             </>
         );
@@ -214,12 +213,16 @@ const NavigationWrapper = () => {
     // 그 외의 경우에는 TopNav와 NavBar 모두 렌더링 (단, 메인 페이지('/')에서는 NavBar를 제외) (Header 조건부 포함)
     return (
         <>
-            {renderHeader && <Header />}
+            {/* {renderHeader && <Header />} */}
             <TopNav />
             {/* 메인 페이지가 아닌 경우 NavBar 추가 */}
             {location.pathname !== '/Enoch' && <NavBar />}
         </>
     );
+};
+
+const FlexWrapper = ({ children }) => {
+    return <div style={{ display: 'flex', height: '100vh' }}>{children}</div>;
 };
 
 export default App;

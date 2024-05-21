@@ -17,6 +17,9 @@ const NavBar = () => {
 
     return (
         <div className={NavBarStyles.subnav}>
+            <h1>
+                <a href="#">로고</a>
+            </h1>
             <nav>
                 <ul className={NavBarStyles.menu}>
                     <li className={NavBarStyles.mainMenuItem}>

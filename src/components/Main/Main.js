@@ -1,10 +1,9 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
-import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/autoplay';
-import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import MainStyles from './Main.module.css';
 
@@ -13,7 +12,7 @@ const Main = () => {
         <div className={MainStyles.main}>
             <div className={MainStyles.SwiperSlide}>
                 <Swiper
-                    modules={[Navigation, Pagination, Autoplay]}
+                    modules={[Pagination, Autoplay]} // allowTouchMove 모듈 제거
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
@@ -22,6 +21,7 @@ const Main = () => {
                         delay: 2000,
                         disableOnInteraction: false,
                     }}
+                    allowTouchMove={false} // 마우스로 슬라이드 이동을 비활성화
                 >
                     <SwiperSlide>
                         <img src={process.env.PUBLIC_URL + '/images/배너1.png'} alt="Image 1" />

@@ -1,3 +1,44 @@
+/*햄버거버튼*/
+.nav nav > .hamburger {
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1000;
+}
+.nav nav > .hamburger .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: rgb(245, 123, 78);
+    transition: all 0.3s ease;
+}
+
+/* .active 클래스가 추가됐을 때 첫 번째 바 스타일 */
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg); /* 첫 번째 바를 아래로 이동시키고 45도로 회전 */
+}
+
+/* .active 클래스가 추가됐을 때 두 번째 바 (가운데 바) 스타일 */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0; /* 가운데 바 사라짐 */
+}
+
+/* .active 클래스가 추가됐을 때 세 번째 바 스타일 */
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg); /* 세 번째 바를 위로 이동시키고 -45도로 회전 */
+}
+
 .nav {
     display: flex;
     justify-content: space-between;
@@ -8,6 +49,10 @@
 .nav .logo {
 }
 
+.nav nav {
+    display: flex;
+}
+
 .nav nav ul {
     list-style: none;
     display: flex;
@@ -15,9 +60,14 @@
     margin: 0;
 }
 
+.nav nav ul:hover a {
+    color: #fff;
+}
+
 .nav nav ul li {
     position: relative;
     margin-right: 30px; /* 대메뉴 간격 조정 */
+    z-index: 9999;
 }
 
 .nav nav ul li ul {
@@ -37,6 +87,25 @@
 
 .nav nav ul li ul li {
     margin-right: 0;
+}
+
+.nav nav ul li:hover .subMenu {
+    background-color: #000;
+    color: #fff;
+}
+
+.nav nav ul li .subMenu {
+    background-color: #f0f0f0; /* 소메뉴 배경색 */
+    color: #333; /* 소메뉴 폰트 색상 */
+}
+
+.nav nav ul li .subMenu li {
+    padding: 10px;
+}
+
+.nav nav ul li .subMenu a {
+    color: inherit; /* 부모 요소(여기서는 li)의 색상을 상속받음 */
+    text-decoration: none; /* 밑줄 제거 */
 }
 
 .nav nav a,
@@ -76,7 +145,41 @@ a {
     /* 다른 스타일 설정 */
 }
 
-.nav a.link:hover {
-    color: #1abc9c; /* 마우스를 올렸을 때의 색상 */
-    background-color: transparent; /* 배경색을 투명하게 설정하여 호버 효과 제거 */
+/* TopNav.module.css에서 기존 스타일에 추가 */
+
+.hoveredLink {
+    color: #fff; /* 변경하고 싶은 색상 코드 */
+    transition: color 0.5s ease; /* 부드러운 색상 전환 효과 */
+    background-color: transparent;
+}
+
+@media only screen and (max-width: 600px) {
+    /* 여기에 모바일 기기용 스타일을 작성합니다. */
+    .nav {
+        padding: 0;
+    }
+    .nav nav > .hamburger {
+        display: flex;
+    }
+    .nav nav ul {
+        position: absolute;
+        top: 0;
+        right: 300%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgb(24, 24, 49);
+        backdrop-filter: blur(10px);
+    }
+    .nav nav ul.on {
+        /*햄버거버튼을 토글하면 이 화면이 나오게 됌*/
+        right: 0;
+    }
+    .nav nav a,
+    a {
+        padding: 10px 28px;
+        display: none;
+    }
 }

@@ -1,16 +1,28 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 .subnav {
-    width: 13vw;
-    float: left;
-    padding: 1%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
     background-color: #fff;
+    z-index: 100;
+    justify-content: space-around;
+}
+.subnav h1 {
+    display: block;
+    text-align: center;
+    border: 1px solid red;
+}
+.subnav nav {
+    background-color: aquamarine;
+    padding: 20px;
 }
 
 .subnav nav .menu {
+    border: 1px solid;
     margin-top: 2vh;
     font-size: 1.2rem; /* 기본 메뉴 항목의 폰트 크기를 설정합니다. */
     padding: 0;
