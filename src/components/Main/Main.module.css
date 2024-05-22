@@ -1,39 +1,41 @@
 .main {
     width: 100%;
-    height: calc(100vh - 100px);
-    padding: 0 20px;
+}
+.main .main1 {
+    height: 80%;
+    margin: auto;
+
     box-sizing: border-box;
 }
 
 .main .SwiperSlide {
-    padding-top: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    border: 1px solid blue;
+    box-sizing: border-box;
 }
 
 .main .SwiperSlide img {
     width: 100%;
-    height: 100%;
-    max-width: 1500px;
-    max-height: 350px;
+    height: 40%;
     object-fit: cover;
+    border: 1px solid darkorange;
+    box-sizing: border-box;
     margin: auto;
 }
 
 .main .product {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     width: 100%;
-    max-width: 1500px;
-    height: calc(100vh - 540px);
+    max-width: 1200px;
     margin: auto;
+    box-sizing: border-box;
 }
 .main .product > h1 {
-    font-size: 2vw;
-    padding-bottom: 50px;
+    font-size: 2rem;
 }
 
 /*사진들 묶은 div컨테이너*/
@@ -43,49 +45,30 @@
     gap: 20px;
     width: 100%;
 }
-
-.main .product .product_container > a {
-    cursor: pointer;
+.main .product .product_container > div {
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main .product .product_container > div > a {
     display: block;
+    width: 100%;
+    max-width: 400px;
+    max-height: 20px;
+    height: 100%;
+    background-color: chocolate;
+    box-sizing: border-box; /* 박스 크기 계산 방식 설정 */
 }
 
-.main .product .product_container > a > img {
-    border-radius: 25px;
+.main .product .product_container > div > a > img {
     width: 100%;
     height: 100%;
     filter: brightness(1);
-    object-fit: cover;
+    object-fit: contain; /*가로세로 비율 안깨지고 확대 축소 가능*/
     transition: filter 0.3s ease;
 }
-
-.main .product .product_container > a:hover img {
-    filter: brightness(0.7);
-}
-
-/* @media only screen and (max-width: 900px) {
-    
-    .main {
-        display: flex;
-        flex-direction: column;
-    }
-    .main .SwiperSlide {
-        margin: 0 20px;
-        padding: 45px 0;
-    }
-    .main .product {
-        margin: 0;
-    }
-    .main .product > h1 {
-        font-size: 1.4rem;
-    }
-    .main .footer p {
-        font-size: 0.6rem;
-    }
-} */
-
-@media only screen and (max-width: 600px) {
-    /* 여기에 모바일 기기용 스타일을 작성합니다. */
-    .main .footer p {
-        font-size: 0.3rem;
-    }
+.main .product .product_container > div > a:hover img {
+    filter: brightness(0.7); /* 이미지를 어둡게 */
 }

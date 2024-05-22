@@ -5,6 +5,7 @@ import TopNavStyles from './TopNav.module.css';
 const TopNav = () => {
     const [isHovered, setIsHovered] = useState(false);
     const [isLinkHovered, setIsLinkHovered] = useState(false);
+    const [isShopHovered, setIsShopHovered] = useState(false);
 
     const handleMouseEnter = () => {
         setIsHovered(true);
@@ -22,17 +23,27 @@ const TopNav = () => {
         setIsLinkHovered(false);
     };
 
+    const handleShopMouseEnter = () => {
+        setIsShopHovered(true);
+    };
+
+    const handleShopMouseLeave = () => {
+        setIsShopHovered(false);
+    };
+
     return (
         <div
             className={TopNavStyles.nav}
             style={{
-                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
+                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
                 transition: 'background-color 0.5s ease',
             }}
         >
             <Link
                 to="/Enoch"
-                className={`${TopNavStyles.logo} ${isHovered || isLinkHovered ? TopNavStyles.hoveredLink : ''}`}
+                className={`${TopNavStyles.logo} ${
+                    isHovered || isLinkHovered || isShopHovered ? TopNavStyles.hoveredLink : ''
+                }`}
                 onMouseEnter={handleLinkMouseEnter}
                 onMouseLeave={handleLinkMouseLeave}
             >
@@ -50,7 +61,7 @@ const TopNav = () => {
                         <ul
                             className={isHovered ? TopNavStyles.subMenu : ''}
                             style={{
-                                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
+                                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
                                 transition: 'background-color 0.5s ease',
                             }}
                         >
@@ -73,7 +84,7 @@ const TopNav = () => {
                         <ul
                             className={isHovered ? TopNavStyles.subMenu : ''}
                             style={{
-                                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
+                                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
                                 transition: 'background-color 0.5s ease',
                             }}
                         >
@@ -90,7 +101,7 @@ const TopNav = () => {
                         <ul
                             className={isHovered ? TopNavStyles.subMenu : ''}
                             style={{
-                                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
+                                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
                                 transition: 'background-color 0.5s ease',
                             }}
                         >
@@ -102,17 +113,21 @@ const TopNav = () => {
                             </li>
                         </ul>
                     </li>
+                    <li>
+                        <a
+                            href="https://swit2019.cafe24.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className={`${TopNavStyles.link} ${
+                                isHovered || isLinkHovered || isShopHovered ? TopNavStyles.hoveredLink : ''
+                            }`}
+                            onMouseEnter={handleShopMouseEnter}
+                            onMouseLeave={handleShopMouseLeave}
+                        >
+                            Shop
+                        </a>
+                    </li>
                 </ul>
-                <a
-                    href="https://swit2019.cafe24.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`${TopNavStyles.link} ${isHovered || isLinkHovered ? TopNavStyles.hoveredLink : ''}`}
-                    onMouseEnter={handleLinkMouseEnter}
-                    onMouseLeave={handleLinkMouseLeave}
-                >
-                    Shop
-                </a>
             </nav>
         </div>
     );
