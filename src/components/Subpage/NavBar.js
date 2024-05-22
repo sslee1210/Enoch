@@ -1,10 +1,10 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import NavBarStyles from './NavBar.module.css';
 
 const NavBar = () => {
     const activeStyle = {
-        color: 'rgb(8, 71, 8)',
+        color: 'blue',
         fontWeight: 'bold',
     };
 
@@ -18,68 +18,108 @@ const NavBar = () => {
     return (
         <div className={NavBarStyles.subnav}>
             <h1>
-                <a href="#">로고</a>
+                <Link to="/Enoch">로고</Link>
             </h1>
             <nav>
                 <ul className={NavBarStyles.menu}>
-                    <li className={NavBarStyles.mainMenuItem}>
-                        <NavLink to="/about" style={isActiveAbout ? activeStyle : {}}>
+                    <li>
+                        <NavLink
+                            to="/about"
+                            className={NavBarStyles.mainMenuItem}
+                            style={isActiveAbout ? activeStyle : {}}
+                        >
                             About
                         </NavLink>
                         <ol>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/about" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    to="/about"
+                                    className={NavBarStyles.subMenuItem}
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     회사소개
                                 </NavLink>
                             </li>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/history" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    to="/history"
+                                    className={NavBarStyles.subMenuItem}
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     HISTORY
                                 </NavLink>
                             </li>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/global" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    to="/global"
+                                    className={NavBarStyles.subMenuItem}
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     해외법인
                                 </NavLink>
                             </li>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/contact" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    to="/contact"
+                                    className={NavBarStyles.subMenuItem}
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     CONTACT US
                                 </NavLink>
                             </li>
                         </ol>
                     </li>
-                    <hr />
-                    <li className={NavBarStyles.mainMenuItem}>
-                        <NavLink to="/as" style={isActiveAs ? activeStyle : {}}>
+
+                    <li>
+                        <NavLink to="/as" className={NavBarStyles.mainMenuItem} style={isActiveAs ? activeStyle : {}}>
                             A/S
                         </NavLink>
                         <ol>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/as" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    className={NavBarStyles.subMenuItem}
+                                    to="/as"
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     A/S 접수
                                 </NavLink>
                             </li>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/qna" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    to="/qna"
+                                    className={NavBarStyles.subMenuItem}
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     자주 묻는 질문
                                 </NavLink>
                             </li>
                         </ol>
                     </li>
-                    <hr />
-                    <li className={NavBarStyles.mainMenuItem}>
-                        <NavLink to="/support" style={isActiveSupport ? activeStyle : {}}>
+
+                    <li>
+                        <NavLink
+                            to="/support"
+                            className={NavBarStyles.mainMenuItem}
+                            style={isActiveSupport ? activeStyle : {}}
+                        >
                             Support
                         </NavLink>
                         <ol>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/support" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    to="/support"
+                                    className={NavBarStyles.subMenuItem}
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     Download File
                                 </NavLink>
                             </li>
-                            <li className={NavBarStyles.subMenuItem}>
-                                <NavLink to="/guide" style={({ isActive }) => (isActive ? activeStyle : {})}>
+                            <li>
+                                <NavLink
+                                    to="/guide"
+                                    className={NavBarStyles.subMenuItem}
+                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                >
                                     사용 설명법
                                 </NavLink>
                             </li>

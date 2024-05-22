@@ -1,98 +1,42 @@
-* {
-    margin: 0;
-
-    padding: 0;
-}
 .About {
-    background-color: #a7a7d1;
     width: 100%;
-    margin-top: 13vh;
-    overflow-y: hidden;
-    display: flex;
+    height: 100vh;
+    flex-basis: 82%;
     justify-content: center;
     align-items: center;
 }
 
-.About .About1 {
-    display: flex;
-    background-color: #fff;
-    flex-direction: column;
-    justify-content: space-between;
-    /* width: calc(100% - 170px); */
-    /* max-width: 1479px; */
-    height: 100%;
-    margin-top: 20px;
-    margin-left: 215px;
+.About .about1 {
+    width: 60%;
+    height: 80%;
+    margin: auto;
+    margin-top: 3.5vw;
+    box-sizing: border-box;
+    padding-top: 40px;
 }
 
-.About .about_container1 {
-    width: 100%;
-    height: 80%;
-    position: relative;
-    padding: 20px 60px;
+.About .about1 h1 {
+    font-size: 2.2vw;
+    margin-bottom: 2vw;
+}
+.About .about1 .alltext {
     box-sizing: border-box;
 }
 
-.About .about_container1 h1 {
-    /* padding-left: 0.5vw;
-    padding-top: 0.5vw; */
-    padding-bottom: 60px;
+.About .about1 .alltext h2 {
     font-size: 1.5vw;
-}
-.About .about_container1 .alltext {
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 240px);
-    justify-content: center;
+    margin-bottom: 2vw;
 }
 
-.About .about_container1 .alltext .Subtit {
-    /* padding-left: 1vw;
-    padding-top: 1vw; */
-    font-size: 1.3vw;
-    padding-bottom: 50px;
+.About .about1 .alltext p {
+    font-size: 0.9vw;
+    line-height: 2;
+    padding-bottom: 2vw;
 }
 
-.About .about_container1 .alltext .Text {
-    /*padding-left: 1vw;  기존 2.8vw에서 줄임 
-    padding-right: 1vw; /* 기존 2.8vw에서 줄임 
-    padding-top: 1vw; 기존 2.2vw에서 줄임*/
-    font-size: 0.8vw;
-    line-height: 1.4;
-}
-
-.About .about_container1 .RightText {
-    text-align: right;
-    padding-top: 53px;
-    /*padding-top: 2vw; 기존 2.2vw에서 줄임 */
-    /*padding-left: 35vw; 기존 33vw에서 줄임 */
-    font-size: 0.8vw;
+.About .about1 .RightText {
+    font-size: 0.9vw;
+    float: right;
     font-weight: bold;
     line-height: 1.7;
-}
-
-.About .footer {
-    border-top: 1px solid #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-    height: 20%;
-    width: 100%;
-}
-.About .footer .footer_container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 1010px;
-    height: 100%;
-    align-items: center;
-    padding: 0 60px;
-}
-
-.About .footer p {
-    font-size: 0.7rem;
-    /*padding-top: 1.3vw;
-    padding-right: 2vw; 기존 2.5vw에서 줄임 
-    padding-left: 2vw; 기존 2.5vw에서 줄임 */
 }

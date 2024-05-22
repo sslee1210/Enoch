@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
 
 const Etc = () => {
+    const [opacity, setOpacity] = useState(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 84) {
+                setOpacity(1);
+            } else {
+                setOpacity(scrollPosition / 84);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
+    const MoveToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
                 <img src={process.env.PUBLIC_URL + '/images/Etc.png'} alt="Etc" />
-                <h2>A Flagship Product Born for the Industry</h2>
+                <h2>The Best Noise Canceling Earbuds</h2>
                 <p>
-                    X30 quadruped robot, a flagship product designed to meet core industry needs in multiple fields
-                    including inspection, investigation, security, surveying and mapping.
+                    The WF-1000XM5 features cutting-edge technology to deliver premium sound quality and the best
+                    noise-canceling performance on the market.
                 </p>
             </div>
             <div className={ProductStyles.menu}>
@@ -25,7 +46,7 @@ const Etc = () => {
                         <Link to="/living">Living Product</Link>
                     </li>
                     <li>
-                        <Link to="/appliance">생활가전</Link>
+                        <Link to="/appliance">Electronics</Link>
                     </li>
                     <li>
                         <Link to="/etc">Etc</Link>
@@ -36,44 +57,64 @@ const Etc = () => {
                 <div className={ProductStyles.sec1}>
                     <img src={process.env.PUBLIC_URL + '/images/Etc1.png'} alt="Etc1" />
                     <div className={ProductStyles.tex}>
-                        <h2>Unstoppable operation in Extreme weather</h2>
-                        <p>Operate from -20°C to 55°C; IP67 protection.</p>
-                    </div>
-                </div>
-                <div className={ProductStyles.sec2}>
-                    <div className={ProductStyles.tex}>
-                        <h2>Rapidlysteadily surmount obstacles</h2>
+                        <h2>Feel a more stable fitting earbud</h2>
                         <p>
-                            X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb industrial
-                            stairs, respond to sudden task requirements the first time, and quickly traverse into
-                            complex scenes.
+                            Noise Isolation Earbud Tips feature a unique polyurethane foam material which reduces noise
+                            in the high-frequency range. Soft and elastic, they maximize the contact area between the
+                            earbud tip and the ear canal, insulating your sound and reducing noise. It also improves
+                            adhesion to the ear canal for a more secure, stable fit.
                         </p>
                     </div>
-                    <img src={process.env.PUBLIC_URL + '/images/Etc2.png'} alt="Etc2" />
+                </div>
+                <div className={ProductStyles.background}>
+                    <div className={ProductStyles.sec2}>
+                        <div className={ProductStyles.tex}>
+                            <h2>Multi Noise Sensor technology</h2>
+                            <p>
+                                Three microphones on each earbud, including dual feedback mics, improve low-frequency
+                                cancellation performance. This is our biggest ever step forward in noise canceling,
+                                resulting in ambient sound captured even more accurately. So you can enjoy one of our
+                                purest sounds.
+                            </p>
+                        </div>
+                        <img src={process.env.PUBLIC_URL + '/images/Etc2.png'} alt="Etc2" />
+                    </div>
                 </div>
                 <div className={ProductStyles.sec3}>
                     <img src={process.env.PUBLIC_URL + '/images/Etc3.png'} alt="Etc3" />
                     <div className={ProductStyles.tex}>
-                        <h2>Rapidlysteadily surmount obstacles</h2>
+                        <h2>Unbeatable Noise Cancellation</h2>
                         <p>
-                            X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb industrial
-                            stairs, respond to sudden task requirements the first time, and quickly traverse into
-                            complex scenes.
+                            Exclusively developed by Sony, the Integrated Processor V2 unlocks the full potential of our
+                            HD Noise Cancelling Processor QN2e. This unique combination of technology controls the six
+                            microphones, across both ears, to deliver unprecedented noise-cancelling quality that can be
+                            adapted to provide the best performance for your environment.
                         </p>
                     </div>
                 </div>
-                <div className={ProductStyles.sec4}>
-                    <div className={ProductStyles.tex}>
-                        <h2>Rapidlysteadily surmount obstacles</h2>
-                        <p>
-                            X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb industrial
-                            stairs, respond to sudden task requirements the first time, and quickly traverse into
-                            complex scenes.
-                        </p>
+                <div className={ProductStyles.background}>
+                    <div className={ProductStyles.sec4}>
+                        <div className={ProductStyles.tex}>
+                            <h2>New high-quality sound and noise canceling driver unit</h2>
+                            <p>
+                                The specially designed driver unit Dynamic Driver X able to reproduce lower frequencies
+                                has been improved using a dome-edge separation structure that combines different
+                                materials, allowing for a more accurate generation of cancellation waves in the lower
+                                frequencies.
+                            </p>
+                        </div>
                     </div>
                     <img src={process.env.PUBLIC_URL + '/images/Etc4.png'} alt="Etc4" />
                 </div>
             </div>
+
+            <img
+                src={process.env.PUBLIC_URL + '/images/Up.png'}
+                onClick={MoveToTop}
+                className={ProductStyles.up}
+                style={{ opacity: opacity }} // 이 부분에서 스타일을 직접 적용하여 opacity를 조절합니다.
+                alt="Move to Top"
+            />
         </div>
     );
 };

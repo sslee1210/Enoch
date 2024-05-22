@@ -1,58 +1,63 @@
 .subnav {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100vh;
-    max-width: 250px;
-    display: flex;
-    flex-direction: column;
     background-color: #fff;
-    z-index: 100;
-    justify-content: space-around;
+    flex-basis: 18%;
 }
+
 .subnav h1 {
     display: block;
     text-align: center;
-    border: 1px solid red;
+    margin-top: 3vw;
 }
+
+.subnav h1 a {
+    font-size: 2vw;
+}
+
 .subnav nav {
-    background-color: aquamarine;
-    padding: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 .subnav nav .menu {
-    border: 1px solid;
-    margin-top: 2vh;
-    font-size: 1.2rem; /* 기본 메뉴 항목의 폰트 크기를 설정합니다. */
-    padding: 0;
+    margin-top: 6vh;
+    font-size: 1.1rem;
+    padding-bottom: 50px;
+    border-right: 1px solid #ddd;
 }
 
-.subnav nav .menu li a {
+.subnav nav .menu li {
+    list-style: none;
+}
+.subnav nav .menu li .mainMenuItem {
+    text-align: center;
     color: #000;
-    font-size: 0.9vw; /* 링크의 폰트 크기를 설정합니다. */
+    font-size: 1.8vw;
     text-decoration: none; /* 텍스트 밑줄을 제거합니다. */
     display: block; /* 링크가 블록 요소처럼 동작하도록 설정합니다. */
-    padding: 10px; /* 링크 내부에 패딩을 추가하여 클릭 영역을 확장합니다. */
-}
-
-.subnav nav .menu .mainMenuItem {
     list-style: none;
-    padding: 3vh 0px;
+    margin-bottom: 1.8vw;
 }
 
-/* 메인 메뉴 항목의 스타일을 추가합니다. */
-.subnav nav .menu .mainMenuItem a {
-    /* font-size: 30px; 메인 메뉴 항목의 폰트 크기를 설정합니다. */
-    font-size: 1.8vw;
-}
-
-.subnav nav .menu .subMenuItem {
+.subnav nav .menu li ol li {
     list-style: disc;
-    margin-left: 3.5vw;
+    margin-left: 7vw;
+    margin-bottom: 1.5vw;
+    border-right: none;
 }
 
-/* 서브 메뉴 항목의 스타일을 추가합니다. */
-.subnav nav .menu .subMenuItem a {
-    font-size: 0.9vw; /* 서브 메뉴 항목의 폰트 크기를 설정합니다. */
+.subnav nav .menu li ol li .subMenuItem {
+    text-decoration: none;
+    color: #000;
+    font-size: 0.9vw;
+}
+
+.subnav nav .menu li ol:last-child {
+    border-bottom: 1px solid #ddd;
+    width: 80%;
+    margin: 1.2vw auto;
+}
+
+.subnav nav .menu li:last-child ol {
+    border-bottom: none;
 }

@@ -3,12 +3,6 @@ html {
     font-weight: bold;
 }
 
-div {
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
 .borderTop {
     border-top: 1px solid #000;
     margin: 10px 0;

@@ -4,16 +4,38 @@ import TopNavStyles from './TopNav.module.css';
 
 const TopNav = () => {
     const [isHovered, setIsHovered] = useState(false);
+    const [isLinkHovered, setIsLinkHovered] = useState(false);
+
+    const handleMouseEnter = () => {
+        setIsHovered(true);
+    };
+
+    const handleMouseLeave = () => {
+        setIsHovered(false);
+    };
+
+    const handleLinkMouseEnter = () => {
+        setIsLinkHovered(true);
+    };
+
+    const handleLinkMouseLeave = () => {
+        setIsLinkHovered(false);
+    };
 
     return (
         <div
             className={TopNavStyles.nav}
             style={{
-                backgroundColor: isHovered ? '#000' : 'white',
+                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
                 transition: 'background-color 0.5s ease',
             }}
         >
-            <Link to="/Enoch" className={`${TopNavStyles.logo} ${isHovered ? TopNavStyles.hoveredLink : ''}`}>
+            <Link
+                to="/Enoch"
+                className={`${TopNavStyles.logo} ${isHovered || isLinkHovered ? TopNavStyles.hoveredLink : ''}`}
+                onMouseEnter={handleLinkMouseEnter}
+                onMouseLeave={handleLinkMouseLeave}
+            >
                 로고
             </Link>
             <nav>
@@ -22,11 +44,16 @@ const TopNav = () => {
                     <span className={TopNavStyles.bar}></span>
                     <span className={TopNavStyles.bar}></span>
                 </button>
-                <ul onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                <ul onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <li>
                         <Link to="/about">About</Link>
-                        {/* 조건부 스타일링을 적용하여, isHovered 상태에 따라 클래스를 동적으로 변경합니다. */}
-                        <ul className={isHovered ? TopNavStyles.subMenu : ''}>
+                        <ul
+                            className={isHovered ? TopNavStyles.subMenu : ''}
+                            style={{
+                                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
+                                transition: 'background-color 0.5s ease',
+                            }}
+                        >
                             <li>
                                 <Link to="/about">회사 소개</Link>
                             </li>
@@ -43,7 +70,13 @@ const TopNav = () => {
                     </li>
                     <li>
                         <Link to="/as">A/S</Link>
-                        <ul className={isHovered ? TopNavStyles.subMenu : ''}>
+                        <ul
+                            className={isHovered ? TopNavStyles.subMenu : ''}
+                            style={{
+                                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
+                                transition: 'background-color 0.5s ease',
+                            }}
+                        >
                             <li>
                                 <Link to="/as">A/S 접수</Link>
                             </li>
@@ -54,7 +87,13 @@ const TopNav = () => {
                     </li>
                     <li>
                         <Link to="/support">Support</Link>
-                        <ul className={isHovered ? TopNavStyles.subMenu : ''}>
+                        <ul
+                            className={isHovered ? TopNavStyles.subMenu : ''}
+                            style={{
+                                backgroundColor: isHovered || isLinkHovered ? '#263238' : 'white',
+                                transition: 'background-color 0.5s ease',
+                            }}
+                        >
                             <li>
                                 <Link to="/support">Download File</Link>
                             </li>
@@ -68,7 +107,9 @@ const TopNav = () => {
                     href="https://swit2019.cafe24.com/"
                     target="_blank"
                     rel="noreferrer"
-                    className={`${TopNavStyles.link} ${isHovered ? TopNavStyles.hoveredLink : ''}`}
+                    className={`${TopNavStyles.link} ${isHovered || isLinkHovered ? TopNavStyles.hoveredLink : ''}`}
+                    onMouseEnter={handleLinkMouseEnter}
+                    onMouseLeave={handleLinkMouseLeave}
                 >
                     Shop
                 </a>
