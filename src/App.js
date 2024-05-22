@@ -19,10 +19,10 @@ import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
 
 const TopNavLayout = ({ children }) => (
-    <>
+    <div style={{ height: '100vh' }}>
         <TopNav />
         {children}
-    </>
+    </div>
 );
 
 const NavBarLayout = ({ children }) => (

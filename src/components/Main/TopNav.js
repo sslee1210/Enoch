@@ -50,11 +50,6 @@ const TopNav = () => {
                 로고
             </Link>
             <nav>
-                <button className={TopNavStyles.hamburger}>
-                    <span className={TopNavStyles.bar}></span>
-                    <span className={TopNavStyles.bar}></span>
-                    <span className={TopNavStyles.bar}></span>
-                </button>
                 <ul onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <li>
                         <Link to="/about">About</Link>
@@ -113,20 +108,18 @@ const TopNav = () => {
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <a
-                            href="https://swit2019.cafe24.com/"
-                            target="_blank"
-                            rel="noreferrer"
-                            className={`${TopNavStyles.link} ${
-                                isHovered || isLinkHovered || isShopHovered ? TopNavStyles.hoveredLink : ''
-                            }`}
-                            onMouseEnter={handleShopMouseEnter}
-                            onMouseLeave={handleShopMouseLeave}
-                        >
-                            Shop
-                        </a>
-                    </li>
+                    <a
+                        href="https://swit2019.cafe24.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                        className={`${TopNavStyles.link} ${
+                            isHovered || isLinkHovered || isShopHovered ? TopNavStyles.hoveredLink : ''
+                        }`}
+                        onMouseEnter={handleShopMouseEnter}
+                        onMouseLeave={handleShopMouseLeave}
+                    >
+                        Shop
+                    </a>
                 </ul>
             </nav>
         </div>

@@ -1,8 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Nanum Gothic', sans-serif;
-    font-weight: bold;
 }
 
 a {
@@ -14,10 +12,13 @@ body {
         'Droid Sans', 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
     margin: 0;
     padding: 0;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
+    height: 100%;
+    overflow: hidden;
 }
 
 code {
