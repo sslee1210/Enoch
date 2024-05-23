@@ -1,13 +1,14 @@
 .About {
+    margin-bottom: 100px;
+    height: calc(100vh - 100px);
     width: 100%;
-    height: 100vh;
     flex-basis: 82%;
     justify-content: center;
     align-items: center;
 }
 
 .About .about1 {
-    width: 60%;
+    width: 85%;
     height: 80%;
     margin: auto;
     margin-top: 3.5vw;
@@ -16,7 +17,7 @@
 }
 
 .About .about1 h1 {
-    font-size: 2.2vw;
+    font-size: 2vw;
     margin-bottom: 2vw;
 }
 .About .about1 .alltext {
@@ -29,13 +30,13 @@
 }
 
 .About .about1 .alltext p {
-    font-size: 0.9vw;
+    font-size: 0.95vw;
     line-height: 2;
     padding-bottom: 2vw;
 }
 
 .About .about1 .RightText {
-    font-size: 0.9vw;
+    font-size: 0.95vw;
     float: right;
     font-weight: bold;
     line-height: 1.7;

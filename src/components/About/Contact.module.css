@@ -1,31 +1,36 @@
 .Contact {
-    margin-top: 4vh;
-    background-color: lightblue;
-    margin-left: 19vw;
-    height: 87vh;
+    margin-bottom: 100px;
+    height: calc(100vh - 100px);
+    width: 100%;
+    flex-basis: 82%;
 }
 
-.Contact .ContactText {
-    border: 1px solid blue;
+.Contact .Contact1 {
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    margin-top: 3.5vw;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.Contact .Contact1 h1 {
+    font-size: 2vw;
+    margin-bottom: 100px;
+}
+
+.Contact .Contact1 .ContactText {
     display: inline-block;
+    position: relative;
+    top: 8vw;
 }
 
-.Contact .ContactText .ContactTitle {
-    padding: 0 0 2vw 0;
+.Contact .Contact1 .ContactText h3 {
+    font-size: 1.3vw;
+    margin-bottom: 1vw;
 }
 
-.Contact .Map {
-}
-
-.Contact .footer {
-    border-top: 1px solid #000;
-    display: flex;
-    justify-content: space-between;
-}
-
-.Contact .footer p {
-    padding-top: 1.3vw;
-    padding-bottom: 1.2vw;
-    padding-right: 2.5vw;
-    padding-left: 2.5vw;
+.Contact .Contact1 .ContactText p {
+    font-size: 1.1vw;
+    line-height: 1.2;
 }

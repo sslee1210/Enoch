@@ -1,0 +1,6 @@
+.news {
+    margin-bottom: 100px;
+    height: calc(100vh - 100px);
+    width: 100%;
+    flex-basis: 82%;
+}

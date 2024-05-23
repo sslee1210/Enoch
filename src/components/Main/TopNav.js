@@ -75,7 +75,7 @@ const TopNav = () => {
                         </ul>
                     </li>
                     <li>
-                        <Link to="/as">A/S</Link>
+                        <Link to="/community">Community</Link>
                         <ul
                             className={isHovered ? TopNavStyles.subMenu : ''}
                             style={{
@@ -84,10 +84,10 @@ const TopNav = () => {
                             }}
                         >
                             <li>
-                                <Link to="/as">A/S 접수</Link>
+                                <Link to="/community">소식</Link>
                             </li>
                             <li>
-                                <Link to="/qna">자주 묻는 질문</Link>
+                                <Link to="/Community">자주 묻는 질문</Link>
                             </li>
                         </ul>
                     </li>

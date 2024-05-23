@@ -28,11 +28,8 @@ const Etc = () => {
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
                 <img src={process.env.PUBLIC_URL + '/images/Etc.png'} alt="Etc" />
-                <h2>The Best Noise Canceling Earbuds</h2>
-                <p>
-                    The WF-1000XM5 features cutting-edge technology to deliver premium sound quality and the best
-                    noise-canceling performance on the market.
-                </p>
+                <h2>ENO-100</h2>
+                <p>고감도 완전 무선 스테레오 음성 증폭 이어폰 TWS 맑은소리</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -55,56 +52,44 @@ const Etc = () => {
             </div>
             <div className={ProductStyles.sec}>
                 <div className={ProductStyles.sec1}>
-                    <img src={process.env.PUBLIC_URL + '/images/Etc1.png'} alt="Etc1" />
+                    <img src={process.env.PUBLIC_URL + '/images/Etc1.jpg'} alt="Etc1" />
                     <div className={ProductStyles.tex}>
-                        <h2>Feel a more stable fitting earbud</h2>
+                        <h2>맑고 선명한 소리 추구</h2>
                         <p>
-                            Noise Isolation Earbud Tips feature a unique polyurethane foam material which reduces noise
-                            in the high-frequency range. Soft and elastic, they maximize the contact area between the
-                            earbud tip and the ear canal, insulating your sound and reducing noise. It also improves
-                            adhesion to the ear canal for a more secure, stable fit.
+                            음성 증폭 출력 기능 4단계 구현. 고음의 주파수 대역 최적화 설계로 또렷하고 선명하게 들립니다.
                         </p>
                     </div>
                 </div>
                 <div className={ProductStyles.background}>
                     <div className={ProductStyles.sec2}>
                         <div className={ProductStyles.tex}>
-                            <h2>Multi Noise Sensor technology</h2>
-                            <p>
-                                Three microphones on each earbud, including dual feedback mics, improve low-frequency
-                                cancellation performance. This is our biggest ever step forward in noise canceling,
-                                resulting in ambient sound captured even more accurately. So you can enjoy one of our
-                                purest sounds.
-                            </p>
+                            <h2>코드프리 멀티기능 최적화</h2>
+                            <p>고감도 음성증폭기기로 사용하지만, 무선 이어폰으로도 사용할 수 있습니다.</p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Etc2.png'} alt="Etc2" />
+                        <img src={process.env.PUBLIC_URL + '/images/Etc2.jpg'} alt="Etc2" />
                     </div>
                 </div>
                 <div className={ProductStyles.sec3}>
                     <img src={process.env.PUBLIC_URL + '/images/Etc3.png'} alt="Etc3" />
                     <div className={ProductStyles.tex}>
-                        <h2>Unbeatable Noise Cancellation</h2>
+                        <h2>빠르고 안정적인 Bluetooth 5.2 버전 탑재</h2>
                         <p>
-                            Exclusively developed by Sony, the Integrated Processor V2 unlocks the full potential of our
-                            HD Noise Cancelling Processor QN2e. This unique combination of technology controls the six
-                            microphones, across both ears, to deliver unprecedented noise-cancelling quality that can be
-                            adapted to provide the best performance for your environment.
+                            무선기기와 빠른 연결 속도, 끊기지 않는 통화 품질, 안정적인 사운드의 무선 환경을
+                            구현했습니다.
                         </p>
                     </div>
                 </div>
                 <div className={ProductStyles.background}>
                     <div className={ProductStyles.sec4}>
                         <div className={ProductStyles.tex}>
-                            <h2>New high-quality sound and noise canceling driver unit</h2>
+                            <h2>고감도 ANC MIC 임베디드 안테나 탑재</h2>
                             <p>
-                                The specially designed driver unit Dynamic Driver X able to reproduce lower frequencies
-                                has been improved using a dome-edge separation structure that combines different
-                                materials, allowing for a more accurate generation of cancellation waves in the lower
-                                frequencies.
+                                하이퀄리티(High Quality) 퍼포먼스 구현으로 끊김 없는 무선 환경에서 선명한 소리를 들을 수
+                                있습니다.
                             </p>
                         </div>
+                        <img src={process.env.PUBLIC_URL + '/images/Etc4.jpg'} alt="Etc4" />
                     </div>
-                    <img src={process.env.PUBLIC_URL + '/images/Etc4.png'} alt="Etc4" />
                 </div>
             </div>
 

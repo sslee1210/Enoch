@@ -32,7 +32,8 @@
 .subnav nav .menu li .mainMenuItem {
     text-align: center;
     color: #000;
-    font-size: 1.8vw;
+    font-size: 1.3vw;
+
     text-decoration: none; /* 텍스트 밑줄을 제거합니다. */
     display: block; /* 링크가 블록 요소처럼 동작하도록 설정합니다. */
     list-style: none;
@@ -41,7 +42,7 @@
 
 .subnav nav .menu li ol li {
     list-style: disc;
-    margin-left: 7vw;
+    margin-left: 7.5vw;
     margin-bottom: 1.5vw;
     border-right: none;
 }
@@ -49,7 +50,7 @@
 .subnav nav .menu li ol li .subMenuItem {
     text-decoration: none;
     color: #000;
-    font-size: 0.9vw;
+    font-size: 0.8vw;
 }
 
 .subnav nav .menu li ol:last-child {

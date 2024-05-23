@@ -3,7 +3,7 @@
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    height: 80px;
 }
 
 .nav nav {
@@ -30,10 +30,10 @@
 .nav nav ul li ul {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0;
+    top: 90%;
+    left: 0px;
     right: auto;
-    width: 100%;
+    width: 120%;
     padding: 10px 0;
     background-color: rgba(255, 255, 255, 0.8); /* 불투명한 배경색 추가 */
 }
@@ -82,7 +82,7 @@
 }
 
 .nav nav .hoveredLink:hover {
-    color: #fff;
+    color: #f8881f;
 }
 
 .nav nav ul li a {

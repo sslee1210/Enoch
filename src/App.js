@@ -7,8 +7,8 @@ import About from './components/About/About';
 import History from './components/About/History';
 import Global from './components/About/Global';
 import Contact from './components/About/Contact';
-import As from './components/As/As';
-import Qna from './components/As/Qna';
+import News from './components/Community/News';
+import Qna from './components/Community/Qna';
 import Support from './components/Support/Support';
 import Guide from './components/Support/Guide';
 import Robot from './components/Product/Robot';
@@ -26,7 +26,7 @@ const TopNavLayout = ({ children }) => (
 );
 
 const NavBarLayout = ({ children }) => (
-    <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+    <div style={{ display: 'flex', height: '100vh' }}>
         <NavBar />
         {children}
     </div>
@@ -82,10 +82,10 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/as"
+                    path="/community"
                     element={
                         <NavBarLayout>
-                            <As />
+                            <News />
                             <Footer />
                         </NavBarLayout>
                     }
