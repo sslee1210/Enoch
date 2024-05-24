@@ -21,23 +21,33 @@
     margin-bottom: 2vw;
 }
 .About .about1 .alltext {
+    display: inline-block;
     box-sizing: border-box;
+
+    margin: auto;
 }
 
 .About .about1 .alltext h2 {
     font-size: 1.5vw;
+    margin-left: 5vw;
     margin-bottom: 2vw;
 }
 
 .About .about1 .alltext p {
     font-size: 0.95vw;
-    line-height: 2;
+    line-height: 2.1;
     padding-bottom: 2vw;
+    margin-left: 5vw;
+    width: 70%;
+    text-align: center;
+    white-space: wrap;
 }
 
-.About .about1 .RightText {
+.About .about1 .alltext .RightText {
     font-size: 0.95vw;
-    float: right;
     font-weight: bold;
-    line-height: 1.7;
+    margin-left: 44vw;
+    width: 10vw;
+    text-align: left;
+    line-height: 1.5;
 }

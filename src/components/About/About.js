@@ -25,13 +25,8 @@ const About = () => {
                         청년층의 기회 상실 등 복잡하고 어려운 사회 변화의 여건 속에서도 이노치코리아가 소비자에게
                         신뢰받으며 성장하는 기업이 될 수 있도록 많은 격려 부탁드립니다.
                     </p>
+                    <p className={AboutStyles.RightText}>주식회사 이노치코리아 대표이사 정경영</p>
                 </div>
-
-                <p className={AboutStyles.RightText}>
-                    주식회사 이노치코리아
-                    <br />
-                    대표이사 정경영
-                </p>
             </div>
         </div>
     );
