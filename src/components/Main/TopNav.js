@@ -28,10 +28,10 @@ const TopNav = () => {
                         </ul>
                     </li>
                     <li>
-                        <Link to="/as">A/S</Link>
+                        <Link to="/community">community</Link>
                         <ul className={TopNavStyles.subMenu}>
                             <li>
-                                <Link to="/as">A/S 접수</Link>
+                                <Link to="community/news">소식</Link>
                             </li>
                             <li>
                                 <Link to="/qna">자주 묻는 질문</Link>

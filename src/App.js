@@ -23,13 +23,17 @@ const TopNavLayout = ({ children }) => (
     <div style={{ height: '100vh' }}>
         <TopNav />
         {children}
+        <Footer />
     </div>
 );
 
 const NavBarLayout = ({ children }) => (
     <div style={{ display: 'flex', height: '100vh' }}>
         <NavBar />
-        {children}
+        <div style={{ flex: 1 }}>
+            {children}
+            <Footer />
+        </div>
     </div>
 );
 
@@ -42,7 +46,6 @@ const App = () => {
                     element={
                         <TopNavLayout>
                             <Main />
-                            <Footer />
                         </TopNavLayout>
                     }
                 />
@@ -51,7 +54,6 @@ const App = () => {
                     element={
                         <NavBarLayout>
                             <About />
-                            <Footer />
                         </NavBarLayout>
                     }
                 />
@@ -60,7 +62,6 @@ const App = () => {
                     element={
                         <NavBarLayout>
                             <History />
-                            <Footer />
                         </NavBarLayout>
                     }
                 />
@@ -69,7 +70,6 @@ const App = () => {
                     element={
                         <NavBarLayout>
                             <Global />
-                            <Footer />
                         </NavBarLayout>
                     }
                 />
@@ -78,28 +78,18 @@ const App = () => {
                     element={
                         <NavBarLayout>
                             <Contact />
-                            <Footer />
                         </NavBarLayout>
                     }
                 />
                 <Route
-                    path="/community/*"
+                    path="/community/news"
                     element={
                         <NavBarLayout>
                             <Routes>
-                                <Route path="news" element={<NewsDetail />} />
+                                <Route path="/community/news" element={<News />} />
                                 <Route path="qna" element={<Qna />} />
-                                <Route path="news/:id" element={<News />} />
+                                <Route path="/community/news/:id" element={<NewsDetail />} />
                             </Routes>
-                        </NavBarLayout>
-                    }
-                />
-                <Route
-                    path="/qna"
-                    element={
-                        <NavBarLayout>
-                            <Qna />
-                            <Footer />
                         </NavBarLayout>
                     }
                 />
@@ -108,7 +98,6 @@ const App = () => {
                     element={
                         <NavBarLayout>
                             <Guide />
-                            <Footer />
                         </NavBarLayout>
                     }
                 />
@@ -117,7 +106,6 @@ const App = () => {
                     element={
                         <NavBarLayout>
                             <Support />
-                            <Footer />
                         </NavBarLayout>
                     }
                 />
