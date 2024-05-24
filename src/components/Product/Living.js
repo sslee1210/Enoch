@@ -55,15 +55,33 @@ const Living = () => {
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <div className={ProductStyles.sec1}>
-                    <img src={process.env.PUBLIC_URL + '/images/living1.png'} alt="Robot1" />
-                    <div className={ProductStyles.tex}>
-                        <h2>Unstoppable operation in Extreme weather</h2>
-                        <p>Operate from -20°C to 55°C; IP67 protection.</p>
+                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                    <div className={ProductStyles.sec1}>
+                        <img src={process.env.PUBLIC_URL + '/images/living1.png'} alt="Robot1" />
+                        <div className={ProductStyles.tex}>
+                            <h2>Unstoppable operation in Extreme weather</h2>
+                            <p>Operate from -20°C to 55°C; IP67 protection.</p>
+                        </div>
                     </div>
-                </div>
+                </a>
                 <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec2}>
+                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                        <div className={ProductStyles.sec2}>
+                            <div className={ProductStyles.tex}>
+                                <h2>Rapidlysteadily surmount obstacles</h2>
+                                <p>
+                                    X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb
+                                    industrial stairs, respond to sudden task requirements the first time, and quickly
+                                    traverse into complex scenes.
+                                </p>
+                            </div>
+                            <img src={process.env.PUBLIC_URL + '/images/living2.png'} alt="Robot2" />
+                        </div>
+                    </a>
+                </div>
+                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                    <div className={ProductStyles.sec3}>
+                        <img src={process.env.PUBLIC_URL + '/images/living3.png'} alt="Robot3" />
                         <div className={ProductStyles.tex}>
                             <h2>Rapidlysteadily surmount obstacles</h2>
                             <p>
@@ -72,32 +90,22 @@ const Living = () => {
                                 complex scenes.
                             </p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + '/images/living2.png'} alt="Robot2" />
                     </div>
-                </div>
-                <div className={ProductStyles.sec3}>
-                    <img src={process.env.PUBLIC_URL + '/images/living3.png'} alt="Robot3" />
-                    <div className={ProductStyles.tex}>
-                        <h2>Rapidlysteadily surmount obstacles</h2>
-                        <p>
-                            X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb industrial
-                            stairs, respond to sudden task requirements the first time, and quickly traverse into
-                            complex scenes.
-                        </p>
-                    </div>
-                </div>
+                </a>
                 <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec4}>
-                        <div className={ProductStyles.tex}>
-                            <h2>Rapidlysteadily surmount obstacles</h2>
-                            <p>
-                                X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb industrial
-                                stairs, respond to sudden task requirements the first time, and quickly traverse into
-                                complex scenes.
-                            </p>
+                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                        <div className={ProductStyles.sec4}>
+                            <div className={ProductStyles.tex}>
+                                <h2>Rapidlysteadily surmount obstacles</h2>
+                                <p>
+                                    X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb
+                                    industrial stairs, respond to sudden task requirements the first time, and quickly
+                                    traverse into complex scenes.
+                                </p>
+                            </div>
+                            <img src={process.env.PUBLIC_URL + '/images/living4.png'} alt="Robot4" />
                         </div>
-                        <img src={process.env.PUBLIC_URL + '/images/living4.png'} alt="Robot4" />
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

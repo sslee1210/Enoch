@@ -38,10 +38,11 @@
     align-items: center;
     flex: 1;
     height: 100%;
+    padding-top: 50px;
 }
 .main .product > h1 {
     font-size: 2vw;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
 }
 
 /*사진들 묶은 div컨테이너*/

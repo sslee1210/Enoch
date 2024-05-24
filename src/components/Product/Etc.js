@@ -51,45 +51,54 @@ const Etc = () => {
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <div className={ProductStyles.sec1}>
-                    <img src={process.env.PUBLIC_URL + '/images/Etc1.jpg'} alt="Etc1" />
-                    <div className={ProductStyles.tex}>
-                        <h2>맑고 선명한 소리 추구</h2>
-                        <p>
-                            음성 증폭 출력 기능 4단계 구현. 고음의 주파수 대역 최적화 설계로 또렷하고 선명하게 들립니다.
-                        </p>
-                    </div>
-                </div>
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec2}>
+                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                    <div className={ProductStyles.sec1}>
+                        <img src={process.env.PUBLIC_URL + '/images/Etc1.jpg'} alt="Etc1" />
                         <div className={ProductStyles.tex}>
-                            <h2>코드프리 멀티기능 최적화</h2>
-                            <p>고감도 음성증폭기기로 사용하지만, 무선 이어폰으로도 사용할 수 있습니다.</p>
-                        </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Etc2.jpg'} alt="Etc2" />
-                    </div>
-                </div>
-                <div className={ProductStyles.sec3}>
-                    <img src={process.env.PUBLIC_URL + '/images/Etc3.png'} alt="Etc3" />
-                    <div className={ProductStyles.tex}>
-                        <h2>빠르고 안정적인 Bluetooth 5.2 버전 탑재</h2>
-                        <p>
-                            무선기기와 빠른 연결 속도, 끊기지 않는 통화 품질, 안정적인 사운드의 무선 환경을
-                            구현했습니다.
-                        </p>
-                    </div>
-                </div>
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec4}>
-                        <div className={ProductStyles.tex}>
-                            <h2>고감도 ANC MIC 임베디드 안테나 탑재</h2>
+                            <h2>맑고 선명한 소리 추구</h2>
                             <p>
-                                하이퀄리티(High Quality) 퍼포먼스 구현으로 끊김 없는 무선 환경에서 선명한 소리를 들을 수
-                                있습니다.
+                                음성 증폭 출력 기능 4단계 구현. 고음의 주파수 대역 최적화 설계로 또렷하고 선명하게
+                                들립니다.
                             </p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Etc4.jpg'} alt="Etc4" />
                     </div>
+                </a>
+                <div className={ProductStyles.background}>
+                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                        <div className={ProductStyles.sec2}>
+                            <div className={ProductStyles.tex}>
+                                <h2>코드프리 멀티기능 최적화</h2>
+                                <p>고감도 음성증폭기기로 사용하지만, 무선 이어폰으로도 사용할 수 있습니다.</p>
+                            </div>
+                            <img src={process.env.PUBLIC_URL + '/images/Etc2.jpg'} alt="Etc2" />
+                        </div>
+                    </a>
+                </div>
+                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                    <div className={ProductStyles.sec3}>
+                        <img src={process.env.PUBLIC_URL + '/images/Etc3.png'} alt="Etc3" />
+                        <div className={ProductStyles.tex}>
+                            <h2>빠르고 안정적인 Bluetooth 5.2 버전 탑재</h2>
+                            <p>
+                                무선기기와 빠른 연결 속도, 끊기지 않는 통화 품질, 안정적인 사운드의 무선 환경을
+                                구현했습니다.
+                            </p>
+                        </div>
+                    </div>
+                </a>
+                <div className={ProductStyles.background}>
+                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                        <div className={ProductStyles.sec4}>
+                            <div className={ProductStyles.tex}>
+                                <h2>고감도 ANC MIC 임베디드 안테나 탑재</h2>
+                                <p>
+                                    하이퀄리티(High Quality) 퍼포먼스 구현으로 끊김 없는 무선 환경에서 선명한 소리를
+                                    들을 수 있습니다.
+                                </p>
+                            </div>
+                            <img src={process.env.PUBLIC_URL + '/images/Etc4.jpg'} alt="Etc4" />
+                        </div>
+                    </a>
                 </div>
             </div>
 

@@ -3,6 +3,10 @@
     height: calc(100vh - 100px);
 }
 
+.product a {
+    color: #000;
+}
+
 .product .big {
     display: flex;
     justify-content: center;
