@@ -233,4 +233,4 @@ const NavBar = () => {
 ## [**🔗 작업일지**](https://neighborly-goal-bcc.notion.site/c66bbd1cac0c49a9bc6394b6aca945a7?v=400add0062334f1099509a05901452af&pvs=4)
 
 # 프로젝트 바로가기
-## [**🔗 이노치코리아 홈페이지**](https://sslee1210.github.io/Enoch/) (추후 다른 도메인 연결 예정)
+## [**🔗 이노치코리아 홈페이지**](https://enochkorea.netlify.app/) (추후 다른 도메인 연결 예정)
