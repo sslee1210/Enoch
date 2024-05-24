@@ -3,4 +3,28 @@
     height: calc(100vh - 100px);
     width: 100%;
     flex-basis: 82%;
+    justify-content: center;
+    align-items: center;
+}
+
+.news .news1 {
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    margin-top: 3.5vw;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.news .news1 h1 {
+    font-size: 2vw;
+    margin-bottom: 2vw;
+}
+
+.news .news1 ul {
+    list-style: none;
+}
+
+.news .news1 ul li {
+    padding: 10px;
 }

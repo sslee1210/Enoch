@@ -11,20 +11,20 @@ const NavBar = () => {
     const location = useLocation();
 
     // 상위 메뉴 항목이 활성화되어야 하는지 확인
-    const isActiveAbout = ['/about', '/history', '/global', '/contact'].includes(location.pathname);
-    const isActiveAs = ['/community/news/*', '/qna'].includes(location.pathname);
-    const isActiveSupport = ['/support', '/guide'].includes(location.pathname);
+    const isActiveAbout = ['/about', '/about/history', '/about/global', '/about/contact'].includes(location.pathname);
+    const isActiveAs = ['/community/news', '/community/news/*', '/community/qna'].includes(location.pathname);
+    const isActiveSupport = ['/support', '/support/guide'].includes(location.pathname);
 
     return (
         <div className={NavBarStyles.subnav}>
             <h1>
-                <Link to="/Enoch">로고</Link>
+                <Link to="/">로고</Link>
             </h1>
             <nav>
                 <ul className={NavBarStyles.menu}>
                     <li>
                         <NavLink
-                            to="/about"
+                            to="/about/intro"
                             className={NavBarStyles.mainMenuItem}
                             style={isActiveAbout ? activeStyle : {}}
                         >
@@ -33,7 +33,7 @@ const NavBar = () => {
                         <ol>
                             <li>
                                 <NavLink
-                                    to="/about"
+                                    to="/about/intro"
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
@@ -42,7 +42,7 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/history"
+                                    to="/about/history"
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
@@ -51,7 +51,7 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/global"
+                                    to="/about/global"
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
@@ -60,7 +60,7 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/contact"
+                                    to="/about/contact"
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
@@ -90,7 +90,7 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/qna"
+                                    to="/community/qna"
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
@@ -120,7 +120,7 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <NavLink
-                                    to="/guide"
+                                    to="/support/guide"
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >

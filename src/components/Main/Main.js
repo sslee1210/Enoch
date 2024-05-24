@@ -37,23 +37,23 @@ const Main = () => {
             <div className={MainStyles.product}>
                 <h1>Product</h1>
                 <div className={MainStyles.product_container}>
-                    <Link to="/robot">
+                    <Link to="/product/robot">
                         <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="로봇" />
                     </Link>
 
-                    <Link to="/PC">
+                    <Link to="/product/PC">
                         <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="컴퓨터" />
                     </Link>
 
-                    <Link to="/Living">
+                    <Link to="/product/Living">
                         <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="리빙" />
                     </Link>
 
-                    <Link to="/appliance">
+                    <Link to="/product/appliance">
                         <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="생활가전" />
                     </Link>
 
-                    <Link to="/Etc">
+                    <Link to="/product/Etc">
                         <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="기타" />
                     </Link>
                 </div>

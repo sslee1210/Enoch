@@ -42,7 +42,7 @@ const App = () => {
         <>
             <Routes>
                 <Route
-                    path="/Enoch"
+                    path="/"
                     element={
                         <TopNavLayout>
                             <Main />
@@ -50,102 +50,52 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/about"
-                    element={
-                        <NavBarLayout>
-                            <About />
-                        </NavBarLayout>
-                    }
-                />
-                <Route
-                    path="/history"
-                    element={
-                        <NavBarLayout>
-                            <History />
-                        </NavBarLayout>
-                    }
-                />
-                <Route
-                    path="/global"
-                    element={
-                        <NavBarLayout>
-                            <Global />
-                        </NavBarLayout>
-                    }
-                />
-                <Route
-                    path="/contact"
-                    element={
-                        <NavBarLayout>
-                            <Contact />
-                        </NavBarLayout>
-                    }
-                />
-                <Route
-                    path="/community/news"
+                    path="/about/*"
                     element={
                         <NavBarLayout>
                             <Routes>
-                                <Route path="/community/news" element={<News />} />
-                                <Route path="qna" element={<Qna />} />
-                                <Route path="/community/news/:id" element={<NewsDetail />} />
+                                <Route path="/intro" element={<About />} />
+                                <Route path="/history" element={<History />} />
+                                <Route path="/global" element={<Global />} />
+                                <Route path="/contact" element={<Contact />} />
                             </Routes>
                         </NavBarLayout>
                     }
                 />
                 <Route
-                    path="/guide"
+                    path="/community/*"
                     element={
                         <NavBarLayout>
-                            <Guide />
+                            <Routes>
+                                <Route path="news" element={<News />} />
+                                <Route path="news/:id" element={<NewsDetail />} />
+                                <Route path="qna" element={<Qna />} />
+                            </Routes>
                         </NavBarLayout>
                     }
                 />
                 <Route
-                    path="/support"
+                    path="/support/*"
                     element={
                         <NavBarLayout>
-                            <Support />
+                            <Routes>
+                                <Route path="" element={<Support />} />
+                                <Route path="/guide" element={<Guide />} />
+                            </Routes>
                         </NavBarLayout>
                     }
                 />
                 <Route
-                    path="/robot"
+                    path="/product/*"
                     element={
                         <TopNavLayout>
-                            <Robot />
-                        </TopNavLayout>
-                    }
-                />
-                <Route
-                    path="/pc"
-                    element={
-                        <TopNavLayout>
-                            <Pc />
-                        </TopNavLayout>
-                    }
-                />
-                <Route
-                    path="/living"
-                    element={
-                        <TopNavLayout>
-                            <Living />
-                        </TopNavLayout>
-                    }
-                />
-                <Route
-                    path="/appliance"
-                    element={
-                        <TopNavLayout>
-                            <Appliance />
-                        </TopNavLayout>
-                    }
-                />
-                <Route
-                    path="/etc"
-                    element={
-                        <TopNavLayout>
-                            <Etc />
+                            <Routes>
+                                <Route path="/robot" element={<Robot />} />
+                                <Route path="/pc" element={<Pc />} />
+                                <Route path="/living" element={<Living />} />
+                                <Route path="/appliance" element={<Appliance />} />
+                                <Route path="/etc" element={<Etc />} />
+                            </Routes>
                         </TopNavLayout>
                     }
                 />
