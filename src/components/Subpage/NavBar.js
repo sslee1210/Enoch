@@ -12,7 +12,7 @@ const NavBar = () => {
 
     // 상위 메뉴 항목이 활성화되어야 하는지 확인
     const isActiveAbout = ['/about', '/history', '/global', '/contact'].includes(location.pathname);
-    const isActiveAs = ['/community', '/qna'].includes(location.pathname);
+    const isActiveAs = ['/community/news/*', '/qna'].includes(location.pathname);
     const isActiveSupport = ['/support', '/guide'].includes(location.pathname);
 
     return (
@@ -72,7 +72,7 @@ const NavBar = () => {
 
                     <li>
                         <NavLink
-                            to="/community"
+                            to="/community/news"
                             className={NavBarStyles.mainMenuItem}
                             style={isActiveAs ? activeStyle : {}}
                         >
@@ -82,7 +82,7 @@ const NavBar = () => {
                             <li>
                                 <NavLink
                                     className={NavBarStyles.subMenuItem}
-                                    to="/community"
+                                    to="/community/news"
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
                                     소식

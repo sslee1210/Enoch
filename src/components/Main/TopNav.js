@@ -1,65 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import TopNavStyles from './TopNav.module.css';
 
 const TopNav = () => {
-    const [isHovered, setIsHovered] = useState(false);
-    const [isLinkHovered, setIsLinkHovered] = useState(false);
-    const [isShopHovered, setIsShopHovered] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false);
-    };
-
-    const handleLinkMouseEnter = () => {
-        setIsLinkHovered(true);
-    };
-
-    const handleLinkMouseLeave = () => {
-        setIsLinkHovered(false);
-    };
-
-    const handleShopMouseEnter = () => {
-        setIsShopHovered(true);
-    };
-
-    const handleShopMouseLeave = () => {
-        setIsShopHovered(false);
-    };
-
     return (
-        <div
-            className={TopNavStyles.nav}
-            style={{
-                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
-                transition: 'background-color 0.5s ease',
-            }}
-        >
-            <Link
-                to="/Enoch"
-                className={`${TopNavStyles.logo} ${
-                    isHovered || isLinkHovered || isShopHovered ? TopNavStyles.hoveredLink : ''
-                }`}
-                onMouseEnter={handleLinkMouseEnter}
-                onMouseLeave={handleLinkMouseLeave}
-            >
+        <div className={TopNavStyles.nav}>
+            <Link to="/Enoch" className={TopNavStyles.logo}>
                 로고
             </Link>
             <nav>
-                <ul onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                <ul>
                     <li>
                         <Link to="/about">About</Link>
-                        <ul
-                            className={isHovered ? TopNavStyles.subMenu : ''}
-                            style={{
-                                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
-                                transition: 'background-color 0.5s ease',
-                            }}
-                        >
+                        <ul className={TopNavStyles.subMenu}>
                             <li>
                                 <Link to="/about">회사 소개</Link>
                             </li>
@@ -75,31 +28,19 @@ const TopNav = () => {
                         </ul>
                     </li>
                     <li>
-                        <Link to="/community">Community</Link>
-                        <ul
-                            className={isHovered ? TopNavStyles.subMenu : ''}
-                            style={{
-                                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
-                                transition: 'background-color 0.5s ease',
-                            }}
-                        >
+                        <Link to="/as">A/S</Link>
+                        <ul className={TopNavStyles.subMenu}>
                             <li>
-                                <Link to="/community">소식</Link>
+                                <Link to="/as">A/S 접수</Link>
                             </li>
                             <li>
-                                <Link to="/Community">자주 묻는 질문</Link>
+                                <Link to="/qna">자주 묻는 질문</Link>
                             </li>
                         </ul>
                     </li>
                     <li>
                         <Link to="/support">Support</Link>
-                        <ul
-                            className={isHovered ? TopNavStyles.subMenu : ''}
-                            style={{
-                                backgroundColor: isHovered || isLinkHovered || isShopHovered ? '#263238' : 'white',
-                                transition: 'background-color 0.5s ease',
-                            }}
-                        >
+                        <ul className={TopNavStyles.subMenu}>
                             <li>
                                 <Link to="/support">Download File</Link>
                             </li>
@@ -108,18 +49,16 @@ const TopNav = () => {
                             </li>
                         </ul>
                     </li>
-                    <a
-                        href="https://swit2019.cafe24.com/"
-                        target="_blank"
-                        rel="noreferrer"
-                        className={`${TopNavStyles.link} ${
-                            isHovered || isLinkHovered || isShopHovered ? TopNavStyles.hoveredLink : ''
-                        }`}
-                        onMouseEnter={handleShopMouseEnter}
-                        onMouseLeave={handleShopMouseLeave}
-                    >
-                        Shop
-                    </a>
+                    <li>
+                        <a
+                            href="https://swit2019.cafe24.com/"
+                            target="_blank"
+                            rel="noreferrer"
+                            className={TopNavStyles.link}
+                        >
+                            Shop
+                        </a>
+                    </li>
                 </ul>
             </nav>
         </div>

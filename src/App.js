@@ -17,6 +17,7 @@ import Living from './components/Product/Living';
 import Appliance from './components/Product/Appliance';
 import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
+import NewsDetail from './components/Community/NewsDetail';
 
 const TopNavLayout = ({ children }) => (
     <div style={{ height: '100vh' }}>
@@ -82,11 +83,14 @@ const App = () => {
                     }
                 />
                 <Route
-                    path="/community"
+                    path="/community/*"
                     element={
                         <NavBarLayout>
-                            <News />
-                            <Footer />
+                            <Routes>
+                                <Route path="news" element={<NewsDetail />} />
+                                <Route path="qna" element={<Qna />} />
+                                <Route path="news/:id" element={<News />} />
+                            </Routes>
                         </NavBarLayout>
                     }
                 />
