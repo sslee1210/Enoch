@@ -1,13 +1,20 @@
 [
-    { "id": 1, "title": "회사 홈페이지 개설", "content": "환영합니다" },
-    { "id": 2, "title": "방가방가", "content": "" },
-    { "id": 3, "title": "방가방가", "content": "" },
-    { "id": 4, "title": "방가방가", "content": "" },
-    { "id": 5, "title": "방가방가", "content": "" },
-    { "id": 6, "title": "방가방가", "content": "" },
-    { "id": 7, "title": "방가방가", "content": "" },
-    { "id": 8, "title": "방가방가", "content": "" },
-    { "id": 9, "title": "방가방가", "content": "" },
-    { "id": 10, "title": "방가방가", "content": "" },
-    { "id": 11, "title": "방가방가", "content": "" }
+    {
+        "id": 1,
+        "title": "회사 홈페이지 개설",
+        "content": "환영합니다.",
+        "date": "2024-05-24"
+    },
+    {
+        "id": 2,
+        "title": "로봇 신제품 출시",
+        "content": "<p>땡깡 피우지 않고 프로그래밍 된 값으로 열심히 일하는 강아지 로봇 출시!</p> <img src='/images/Robot.jpg' alt='강아지 로봇'  width='1000px' height='auto'/>",
+        "date": "2024-05-25"
+    },
+    {
+        "id": 3,
+        "title": "점심",
+        "content": "<p>오늘 점심은 삼겹살 회식입니다</p>",
+        "date": "2024-05-25"
+    }
 ]

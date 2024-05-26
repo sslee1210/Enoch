@@ -215,18 +215,36 @@ const NavBar = () => {
 
 -   #### 문제 발생: 스크롤이 생기지 않게 웹 페이지를 만들어야 되지만 반응형 웹을 스크롤이 없이 만들기가 쉽지 않고 브라우저 창을 키우거나 줄이면 요소가 넘쳐 스크롤이 생김
 -   #### 원인 파악: 구글링을 통해 테스트 파일을 만들어 적용시켜보고 문제 없다는걸 보고 그대로 적용 시킴
--   #### 문제 해결: 모든 컴포넌트를 감싸는 전체 div에 100
+-   #### 문제 해결: 모든 컴포넌트를 감싸는 전체 div에 height: 100%를 주고 바로 밑엔 height: 100vh를 줌. 그리고 그 밑 요소엔 width: 100%와 height: calc(100vh - 200px); 그리고 margin-bottom: 100px;을 주면 해결. (200px은 TopNav와 Footer의 높이를 합친것이고  margin-bottom: 100px;은 Footer 높이이다. 마진을 줘야 내용이 Footer와 겹치지 않는다.)
 
-`문제가 난 코드 부분`
-
-```
+`index.css`
 
 ```
-
-`해결한 코드`
-
+body {
+    height: 100%;
+}
 ```
 
+`App.js`
+
+```
+const TopNavLayout = ({ children }) => (
+    <div style={{ height: '100vh' }}>
+        <TopNav />
+        {children}
+        <Footer />
+    </div>
+);
+```
+
+` {children}에 적용되는 스타일`
+
+```
+div {
+    width: 100%;
+    height: calc(100vh - 200px);
+    margin-bottom: 100px;
+}
 ```
 
 # 프로젝트 완료 리뷰

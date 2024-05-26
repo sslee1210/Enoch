@@ -24,7 +24,9 @@ const News = () => {
                 <ul>
                     {currentItems.map((item) => (
                         <li key={item.id}>
-                            <Link to={`/community/news/${item.id}`}>{item.title}</Link>
+                            <Link to={`/community/news/${item.id}`}>
+                                {item.title} <span>({item.date})</span>
+                            </Link>
                         </li>
                     ))}
                 </ul>

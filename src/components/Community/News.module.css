@@ -2,18 +2,21 @@
     margin-bottom: 100px;
     height: calc(100vh - 100px);
     width: 100%;
-    flex-basis: 82%;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.news .news1 {
+.news1 {
     width: 85%;
-    height: 80%;
     margin: auto;
     margin-top: 3.5vw;
     box-sizing: border-box;
     padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
 }
 
 .news .news1 h1 {
@@ -23,8 +26,50 @@
 
 .news .news1 ul {
     list-style: none;
+    border: 1px solid #ddd;
+    flex: 1;
+    overflow-y: auto;
 }
 
-.news .news1 ul li {
+.news ul li {
     padding: 10px;
+}
+
+.news ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+.news .pagination {
+    text-align: center;
+    margin-top: 20px;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding: 10px 0;
+}
+
+.news .news1 .navigation a {
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.news .news1 .navigation .prev {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.news .news1 .navigation .prev:hover {
+    background-color: #787878;
+}
+
+.news .news1 .navigation .next {
+    background-color: #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.news .news1 .navigation .next:hover {
+    background-color: #787878;
 }
