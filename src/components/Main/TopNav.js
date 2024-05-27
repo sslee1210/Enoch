@@ -1,81 +1,102 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import TopNavStyles from './TopNav.module.css';
+import TopNavstyles from './TopNav.module.css';
 
 const TopNav = () => {
     const [isNavOpen, setIsNavOpen] = useState(false);
-    const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
+    const [activeSubMenu, setActiveSubMenu] = useState(null);
 
     const toggleNav = () => {
         setIsNavOpen(!isNavOpen);
     };
 
     const toggleSubMenu = (index) => {
-        setIsSubMenuOpen((prevState) => ({
-            ...prevState,
-            [index]: !prevState[index],
-        }));
+        if (activeSubMenu === index) {
+            setActiveSubMenu(null);
+        } else {
+            setActiveSubMenu(index);
+        }
     };
 
     return (
-        <div className={TopNavStyles.nav}>
-            <Link to="/" className={TopNavStyles.logo}>
+        <div className={TopNavstyles.nav}>
+            <Link to="/" className={TopNavstyles.logo}>
                 로고
             </Link>
-            <div className={TopNavStyles.hamburger} onClick={toggleNav}>
+            <div className={TopNavstyles.hamburger} onClick={toggleNav}>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
-            <nav className={isNavOpen ? `${TopNavStyles.nav} ${TopNavStyles.active}` : TopNavStyles.nav}>
-                <ul className={isNavOpen ? `${TopNavStyles.active}` : ''}>
-                    <li>
-                        <Link to="/about/intro" onClick={() => toggleSubMenu(0)}>
+            <nav className={isNavOpen ? `${TopNavstyles.navList} ${TopNavstyles.active}` : TopNavstyles.navList}>
+                <ul className={TopNavstyles.navItems}>
+                    <li className={TopNavstyles.navItem}>
+                        <Link to="/about/intro" className={TopNavstyles.navLink} onClick={() => toggleSubMenu(0)}>
                             About
                         </Link>
-                        <ul className={`${TopNavStyles.subMenu} ${isSubMenuOpen[0] ? `${TopNavStyles.active}` : ''}`}>
-                            <li>
-                                <Link to="/about/intro">회사 소개</Link>
+                        <ul className={`${TopNavstyles.subMenu} ${activeSubMenu === 0 ? TopNavstyles.active : ''}`}>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/about/intro" className={TopNavstyles.subMenuLink}>
+                                    회사 소개
+                                </Link>
                             </li>
-                            <li>
-                                <Link to="/about/history">HISTORY</Link>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/about/history" className={TopNavstyles.subMenuLink}>
+                                    HISTORY
+                                </Link>
                             </li>
-                            <li>
-                                <Link to="/about/global">해외 법인</Link>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/about/global" className={TopNavstyles.subMenuLink}>
+                                    해외 법인
+                                </Link>
                             </li>
-                            <li>
-                                <Link to="/about/contact">CONTACT US</Link>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <Link to="/community/news">community</Link>
-                        <ul className={TopNavStyles.subMenu}>
-                            <li>
-                                <Link to="community/news">회사 소식</Link>
-                            </li>
-                            <li>
-                                <Link to="/community/qna">자주 묻는 질문</Link>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/about/contact" className={TopNavstyles.subMenuLink}>
+                                    CONTACT US
+                                </Link>
                             </li>
                         </ul>
                     </li>
-                    <li>
-                        <Link to="/support">Support</Link>
-                        <ul className={TopNavStyles.subMenu}>
-                            <li>
-                                <Link to="/support">Download File</Link>
+                    <li className={TopNavstyles.navItem}>
+                        <Link to="/community/news" className={TopNavstyles.navLink} onClick={() => toggleSubMenu(1)}>
+                            Community
+                        </Link>
+                        <ul className={`${TopNavstyles.subMenu} ${activeSubMenu === 0 ? TopNavstyles.active : ''}`}>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/community/news" className={TopNavstyles.subMenuLink}>
+                                    회사 소식
+                                </Link>
                             </li>
-                            <li>
-                                <Link to="/support/guide">사용설명법</Link>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/community/qna" className={TopNavstyles.subMenuLink}>
+                                    자주 묻는 질문
+                                </Link>
                             </li>
                         </ul>
                     </li>
-                    <li>
+                    <li className={TopNavstyles.navItem}>
+                        <Link to="/support" className={TopNavstyles.navLink} onClick={() => toggleSubMenu(2)}>
+                            Support
+                        </Link>
+                        <ul className={`${TopNavstyles.subMenu} ${activeSubMenu === 0 ? TopNavstyles.active : ''}`}>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/support" className={TopNavstyles.subMenuLink}>
+                                    Download File
+                                </Link>
+                            </li>
+                            <li className={TopNavstyles.subMenuItem}>
+                                <Link to="/support/guide" className={TopNavstyles.subMenuLink}>
+                                    사용설명법
+                                </Link>
+                            </li>
+                        </ul>
+                    </li>
+                    <li className={TopNavstyles.navItem}>
                         <a
                             href="https://swit2019.cafe24.com/"
                             target="_blank"
                             rel="noreferrer"
-                            className={TopNavStyles.link}
+                            className={TopNavstyles.navLink}
                         >
                             Shop
                         </a>
