@@ -10,11 +10,6 @@ const NavBar = () => {
 
     const location = useLocation();
 
-    // 상위 메뉴 항목이 활성화되어야 하는지 확인
-    const isActiveAbout = ['/about', '/about/history', '/about/global', '/about/contact'].includes(location.pathname);
-    const isActiveAs = ['/community/news', '/community/news/*', '/community/qna'].includes(location.pathname);
-    const isActiveSupport = ['/support', '/support/guide'].includes(location.pathname);
-
     return (
         <div className={NavBarStyles.subnav}>
             <h1>
@@ -26,7 +21,13 @@ const NavBar = () => {
                         <NavLink
                             to="/about/intro"
                             className={NavBarStyles.mainMenuItem}
-                            style={isActiveAbout ? activeStyle : {}}
+                            style={
+                                ['/about/intro', '/about/history', '/about/global', '/about/contact'].includes(
+                                    location.pathname
+                                )
+                                    ? activeStyle
+                                    : {}
+                            }
                         >
                             About
                         </NavLink>
@@ -74,7 +75,7 @@ const NavBar = () => {
                         <NavLink
                             to="/community/news"
                             className={NavBarStyles.mainMenuItem}
-                            style={isActiveAs ? activeStyle : {}}
+                            style={['/community/news', '/community/qna'].includes(location.pathname) ? activeStyle : {}}
                         >
                             Community
                         </NavLink>
@@ -85,7 +86,7 @@ const NavBar = () => {
                                     to="/community/news"
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
-                                    소식
+                                    회사 소식
                                 </NavLink>
                             </li>
                             <li>
@@ -104,7 +105,7 @@ const NavBar = () => {
                         <NavLink
                             to="/support"
                             className={NavBarStyles.mainMenuItem}
-                            style={isActiveSupport ? activeStyle : {}}
+                            style={['/support', '/support/guide'].includes(location.pathname) ? activeStyle : {}}
                         >
                             Support
                         </NavLink>
@@ -113,7 +114,7 @@ const NavBar = () => {
                                 <NavLink
                                     to="/support"
                                     className={NavBarStyles.subMenuItem}
-                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                    style={location.pathname === '/support' ? activeStyle : {}}
                                 >
                                     Download File
                                 </NavLink>
@@ -122,7 +123,7 @@ const NavBar = () => {
                                 <NavLink
                                     to="/support/guide"
                                     className={NavBarStyles.subMenuItem}
-                                    style={({ isActive }) => (isActive ? activeStyle : {})}
+                                    style={location.pathname === '/support/guide' ? activeStyle : {}}
                                 >
                                     사용 설명법
                                 </NavLink>

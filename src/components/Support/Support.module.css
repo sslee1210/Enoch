@@ -1,0 +1,25 @@
+.support {
+    margin-bottom: 100px;
+    height: calc(100vh - 100px);
+    width: 100%;
+    flex-basis: 82%;
+}
+
+.support .support1 {
+    width: 85%;
+    height: 80%;
+    margin: auto;
+    margin-top: 3.5vw;
+    box-sizing: border-box;
+    padding-top: 40px;
+}
+
+.support .support1 h1 {
+    font-size: 2vw;
+}
+
+.support .support1 p {
+    color: #ddd;
+    text-align: center;
+    margin-top: 15vw;
+}

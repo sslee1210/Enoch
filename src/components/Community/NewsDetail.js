@@ -23,26 +23,32 @@ const NewsDetail = () => {
     return (
         <div className={NewsStyles.news}>
             <div className={NewsStyles.news1}>
-                <h1>
-                    {item.title} <span>({item.date})</span>
-                </h1>
-                <p dangerouslySetInnerHTML={createMarkup(item.content)}></p>
-
-                <div className={NewsStyles.navigation}>
-                    {prevItem && (
-                        <p className={NewsStyles.prev}>
-                            <Link to={`/community/news/${prevItem.id}`}>이전글: {prevItem.title}</Link>
-                        </p>
-                    )}
-                    {nextItem && (
-                        <p className={NewsStyles.next}>
-                            <Link to={`/community/news/${nextItem.id}`}>다음글: {nextItem.title}</Link>
-                        </p>
-                    )}
-                </div>
                 <button onClick={() => navigate('/community/news')} className={NewsStyles.backButton}>
                     뒤로가기
                 </button>
+                <div className={NewsStyles.text}>
+                    <h1>{item.title}</h1>
+                    <p dangerouslySetInnerHTML={createMarkup(item.content)}></p>
+                </div>
+                <div className={NewsStyles.navigation}>
+                    <p style={{ marginTop: '4vw' }}>다른 글</p>
+                    <div className={NewsStyles.but}>
+                        {nextItem && (
+                            <p className={NewsStyles.next}>
+                                <Link to={`/community/news/${nextItem.id}`}>
+                                    {nextItem.title} <span>({nextItem.date})</span>
+                                </Link>
+                            </p>
+                        )}
+                        {prevItem && (
+                            <p className={NewsStyles.prev}>
+                                <Link to={`/community/news/${prevItem.id}`}>
+                                    {prevItem.title} <span>({prevItem.date})</span>
+                                </Link>
+                            </p>
+                        )}
+                    </div>
+                </div>
             </div>
         </div>
     );

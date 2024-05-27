@@ -8,7 +8,7 @@
     {
         "id": 2,
         "title": "로봇 신제품 출시",
-        "content": "<p>땡깡 피우지 않고 프로그래밍 된 값으로 열심히 일하는 강아지 로봇 출시!</p> <img src='/images/Robot.jpg' alt='강아지 로봇'  width='1000px' height='auto'/>",
+        "content": "<p>땡깡 피우지 않고 프로그래밍 된 값으로 열심히 일하는 강아지 로봇을 출시 했습니다!</p> <img src='/images/Robot.jpg' alt='강아지 로봇' style='width: 70%; height: auto; margin-top: 3%;'/>",
         "date": "2024-05-25"
     },
     {

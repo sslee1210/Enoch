@@ -14,7 +14,7 @@ import Guide from './components/Support/Guide';
 import Robot from './components/Product/Robot';
 import Pc from './components/Product/Pc';
 import Living from './components/Product/Living';
-import Appliance from './components/Product/Appliance';
+import Electronics from './components/Product/Electronics';
 import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
 import NewsDetail from './components/Community/NewsDetail';
@@ -23,7 +23,6 @@ const TopNavLayout = ({ children }) => (
     <div style={{ height: '100vh' }}>
         <TopNav />
         {children}
-        <Footer />
     </div>
 );
 
@@ -46,6 +45,7 @@ const App = () => {
                     element={
                         <TopNavLayout>
                             <Main />
+                            <Footer />
                         </TopNavLayout>
                     }
                 />
@@ -93,7 +93,7 @@ const App = () => {
                                 <Route path="/robot" element={<Robot />} />
                                 <Route path="/pc" element={<Pc />} />
                                 <Route path="/living" element={<Living />} />
-                                <Route path="/appliance" element={<Appliance />} />
+                                <Route path="/Electronics" element={<Electronics />} />
                                 <Route path="/etc" element={<Etc />} />
                             </Routes>
                         </TopNavLayout>

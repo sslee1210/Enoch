@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    overflow-y: auto;
+    overflow-y: hidden;
     box-sizing: border-box;
     margin-bottom: 100px;
     width: 100%;
@@ -42,7 +42,9 @@
 }
 .main .product > h1 {
     font-size: 2vw;
+    font-family: 'KBO-Dia-Gothic_bold', sans-serif;
     padding-bottom: 30px;
+    color: rgb(39, 39, 39);
 }
 
 /*사진들 묶은 div컨테이너*/
@@ -55,22 +57,60 @@
 }
 
 .main .product .product_container > a {
-    border-radius: 15px 0 15px 0;
     display: block;
+    border-radius: 15px 0 15px 0;
     width: 100%;
     max-width: 400px;
     max-height: 164px;
     box-sizing: border-box;
     overflow: hidden;
+    filter: brightness(1);
+    transition: ease all 0.3s;
+}
+.main .product .product_container > a:hover {
+    filter: brightness(0.5);
 }
 
 .main .product .product_container > a > img {
     width: 100%;
-    height: 100%;
     filter: brightness(1);
-    object-fit: contain; /*가로세로 비율 안깨지고 확대 축소 가능*/
+    object-fit: cover;
     transition: filter 0.3s ease;
 }
 .main .product .product_container > div > a:hover img {
-    filter: brightness(0.7); /* 이미지를 어둡게 */
+    filter: brightness(0.7);
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        display: block; /* 블록 레이아웃 적용 */
+        height: auto; /* 높이 자동 조정 */
+        overflow-y: hidden; /* 세로 스크롤 방지 */
+    }
+    .main .SwiperSlide {
+        width: 100%;
+        height: 400px;
+        align-items: stretch;
+        padding: 0;
+    }
+    .main .SwiperSlide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .main .product > h1 {
+        font-size: 7vw;
+    }
+    .main .product .product_container {
+        flex-direction: column;
+    }
+    .main .product .product_container > a {
+        max-height: 150px;
+        /*max-width: 250px;*/
+        /*margin: auto;*/
+    }
+    .main .product .product_container > a > img {
+        transform: translateY(-20px);
+    }
 }

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -8,11 +8,26 @@ import { Link } from 'react-router-dom';
 import MainStyles from './Main.module.css';
 
 const Main = () => {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        handleResize(); // 초기 실행 시 한 번 체크
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
         <div className={MainStyles.main}>
             <div className={MainStyles.SwiperSlide}>
                 <Swiper
-                    modules={[Pagination, Autoplay]} // allowTouchMove 모듈 제거
+                    modules={[Pagination, Autoplay]}
                     spaceBetween={50}
                     slidesPerView={1}
                     navigation
@@ -21,16 +36,25 @@ const Main = () => {
                         delay: 2000,
                         disableOnInteraction: false,
                     }}
-                    allowTouchMove={false} // 마우스로 슬라이드 이동을 비활성화
+                    allowTouchMove={false}
                 >
                     <SwiperSlide>
-                        <img src={process.env.PUBLIC_URL + '/images/배너1.png'} alt="Image 1" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너1.png' : '/images/배너1.png')}
+                            alt="Image 1"
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={process.env.PUBLIC_URL + '/images/배너2.png'} alt="Image 2" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너2.png' : '/images/배너2.png')}
+                            alt="Image 2"
+                        />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src={process.env.PUBLIC_URL + '/images/배너3.png'} alt="Image 3" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너3.png' : '/images/배너3.png')}
+                            alt="Image 3"
+                        />
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -38,23 +62,38 @@ const Main = () => {
                 <h1>Product</h1>
                 <div className={MainStyles.product_container}>
                     <Link to="/product/robot">
-                        <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="로봇" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-로봇.png' : '/images/로봇.png')}
+                            alt="로봇"
+                        />
                     </Link>
 
                     <Link to="/product/PC">
-                        <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="컴퓨터" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-컴퓨터.png' : '/images/컴퓨터.png')}
+                            alt="컴퓨터"
+                        />
                     </Link>
 
                     <Link to="/product/Living">
-                        <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="리빙" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-리빙.png' : '/images/생활.png')}
+                            alt="리빙"
+                        />
                     </Link>
 
                     <Link to="/product/appliance">
-                        <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="생활가전" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-가전.png' : '/images/가전.png')}
+                            alt="생활가전"
+                        />
                     </Link>
 
                     <Link to="/product/Etc">
-                        <img src={process.env.PUBLIC_URL + '/images/사진 준비중.png'} alt="기타" />
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-기타.png' : '/images/기타.png')}
+                            alt="기타"
+                        />
                     </Link>
                 </div>
             </div>
