@@ -72,9 +72,9 @@
     padding: 20px;
 }
 
-.product .menu ul .li:hover a {
+.product .menu ul li:hover a {
     transition: 0.3s;
-    color: #ddd;
+    color: #a3a3a3;
 }
 
 .product .sec {

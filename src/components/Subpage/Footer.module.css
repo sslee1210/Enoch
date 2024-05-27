@@ -39,6 +39,22 @@
     font-weight: 500;
 }
 /* 
-.footer .copylight {
-    padding-top: 20px;
-} */
+  .footer .copylight {
+      padding-top: 20px;
+  } */
+
+@media screen and (max-width: 480px) {
+    .footer {
+        position: static;
+        height: 100%;
+    }
+    .footer .footer_container {
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    .footer .f_container1,
+    .footer .f_container2 {
+        align-items: center;
+        width: 100%;
+    }
+}

@@ -2,14 +2,20 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
 import FooterStyles from '../Subpage/Footer.module.css';
+
 const Electronics = () => {
     const [opacity, setOpacity] = useState(0);
 
     useEffect(() => {
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
-            if (scrollPosition > 84) {
+            const windowHeight = window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition > 84 && scrollPosition + windowHeight < documentHeight - 84) {
                 setOpacity(1);
+            } else if (scrollPosition + windowHeight >= documentHeight - 84) {
+                setOpacity(0);
             } else {
                 setOpacity(scrollPosition / 84);
             }
@@ -24,6 +30,7 @@ const Electronics = () => {
     const MoveToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
@@ -106,7 +113,7 @@ const Electronics = () => {
                 src={process.env.PUBLIC_URL + '/images/Up.png'}
                 onClick={MoveToTop}
                 className={ProductStyles.up}
-                style={{ opacity: opacity }} // 이 부분에서 스타일을 직접 적용하여 opacity를 조절합니다.
+                style={{ opacity: opacity }}
                 alt="Move to Top"
             />
 
@@ -135,7 +142,10 @@ const Electronics = () => {
                         전화 : 02-2268-8770 팩스 : 0504-163-8775
                     </p>
                     <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        주소 : 04316 서울특별시 용산구 원효로89길 3-4 (원효로1가) 석선빌딩 101호
+                        주소 : 서울특별시 금천구 가산디지털 2로 165, 백상스타타워 2차 14층 1406호
+                    </p>
+                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
+                        문의가능시간 : 09:00 ~ 18:00 / 점심시간 : 11:30 ~ 12:30
                     </p>
                 </div>
                 <div
@@ -152,7 +162,7 @@ const Electronics = () => {
                         사업자등록번호 : 716-88-01776 [사업자정보확인]
                     </p>
                     <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        통신판매업신고 : 제 2020-서울용산-1041호
+                        통신판매업신고 : 제 2024-서울금천-0999호
                     </p>
                     <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
                         개인정보보호책임자 : 정경영 (michelky@naver.com)

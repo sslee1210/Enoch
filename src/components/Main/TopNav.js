@@ -1,18 +1,39 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import TopNavStyles from './TopNav.module.css';
 
 const TopNav = () => {
+    const [isNavOpen, setIsNavOpen] = useState(false);
+    const [isSubMenuOpen, setIsSubMenuOpen] = useState({});
+
+    const toggleNav = () => {
+        setIsNavOpen(!isNavOpen);
+    };
+
+    const toggleSubMenu = (index) => {
+        setIsSubMenuOpen((prevState) => ({
+            ...prevState,
+            [index]: !prevState[index],
+        }));
+    };
+
     return (
         <div className={TopNavStyles.nav}>
             <Link to="/" className={TopNavStyles.logo}>
                 로고
             </Link>
-            <nav>
-                <ul>
+            <div className={TopNavStyles.hamburger} onClick={toggleNav}>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav className={isNavOpen ? `${TopNavStyles.nav} ${TopNavStyles.active}` : TopNavStyles.nav}>
+                <ul className={isNavOpen ? `${TopNavStyles.active}` : ''}>
                     <li>
-                        <Link to="/about/intro">About</Link>
-                        <ul className={TopNavStyles.subMenu}>
+                        <Link to="/about/intro" onClick={() => toggleSubMenu(0)}>
+                            About
+                        </Link>
+                        <ul className={`${TopNavStyles.subMenu} ${isSubMenuOpen[0] ? `${TopNavStyles.active}` : ''}`}>
                             <li>
                                 <Link to="/about/intro">회사 소개</Link>
                             </li>
