@@ -39,19 +39,19 @@ const Pc = () => {
             <div className={ProductStyles.menu}>
                 <ul>
                     <li>
-                        <Link to="/product/robot">Robot</Link>
+                        <Link to="/robot">Robot</Link>
                     </li>
                     <li>
-                        <Link to="/product/pc">Pc</Link>
+                        <Link to="/pc">Pc</Link>
                     </li>
                     <li>
-                        <Link to="/product/living">Living Product</Link>
+                        <Link to="/living">Living Product</Link>
                     </li>
                     <li>
-                        <Link to="/product/appliance">Electronics</Link>
+                        <Link to="/appliance">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/product/etc">Etc</Link>
+                        <Link to="/etc">Etc</Link>
                     </li>
                 </ul>
             </div>

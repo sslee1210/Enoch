@@ -39,66 +39,75 @@ const Robot = () => {
             <div className={ProductStyles.menu}>
                 <ul>
                     <li>
-                        <Link to="/product/robot">Robot</Link>
+                        <Link to="/robot">Robot</Link>
                     </li>
                     <li>
-                        <Link to="/product/pc">Pc</Link>
+                        <Link to="/pc">Pc</Link>
                     </li>
                     <li>
-                        <Link to="/product/living">Living Product</Link>
+                        <Link to="/living">Living Product</Link>
                     </li>
                     <li>
-                        <Link to="/product/appliance">Electronics</Link>
+                        <Link to="/appliance">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/product/etc">Etc</Link>
+                        <Link to="/etc">Etc</Link>
                     </li>
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <div className={ProductStyles.sec1}>
-                    <img src={process.env.PUBLIC_URL + '/images/robot01.png'} alt="Robot1" />
-                    <div className={ProductStyles.tex}>
-                        <h2>Unstoppable operation in Extreme weather</h2>
-                        <p>Operate from -20°C to 55°C; IP67 protection.</p>
-                    </div>
-                </div>
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec2}>
+                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                    <div className={ProductStyles.sec1}>
+                        <img src={process.env.PUBLIC_URL + '/images/robot01.png'} alt="Robot1" />
                         <div className={ProductStyles.tex}>
-                            <h2>Rapidly steadily surmount obstacles</h2>
+                            <h2>Unstoppable operation in Extreme weather</h2>
+                            <p>Operate from -20°C to 55°C; IP67 protection.</p>
+                        </div>
+                    </div>
+                </a>
+                <div className={ProductStyles.background}>
+                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                        <div className={ProductStyles.sec2}>
+                            <div className={ProductStyles.tex}>
+                                <h2>Rapidly steadily surmount obstacles</h2>
+                                <p>
+                                    X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb
+                                    industrial stairs, respond to sudden task requirements the first time, and quickly
+                                    traverse into complex scenes.
+                                </p>
+                            </div>
+                            <img src={process.env.PUBLIC_URL + '/images/robot02.png'} alt="Robot2" />
+                        </div>
+                    </a>
+                </div>
+                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                    <div className={ProductStyles.sec3}>
+                        <img src={process.env.PUBLIC_URL + '/images/robot03.png'} alt="Robot3" />
+                        <div className={ProductStyles.tex}>
+                            <h2>Fusion perception strike through darkness</h2>
                             <p>
-                                X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb industrial
-                                stairs, respond to sudden task requirements the first time, and quickly traverse into
-                                complex scenes.
+                                With X30's unique integrated perception, it can autonomously navigate and operate in
+                                extreme environments such as darkness, strong light, flickering, and even without any
+                                light source.
                             </p>
                         </div>
-                        <img src={process.env.PUBLIC_URL + '/images/robot02.png'} alt="Robot2" />
                     </div>
-                </div>
-                <div className={ProductStyles.sec3}>
-                    <img src={process.env.PUBLIC_URL + '/images/robot03.png'} alt="Robot3" />
-                    <div className={ProductStyles.tex}>
-                        <h2>Fusion perception strike through darkness</h2>
-                        <p>
-                            With X30's unique integrated perception, it can autonomously navigate and operate in extreme
-                            environments such as darkness, strong light, flickering, and even without any light source.
-                        </p>
-                    </div>
-                </div>
+                </a>
                 <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec4}>
-                        <img
-                            src={process.env.PUBLIC_URL + '/images/Robot4.png'}
-                            alt="Robot4"
-                            style={{
-                                display: 'block',
-                                margin: '0 auto',
-                                width: '80%',
-                                height: 'auto',
-                            }}
-                        />
-                    </div>
+                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
+                        <div className={ProductStyles.sec4}>
+                            <img
+                                src={process.env.PUBLIC_URL + '/images/Robot4.png'}
+                                alt="Robot4"
+                                style={{
+                                    display: 'block',
+                                    margin: '0 auto',
+                                    width: '80%',
+                                    height: 'auto',
+                                }}
+                            />
+                        </div>
+                    </a>
                 </div>
             </div>
 

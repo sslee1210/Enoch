@@ -44,15 +44,33 @@
     text-align: center;
     position: relative;
 }
-.nav nav ul > li:hover .subMenu {
-    display: flex;
-    background-color: #263238;
-    color: #fff;
+
+.nav nav .subMenu {
+    position: absolute;
+    top: 100%;
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    width: 100%;
+    font-size: 0.8vw;
+    z-index: 9999;
+    transition: opacity 0.5s, visibility 0s linear 0.5s, max-height 0.5s ease-out;
 }
 
-/* nav ul 의 사이 칸막이
+.nav nav ul > li:hover .subMenu {
+    visibility: visible;
+    opacity: 1;
+    max-height: 500px;
+    transition: opacity 0.5s, max-height 0.5s ease-in;
+}
+
+/* nav ul 의 사이 칸막이 */
 .nav nav > ul > li:not(:last-child)::after {
-    content: "";
+    content: '';
     display: block;
     width: 1px;
     height: 100%;
@@ -60,42 +78,13 @@
     right: 0;
     top: 0;
     background-color: #ebebeb;
-} */
-
-/*탑나브의 서브제목*/
-.nav nav .subMenu {
-    position: absolute;
-    top: 100%;
-    display: none;
-    align-items: center;
-    flex-direction: column;
-    background-color: #fff; /*색상 변경 자유롭게*/
-    width: 100%;
-    font-size: 0.8vw;
-    z-index: 100;
-}
-
-.nav nav .subMenu > li {
-    width: 100%;
-    padding: 20px;
-    background-color: #fff;
-}
-.nav nav .subMenu > li:first-child {
-    padding-top: 50px;
-}
-
-.nav nav .subMenu > li > a {
-    display: block;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 10px;
 }
 
 .nav .link:hover {
     color: orange;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .nav {
         flex-direction: column;
         align-items: flex-start;
@@ -113,13 +102,11 @@
 
     .nav nav .subMenu {
         position: static;
-
         background-color: transparent;
     }
 
     .nav nav .subMenu > li {
         padding: 10px 20px;
-
         background-color: rgba(255, 255, 255, 0.9);
         width: 100%;
     }
@@ -134,4 +121,4 @@
         font-size: 1em;
         border: 1px solid red;
     }
-} */
+}
