@@ -141,7 +141,7 @@
     .nav {
         position: fixed;
         z-index: 9999;
-        background-color: #ddd;
+        background-color: #fff;
     }
 
     .nav > .logo {
