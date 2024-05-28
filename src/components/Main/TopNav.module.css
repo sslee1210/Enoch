@@ -75,7 +75,6 @@
 }
 
 .subMenuItem {
-    border: 1px solid #000;
     border-top: none;
     padding: 10px;
 }
@@ -92,18 +91,18 @@
     background-color: #f1c40f;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .hamburger {
         display: block;
     }
 
     .navList {
-        position: fixed; /* 수정됨 */
-        top: 5.5%; /* 필요에 따라 조정 */
+        position: fixed;
+        top: 5.5%;
         left: 0;
         width: 100%;
         z-index: 9999;
-        height: 100vh; /* 전체 화면 높이 */
+        height: 100vh;
         background-color: #ffffff;
         flex-direction: column;
         padding: 10px;
@@ -133,7 +132,6 @@
         font-size: 1.6rem;
     }
 
-    /* TopNav.module.css */
     .subMenu {
         position: static;
         display: none;
@@ -144,7 +142,7 @@
 
     .subMenu.active {
         display: block;
-        max-height: 500px; /* 이 값은 실제 메뉴 항목의 크기에 따라 조정해야 할 수 있습니다. */
+        max-height: 500px;
     }
 
     .subMenuItem {
@@ -153,7 +151,7 @@
     }
 
     .subMenuLink {
-        color: #333; /* 링크 색상을 명확하게 설정 */
+        color: #333;
         text-decoration: none;
     }
 }
