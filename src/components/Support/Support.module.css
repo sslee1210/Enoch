@@ -26,13 +26,13 @@
 
 @media screen and (max-width: 768px) {
     .support {
-        margin-bottom: 50px;
-        height: 70%;
+        margin: 0;
+        height: calc(100vh - 500px);
+        padding-top: 20vh;
     }
 
     .support .support1 {
         width: 95%;
-        margin-top: 20vw;
         padding-top: 20px;
     }
     .support .support1 h1 {

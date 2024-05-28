@@ -20,13 +20,13 @@
 
 @media screen and (max-width: 768px) {
     .guide {
-        margin-bottom: 50px;
-        height: 70%;
+        margin: 0;
+        height: calc(100vh - 500px);
+        padding-top: 20vh;
     }
 
     .guide .guide1 {
         width: 95%;
-        margin-top: 20vw;
         padding-top: 20px;
     }
 

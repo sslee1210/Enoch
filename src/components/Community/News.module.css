@@ -120,13 +120,14 @@
 
 @media screen and (max-width: 768px) {
     .news {
-        margin-bottom: 50px;
-        height: 70%;
+        margin: 0;
+        height: calc(100vh - 250px);
+        padding-top: 5vh;
     }
 
     .news .news1 {
         width: 95%;
-        margin-top: 20vw;
+        margin-top: 10vw;
         padding-top: 20px;
     }
 

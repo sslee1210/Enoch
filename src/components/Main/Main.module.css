@@ -84,8 +84,11 @@
     .main {
         display: block; /* 블록 레이아웃 적용 */
         height: auto; /* 높이 자동 조정 */
+        width: 100%;
+        padding-top: 2.7vh;
     }
-    .main .SwiperSlide {
+
+    .main .main .SwiperSlide {
         width: 100%;
         align-items: stretch;
         padding: 0;
@@ -96,7 +99,7 @@
         object-fit: cover;
     }
     .main .product {
-        padding-top: 80px;
+        padding-top: 10vw;
     }
     .main .product > h1 {
         font-size: 7vw;

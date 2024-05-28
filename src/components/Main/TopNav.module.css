@@ -138,6 +138,12 @@
 }
 
 @media screen and (max-width: 768px) {
+    .nav {
+        position: fixed;
+        z-index: 9999;
+        background-color: #ddd;
+    }
+
     .nav > .logo {
         margin-left: 0;
     }
