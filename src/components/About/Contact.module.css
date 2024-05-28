@@ -47,8 +47,9 @@
 @media screen and (max-width: 768px) {
     .Contact {
         margin: 0;
-        height: calc(100vh - 500px);
-        padding-top: 20vh;
+        height: calc(100vh - 171px);
+        display: inline-block;
+        padding-top: 7vh;
         justify-content: flex-start;
         align-items: flex-start;
     }
@@ -57,14 +58,13 @@
         display: flex; /* Flexbox 레이아웃 사용 */
         flex-direction: column; /* 자식 요소들을 세로로 정렬 */
 
-        margin-top: 15vw;
         height: 70vh;
         width: 100%;
     }
 
     .Contact .Contact1 h1 {
         font-size: 5vw;
-        margin-top: 8vw;
+
         margin-left: 2vw;
     }
 

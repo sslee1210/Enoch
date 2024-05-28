@@ -121,8 +121,9 @@
 @media screen and (max-width: 768px) {
     .news {
         margin: 0;
-        height: calc(100vh - 250px);
-        padding-top: 5vh;
+        height: calc(100vh - 171px);
+        display: inline-block;
+        padding-top: 7vh;
     }
 
     .news .news1 {

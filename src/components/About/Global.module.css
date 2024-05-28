@@ -21,8 +21,9 @@
 @media screen and (max-width: 768px) {
     .Global {
         margin: 0;
-        height: calc(100vh - 500px);
-        padding-top: 20vh;
+        height: calc(100vh - 171px);
+        display: inline-block;
+        padding-top: 7vh;
     }
 
     .Global > img {

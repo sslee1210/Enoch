@@ -48,6 +48,7 @@
         position: static;
         height: 100%;
         max-height: 170px;
+        background-color: #fff;
     }
     .footer .footer_container {
         flex-direction: column;
