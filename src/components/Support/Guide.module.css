@@ -17,3 +17,22 @@
 .guide .guide1 h1 {
     font-size: 2vw;
 }
+
+@media screen and (max-width: 768px) {
+    .guide {
+        margin-bottom: 50px;
+        height: 70%;
+    }
+
+    .guide .guide1 {
+        width: 95%;
+        margin-top: 20vw;
+        padding-top: 20px;
+    }
+
+    .guide .guide1 h1 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+        margin-left: 2vw;
+    }
+}

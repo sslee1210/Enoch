@@ -117,3 +117,74 @@
 .news .news1 .navigation .but .next a:hover {
     background-color: #e0e0e0;
 }
+
+@media screen and (max-width: 768px) {
+    .news {
+        margin-bottom: 50px;
+        height: 70%;
+    }
+
+    .news .news1 {
+        width: 95%;
+        margin-top: 20vw;
+        padding-top: 20px;
+    }
+
+    .news .news1 button {
+        font-size: 0.8rem;
+        margin-bottom: 2vw;
+        width: 20vw;
+    }
+
+    .news .news1 h1 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+
+    .news .news1 .text h1 {
+        font-size: 5vw;
+    }
+
+    .news .news1 .text p {
+        font-size: 3.5vw;
+    }
+
+    .news .news1 ul li {
+        padding: 2vw;
+    }
+
+    .news .news1 ul li a {
+        font-size: 1rem;
+    }
+
+    .news .news1 .pagination {
+        margin-top: 10px;
+    }
+
+    .news .news1 .navigation p {
+        font-size: 1.2rem;
+        margin-bottom: 2vw;
+    }
+
+    .news .news1 .navigation a {
+        font-size: 0.8rem;
+    }
+
+    .news .news1 .navigation .but p {
+        font-size: 1rem;
+    }
+
+    .news .news1 .navigation .but span {
+        float: right;
+
+        text-align: right;
+    }
+
+    .news .news1 .navigation .but .prev a,
+    .news .news1 .navigation .but .next a {
+        padding: 0.5vw;
+        margin-bottom: 0.5vw;
+        width: 100%;
+        display: inline-block;
+    }
+}

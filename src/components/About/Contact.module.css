@@ -34,3 +34,59 @@
     font-size: 1.1vw;
     line-height: 1.2;
 }
+
+.Map {
+    width: 50%; /* 지도의 너비를 100%로 설정 */
+    height: 400px; /* 지도의 높이를 400px로 설정 */
+    margin: 0 auto; /* 지도를 수평 중앙에 위치시킴 */
+    position: relative; /* 위치 조정을 위한 상대 위치 설정 */
+    bottom: 8vw; /* 상단에서부터 50px 아래에 위치 */
+    left: 10vw; /* 왼쪽 정렬 */
+}
+
+@media screen and (max-width: 768px) {
+    .Contact {
+        width: 100%;
+        height: auto; /* 높이를 자동으로 조정하도록 변경 */
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .Contact .Contact1 {
+        display: flex; /* Flexbox 레이아웃 사용 */
+        flex-direction: column; /* 자식 요소들을 세로로 정렬 */
+
+        margin-top: 15vw;
+        height: 70vh;
+        width: 100%;
+    }
+
+    .Contact .Contact1 h1 {
+        font-size: 5vw;
+        margin-top: 8vw;
+        margin-left: 2vw;
+    }
+
+    .Contact .Contact1 .ContactText {
+        margin-left: 10vw;
+        top: -2vw;
+    }
+
+    .Contact .Contact1 .ContactText h3 {
+        font-size: 0.9rem;
+        margin-bottom: 3vw;
+    }
+
+    .Contact .Contact1 .ContactText p {
+        font-size: 0.7rem;
+    }
+
+    .Map {
+        width: 80%; /* 모바일 화면에서 지도 너비 조정 */
+        height: 200px;
+        margin: 20px auto; /* 상단과 하단 마진 추가로 요소 간 간격 조정 */
+        position: relative;
+        bottom: 0; /* 모바일 화면에서의 위치 조정을 위해 변경 */
+        left: 0; /* 모바일 화면에서의 위치 조정을 위해 변경 */
+    }
+}

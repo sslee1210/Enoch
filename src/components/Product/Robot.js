@@ -157,7 +157,6 @@ const Robot = () => {
                 <div
                     style={{
                         flex: '1 1',
-
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'flex-end',

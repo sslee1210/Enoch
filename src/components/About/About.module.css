@@ -51,3 +51,54 @@
     text-align: left;
     line-height: 1.5;
 }
+
+@media screen and (max-width: 768px) {
+    .About {
+        width: 100%;
+        height: calc(100vh - 200px);
+        margin: 0;
+        flex-basis: 100%;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .About .about1 {
+        width: 100%;
+        height: auto;
+
+        margin-top: 28vw;
+        padding-top: 20px;
+    }
+
+    .About .about1 h1 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+        margin-left: 2vw;
+    }
+
+    .About .alltext {
+        width: 80%;
+    }
+
+    .About .about1 .alltext h2 {
+        font-size: 3.2vw;
+        margin-left: 2vw;
+        margin-bottom: 4vw;
+    }
+
+    .About .about1 .alltext p {
+        font-size: 2.1vw;
+        line-height: 1.8;
+        margin-left: 8vw;
+        width: 95%;
+        text-align: left;
+    }
+
+    .About .about1 .alltext .RightText {
+        font-size: 2.1vw;
+        margin-left: 8vw;
+        width: 28%;
+        text-align: left;
+        line-height: 1.3;
+    }
+}

@@ -1,35 +1,80 @@
 .nav {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #ffffff;
-    padding: 22px 41px;
-    box-sizing: border-box;
-    position: fixed;
-    top: 0;
     width: 100%;
-    z-index: 9999;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    height: 80px;
+    border-bottom: 1px solid #ebebeb;
 }
 
-.logo {
-    color: #000000;
-    font-size: 24px;
-    text-decoration: none;
+/*로고 스타일*/
+.nav > .logo {
+    display: block;
+    overflow: hidden;
+    max-height: 72px;
+    margin-left: 30px;
+    width: 5%;
+    min-width: 60px;
+}
+.nav > .logo > img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 78px;
+    height: 100%;
+    transform: translateY(4px);
 }
 
+/*햄버거 버튼 스타일링*/
 .hamburger {
     display: none;
+    position: fixed;
+    top: 20px;
+    right: 40px;
+    width: 40px;
+    height: 40px;
     cursor: pointer;
+    z-index: 1000;
 }
-
-.hamburger span {
+.hamburger input {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+.hamburger .hamburger_label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.hamburger .hamburger_label > span {
     display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #000000;
-    margin-bottom: 5px;
+    width: 100%;
+    height: 6px;
+    background-color: black;
+    border: 1px solid red;
 }
 
+/*햄버거 버튼을 누르면 ul 등장*/
+.navList.active .navItems {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #262a63d6;
+    backdrop-filter: blur(8px);
+    z-index: 500;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
 .navList {
     display: flex;
 }
@@ -49,6 +94,7 @@
 .navLink {
     color: #000000;
     text-decoration: none;
+    font-size: 1.3rem;
     padding: 35px;
     transition: color 0.3s ease;
 }
@@ -82,7 +128,7 @@
 .subMenuLink {
     text-align: center;
     display: block;
-    color: #000;
+    color: #424242;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -92,26 +138,31 @@
 }
 
 @media screen and (max-width: 768px) {
+    .nav > .logo {
+        margin-left: 0;
+    }
     .hamburger {
         display: block;
     }
-
     .navList {
-        position: fixed;
-        top: 5.5%;
-        left: 0;
-        width: 100%;
-        z-index: 9999;
-        height: 100vh;
-        background-color: #ffffff;
-        flex-direction: column;
-        padding: 10px;
-        box-sizing: border-box;
         display: none;
     }
-
     .navList.active {
         display: flex;
+    }
+
+    .hamburger > span {
+        background-color: #262a63;
+    }
+    .navItems.active + .hamburger:hover {
+        color: #eee;
+    }
+
+    .navList.active ul a {
+        color: #ffffff;
+    }
+    .navList.active ul a:hover {
+        color: rgb(255, 175, 71);
     }
 
     .navItems {
@@ -134,36 +185,19 @@
 
     .subMenu {
         position: static;
+        background-color: transparent;
         display: none;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.3s ease-out;
     }
 
     .subMenu.active {
-        display: block;
-        max-height: 500px;
+        display: flex;
+        flex-direction: column;
     }
-
+    .navList.active .navItems {
+        display: flex;
+    }
     .subMenuItem {
-        padding: 10px 20px;
+        padding: 5px 10px;
         border: none;
     }
-
-    .subMenuLink {
-        color: #333;
-        text-decoration: none;
-    }
-}
-
-.navItem {
-    position: relative;
-}
-
-.subMenu {
-    display: none;
-}
-
-.navItem.active .subMenu {
-    display: block;
 }

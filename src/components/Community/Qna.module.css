@@ -54,3 +54,40 @@
 .qna .faqContainer .active .faqText {
     display: block;
 }
+
+@media screen and (max-width: 768px) {
+    .qna {
+        margin-bottom: 50px;
+        height: 70%;
+    }
+
+    .qna .qna1 {
+        width: 95%;
+        height: auto;
+        margin-top: 20vw;
+        padding-top: 20px;
+    }
+
+    .qna .qna1 h1 {
+        font-size: 4vw;
+    }
+
+    .qna .faqContainer {
+        margin-top: 10px;
+    }
+
+    .qna .faqContainer .faq {
+        margin-bottom: 5px;
+        padding: 5px;
+        margin-top: 4vw;
+    }
+
+    .qna .faqContainer .faqText {
+        margin-top: 5px;
+        padding-top: 2vw;
+    }
+
+    .qna .faqContainer .fas {
+        font-size: 12px;
+    }
+}

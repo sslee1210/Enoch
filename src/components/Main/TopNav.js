@@ -1,10 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react'; // useState 추가
 import { Link } from 'react-router-dom';
 import TopNavstyles from './TopNav.module.css';
 
 const TopNav = () => {
-    const navListRef = useRef(null);
-    const hamburgerRef = useRef(null);
+    const [isOpen, setIsOpen] = useState(false);
+    const navListRef = useRef(null); // navListRef 정의
+    const hamburgerRef = useRef(null); // hamburgerRef 정의
+
+    const toggleButton = () => {
+        setIsOpen(!isOpen);
+    };
 
     useEffect(() => {
         const toggleMenu = () => {
@@ -28,12 +33,27 @@ const TopNav = () => {
     return (
         <div className={TopNavstyles.nav}>
             <Link to="/" className={TopNavstyles.logo}>
-                로고
+                <img src="/images/enoch 2024 logo.png" alt="로고" />
             </Link>
-            <div ref={hamburgerRef} className={TopNavstyles.hamburger}>
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <div className={TopNavstyles.hamburger} ref={hamburgerRef}>
+                {' '}
+                {}
+                <input
+                    type="checkbox"
+                    id="hamburger-checkbox"
+                    className={TopNavstyles.hamburger_checkbox}
+                    checked={isOpen}
+                    onChange={toggleButton}
+                    aria-label="햄버거 메뉴 버튼"
+                />
+                <label htmlFor="hamburger-checkbox" className={TopNavstyles.hamburger_label}>
+                    {' '}
+                    {}
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
             <nav ref={navListRef} className={TopNavstyles.navList}>
                 <ul className={TopNavstyles.navItems}>

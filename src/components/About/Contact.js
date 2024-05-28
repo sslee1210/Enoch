@@ -43,16 +43,7 @@ const Contact = () => {
                     <p>FAX : 0504-163-8775</p>
                     <p>www.enokorea.com</p>
                 </div>
-                <div
-                    id="myMap"
-                    className={ContactStyles.Map}
-                    style={{
-                        width: '50%',
-                        height: '50%',
-                        left: '30vw',
-                        bottom: '5vw',
-                    }}
-                ></div>
+                <div id="myMap" className={ContactStyles.Map} />
             </div>
         </div>
     );

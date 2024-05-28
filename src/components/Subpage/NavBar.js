@@ -4,7 +4,7 @@ import NavBarStyles from './NavBar.module.css';
 
 const NavBar = () => {
     const activeStyle = {
-        color: 'blue',
+        color: 'rgb(255, 175, 71)',
         fontWeight: 'bold',
     };
 

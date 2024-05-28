@@ -23,3 +23,21 @@
     text-align: center;
     margin-top: 15vw;
 }
+
+@media screen and (max-width: 768px) {
+    .support {
+        margin-bottom: 50px;
+        height: 70%;
+    }
+
+    .support .support1 {
+        width: 95%;
+        margin-top: 20vw;
+        padding-top: 20px;
+    }
+    .support .support1 h1 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+        margin-left: 2vw;
+    }
+}

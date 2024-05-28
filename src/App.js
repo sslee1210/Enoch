@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from './components/Main/Main';
 import NavBar from './components/Subpage/NavBar';
@@ -26,15 +26,32 @@ const TopNavLayout = ({ children }) => (
     </div>
 );
 
-const NavBarLayout = ({ children }) => (
-    <div style={{ display: 'flex', height: '100vh' }}>
-        <NavBar />
-        <div style={{ flex: 1 }}>
-            {children}
-            <Footer />
+const NavBarLayout = ({ children }) => {
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    return isMobile ? (
+        <TopNavLayout>{children}</TopNavLayout>
+    ) : (
+        <div style={{ display: 'flex', height: '100vh' }}>
+            <NavBar />
+            <div style={{ flex: 1 }}>
+                {children}
+                <Footer />
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 const App = () => {
     return (
@@ -59,6 +76,7 @@ const App = () => {
                                 <Route path="/global" element={<Global />} />
                                 <Route path="/contact" element={<Contact />} />
                             </Routes>
+                            <Footer />
                         </NavBarLayout>
                     }
                 />
@@ -71,6 +89,7 @@ const App = () => {
                                 <Route path="news/:id" element={<NewsDetail />} />
                                 <Route path="qna" element={<Qna />} />
                             </Routes>
+                            <Footer />
                         </NavBarLayout>
                     }
                 />
@@ -82,6 +101,7 @@ const App = () => {
                                 <Route path="" element={<Support />} />
                                 <Route path="/guide" element={<Guide />} />
                             </Routes>
+                            <Footer />
                         </NavBarLayout>
                     }
                 />
