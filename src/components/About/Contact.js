@@ -19,6 +19,34 @@ const Contact = () => {
         });
         marker.setMap(map);
 
+        // 커스텀 오버레이 생성
+        const content = document.createElement('div');
+        content.innerHTML = `<button class="${ContactStyles.CustomButton}">길찾기</button>`;
+        content.style.position = 'absolute';
+        content.style.zIndex = '9999';
+
+        const customOverlay = new kakao.maps.CustomOverlay({
+            content: content,
+            position: marker.getPosition(),
+            yAnchor: 1,
+        });
+
+        // 오버레이 버튼 클릭 시 길찾기 페이지로 이동
+        content.querySelector('button').addEventListener('click', () => {
+            const url = `https://map.kakao.com/link/to/길찾기할장소명,37.4824322,126.8774539`; // '길찾기할장소명'을 원하는 대상으로 변경
+            window.open(url, '_blank'); // 새 창에서 링크 열기
+        });
+
+        // 마커 클릭 시 커스텀 오버레이 표시
+        kakao.maps.event.addListener(marker, 'click', function () {
+            customOverlay.setMap(map);
+        });
+
+        // 지도 클릭 시 커스텀 오버레이 제거
+        kakao.maps.event.addListener(map, 'click', function () {
+            customOverlay.setMap(null);
+        });
+
         const handleResize = () => {
             map.setCenter(new kakao.maps.LatLng(37.4824322, 126.8774539));
         };
@@ -28,6 +56,8 @@ const Contact = () => {
         // 컴포넌트가 언마운트될 때 이벤트 리스너 제거
         return () => {
             window.removeEventListener('resize', handleResize);
+            kakao.maps.event.removeListener(map, 'click');
+            kakao.maps.event.removeListener(marker, 'click');
         };
     }, []); // 빈 배열을 의존성 배열로 추가하여 useEffect가 한 번만 실행되도록 함
 
