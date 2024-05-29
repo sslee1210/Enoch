@@ -35,8 +35,8 @@ const Etc = () => {
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
                 <img src={process.env.PUBLIC_URL + '/images/Etc.png'} alt="Etc" />
-                <h2>ENO-100</h2>
-                <p>고감도 완전 무선 스테레오 음성 증폭 이어폰 TWS 맑은소리</p>
+                <h2>etc</h2>
+                <p>각종 장비와 제품들</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -53,7 +53,7 @@ const Etc = () => {
                         <Link to="/Product/Electronics">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/Product/etc">etc</Link>
+                        <Link to="/Product/Etc">Etc</Link>
                     </li>
                 </ul>
             </div>

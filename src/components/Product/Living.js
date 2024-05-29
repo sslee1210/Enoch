@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
-import FooterStyles from '../Subpage/Footer.module.css';
 
 const Living = () => {
     const [opacity, setOpacity] = useState(0);
@@ -34,12 +33,9 @@ const Living = () => {
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
-                <img src={process.env.PUBLIC_URL + '/images/living.png'} alt="Robot" />
-                <h2 className={ProductStyles.textblack}>Folderble Box</h2>
-                <p className={ProductStyles.textblack}>
-                    X30 quadruped robot, a flagship product designed to meet core industry needs in multiple fields
-                    including inspection, investigation, security, surveying and mapping.
-                </p>
+                <img src={process.env.PUBLIC_URL + '/images/Living.png'} alt="closet" />
+                <h2>Living Product</h2>
+                <p>이노치 코리아만의 감성 생활 제품</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -56,7 +52,7 @@ const Living = () => {
                         <Link to="/Product/Electronics">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/Product/etc">etc</Link>
+                        <Link to="/Product/Etc">etc</Link>
                     </li>
                 </ul>
             </div>

@@ -34,13 +34,9 @@ const Pc = () => {
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
-                <img src={process.env.PUBLIC_URL + '/images/Pc.png'} alt="Pc" />
-                <h2>All in One 27inch PC</h2>
-                <p>
-                    MacBook Air sails through work and play — and the M3 chip brings even greater capabilities to the
-                    world’s most popular laptop. With up to 18 hours of battery life,1 you can take the superportable
-                    MacBook Air anywhere and blaze through whatever you’re into.
-                </p>
+                <img src={process.env.PUBLIC_URL + '/images/PC.png'} alt="Pc" />
+                <h2>PC</h2>
+                <p>최신 기술과 혁신적인 디자인이 결합된 고성능 PC</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -57,7 +53,7 @@ const Pc = () => {
                         <Link to="/Product/Electronics">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/etc">etc</Link>
+                        <Link to="/Product/Etc">etc</Link>
                     </li>
                 </ul>
             </div>

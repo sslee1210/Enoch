@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
-import FooterStyles from '../Subpage/Footer.module.css';
 
 const Robot = () => {
     const [opacity, setOpacity] = useState(0);
@@ -34,12 +33,9 @@ const Robot = () => {
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
-                <img src={process.env.PUBLIC_URL + '/images/Robot.jpg'} alt="Robot" />
-                <h2>A Flagship Product Born for the Industry</h2>
-                <p>
-                    X30 quadruped robot, a flagship product designed to meet core industry needs in multiple fields
-                    including inspection, investigation, security, surveying and mapping.
-                </p>
+                <img src={process.env.PUBLIC_URL + '/images/Robot.png'} alt="Robot" />
+                <h2>Robot</h2>
+                <p>첨단 기술로 일상에 혁신을 더하는 스마트 로봇</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -56,7 +52,7 @@ const Robot = () => {
                         <Link to="/Product/Electronics">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/Product/etc">etc</Link>
+                        <Link to="/Product/etc">Etc</Link>
                     </li>
                 </ul>
             </div>
