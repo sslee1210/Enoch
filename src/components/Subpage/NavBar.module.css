@@ -5,14 +5,19 @@
     flex-basis: 18%;
 }
 
-.subnav h1 {
+.subnav > .logo {
     display: block;
-    text-align: center;
-    margin-top: 3vw;
+    overflow: hidden;
+    max-height: 30vw;
+    margin-left: 6.7vw;
+    margin-top: 2vw;
 }
-
-.subnav h1 a {
-    font-size: 2vw;
+.subnav > .logo > img {
+    object-fit: cover;
+    width: 100%;
+    max-width: 4.5vw;
+    height: 100%;
+    transform: translateY(4px);
 }
 
 .subnav nav {

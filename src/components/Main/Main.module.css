@@ -4,9 +4,9 @@
     gap: 20px;
     overflow-y: hidden;
     box-sizing: border-box;
-    margin-bottom: 100px;
+    padding-top: 80px;
     width: 100%;
-    height: calc(100vh - 200px);
+    height: calc(100vh - 110px);
 }
 
 .main .SwiperSlide {

@@ -22,6 +22,7 @@
 .news .news1 .text {
     height: 74%;
     border: 1px solid #ddd;
+    overflow-y: auto;
 }
 
 .news .news1 button {

@@ -12,9 +12,10 @@ const NavBar = () => {
 
     return (
         <div className={NavBarStyles.subnav}>
-            <h1>
-                <Link to="/">로고</Link>
-            </h1>
+            <Link to="/" className={NavBarStyles.logo}>
+                <img src="/images/enoch 2024 logo.png" alt="로고" />
+            </Link>
+
             <nav>
                 <ul className={NavBarStyles.menu}>
                     <li>

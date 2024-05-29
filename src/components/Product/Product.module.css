@@ -1,6 +1,7 @@
 .product {
     width: 100%;
     height: calc(100vh - 100px);
+    padding-top: 8vh;
 }
 
 .product a {
@@ -167,7 +168,7 @@
 
 @media screen and (max-width: 768px) {
     .product {
-        padding-top: 6.3vh;
+        padding-top: 8.7vh;
     }
 
     .product .big {

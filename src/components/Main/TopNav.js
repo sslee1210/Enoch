@@ -1,34 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react'; // useState 추가
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import TopNavstyles from './TopNav.module.css';
 
 const TopNav = () => {
     const [isOpen, setIsOpen] = useState(false);
-    const navListRef = useRef(null); // navListRef 정의
-    const hamburgerRef = useRef(null); // hamburgerRef 정의
+    const navListRef = useRef(null);
+    const hamburgerRef = useRef(null);
 
     const toggleButton = () => {
         setIsOpen(!isOpen);
     };
-
-    useEffect(() => {
-        const toggleMenu = () => {
-            if (navListRef.current) {
-                navListRef.current.classList.toggle(TopNavstyles.active);
-            }
-        };
-
-        const hamburger = hamburgerRef.current;
-        if (hamburger) {
-            hamburger.addEventListener('click', toggleMenu);
-        }
-
-        return () => {
-            if (hamburger) {
-                hamburger.removeEventListener('click', toggleMenu);
-            }
-        };
-    }, []);
 
     return (
         <div className={TopNavstyles.nav}>
@@ -37,8 +18,6 @@ const TopNav = () => {
             </Link>
 
             <div className={TopNavstyles.hamburger} ref={hamburgerRef}>
-                {' '}
-                {}
                 <input
                     type="checkbox"
                     id="hamburger-checkbox"
@@ -48,14 +27,12 @@ const TopNav = () => {
                     aria-label="햄버거 메뉴 버튼"
                 />
                 <label htmlFor="hamburger-checkbox" className={TopNavstyles.hamburger_label}>
-                    {' '}
-                    {}
                     <span></span>
                     <span></span>
                     <span></span>
                 </label>
             </div>
-            <nav ref={navListRef} className={TopNavstyles.navList}>
+            <nav ref={navListRef} className={`${TopNavstyles.navList} ${isOpen ? TopNavstyles.active : ''}`}>
                 <ul className={TopNavstyles.navItems}>
                     <li className={TopNavstyles.navItem}>
                         <Link to="/about/intro" className={TopNavstyles.navLink}>
