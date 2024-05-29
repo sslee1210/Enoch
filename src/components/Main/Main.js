@@ -82,7 +82,7 @@ const Main = () => {
                         />
                     </Link>
 
-                    <Link to="/product/appliance">
+                    <Link to="/product/Electronics">
                         <img
                             src={process.env.PUBLIC_URL + (isMobile ? '/images/m-가전.png' : '/images/가전.png')}
                             alt="생활가전"

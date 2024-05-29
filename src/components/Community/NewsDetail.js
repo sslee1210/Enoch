@@ -1,3 +1,5 @@
+// 상단에 아이콘을 가져오는 코드 추가
+import { MdArrowBack } from 'react-icons/md';
 import React from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import newsData from './newsData.json';
@@ -6,8 +8,8 @@ import NewsStyles from './News.module.css';
 const NewsDetail = () => {
     const { id } = useParams();
     const navigate = useNavigate();
-    const item = newsData.find((news) => news.id === parseInt(id, 10));
 
+    const item = newsData.find((news) => news.id === parseInt(id, 10));
     if (!item) {
         return <div>뉴스 항목을 찾을 수 없습니다.</div>;
     }
@@ -24,26 +26,26 @@ const NewsDetail = () => {
         <div className={NewsStyles.news}>
             <div className={NewsStyles.news1}>
                 <button onClick={() => navigate('/community/news')} className={NewsStyles.backButton}>
-                    뒤로가기
+                    <MdArrowBack className={NewsStyles.icon} />
                 </button>
                 <div className={NewsStyles.text}>
                     <h1>{item.title}</h1>
                     <p dangerouslySetInnerHTML={createMarkup(item.content)}></p>
                 </div>
                 <div className={NewsStyles.navigation}>
-                    <p style={{ marginTop: '4vw' }}>다른 글</p>
+                    <p style={{ marginTop: '2vw' }}>다른 글</p>
                     <div className={NewsStyles.but}>
                         {nextItem && (
                             <p className={NewsStyles.next}>
                                 <Link to={`/community/news/${nextItem.id}`}>
-                                    {nextItem.title} <span>({nextItem.date})</span>
+                                    {nextItem.title} <span>날짜: {item.date}</span>
                                 </Link>
                             </p>
                         )}
                         {prevItem && (
                             <p className={NewsStyles.prev}>
                                 <Link to={`/community/news/${prevItem.id}`}>
-                                    {prevItem.title} <span>({prevItem.date})</span>
+                                    {prevItem.title} <span>날짜: {item.date}</span>
                                 </Link>
                             </p>
                         )}

@@ -44,7 +44,7 @@ const Electronics = () => {
                         <Link to="/Product/robot">Robot</Link>
                     </li>
                     <li>
-                        <Link to="/Product/pc">Pc</Link>
+                        <Link to="/Product/pc">PC</Link>
                     </li>
                     <li>
                         <Link to="/Product/living">Living Product</Link>
@@ -53,7 +53,7 @@ const Electronics = () => {
                         <Link to="/Product/Electronics">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/Product/etc">Etc</Link>
+                        <Link to="/Product/etc">etc</Link>
                     </li>
                 </ul>
             </div>

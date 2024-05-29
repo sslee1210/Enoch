@@ -25,7 +25,7 @@ const News = () => {
                     {currentItems.map((item) => (
                         <li key={item.id}>
                             <Link to={`/community/news/${item.id}`}>
-                                {item.title} <span>({item.date})</span>
+                                {item.title} <span>날짜: {item.date}</span>
                             </Link>
                         </li>
                     ))}
@@ -40,7 +40,7 @@ const News = () => {
                                 margin: '0 5px',
                                 padding: '5px 10px',
                                 cursor: 'pointer',
-                                backgroundColor: currentPage === index + 1 ? 'gray' : 'white',
+                                backgroundColor: currentPage === index + 1 ? '#ddd' : 'white',
                             }}
                         >
                             {index + 1}
