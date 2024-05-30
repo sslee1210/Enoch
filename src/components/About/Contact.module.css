@@ -36,12 +36,12 @@
 }
 
 .Map {
-    width: 50%; /* 지도의 너비를 100%로 설정 */
-    height: 400px; /* 지도의 높이를 400px로 설정 */
+    width: 40%; /* 지도의 너비를 100%로 설정 */
+    height: 300px; /* 지도의 높이를 400px로 설정 */
     margin: 0 auto; /* 지도를 수평 중앙에 위치시킴 */
     position: relative; /* 위치 조정을 위한 상대 위치 설정 */
-    bottom: 8vw; /* 상단에서부터 50px 아래에 위치 */
-    left: 10vw; /* 왼쪽 정렬 */
+    bottom: 5vw; /* 상단에서부터 50px 아래에 위치 */
+    left: 5vw; /* 왼쪽 정렬 */
 }
 
 .CustomButton {
