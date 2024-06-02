@@ -2,17 +2,17 @@
 
 ## 🎯 프로젝트 개요
 
-### (주)이노치코리아 웹 사이트 제작, 쇼핑몰 구축
+### (주)이노치코리아 웹 사이트 제작, 쇼핑몰 구축, 도메인 구입 후 netlify로 배포
 
 ---
 
 ## 🛠 사용 기술 및 도구
 
-#### **TOOL:** `Github` `Google spread sheet` `Figma` `Adobe Illustrator` `Adobe photoShop`
+#### **TOOL:** `Github` `Google spread sheet` `Figma` `Adobe Illustrator` `Adobe photoShop` `Netlify`
 
 #### **WEB FRAMEWORK:** `HTML5` `CSS3` `JavaScript`
 
-#### **LIBRARY:** ``
+#### **LIBRARY:** 
 
 ---
 
@@ -24,7 +24,7 @@
 | ------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Home**     | 명시성 중요<br/>회사가 추구하는 방향성을 돋보이게<br/>스크롤, 복잡한 이벤트 사용 x             | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/af5f32a1-5b5e-41b6-9e71-6fc27f4e77e6"  width="300" height="auto"/></p> |
 | **Sub Page** | Box형 틀, 최대한 basic하게                                                                     | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/a9fcb6ef-8b15-49f2-a3ed-612e8fcae360"  width="300" height="auto"/></p> |
-| **Product**  | 사용자의 눈높이에 맞게<br/>구매 목적 의식에 맞게 실용성과 편의성 챙기기 <br/>심플하고 깔끔하게 | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/b1ea9c87-f003-4032-88c9-d59f212fee1c"  width="300" height="auto"/></p> |
+| **Product**  | 사용자의 눈높이에 맞게<br/>목적 의식에 맞게 실용성과 편의성 챙기기 <br/>심플하고 깔끔하게 | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/b1ea9c87-f003-4032-88c9-d59f212fee1c"  width="300" height="auto"/></p> |
 
 ---
 
