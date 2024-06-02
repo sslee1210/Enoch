@@ -64,7 +64,7 @@
 
 ## 5. 디렉토리 구조 분석 : 프로젝트 구조
 
-   <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/fae22bda-bede-468b-9394-5e13318659bd"  width="500" height="auto"/></p> 
+   <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/50a283d7-808a-47cd-80c4-959a96bec239"  width="200" height="auto"/></p> 
    
 ---
 
@@ -262,4 +262,4 @@ div {
 
 # 프로젝트 바로가기
 
-## [**🔗 이노치코리아 홈페이지**](https://enochkorea.netlify.app/) (추후 다른 도메인 연결 예정)
+## [**🔗 이노치코리아 홈페이지**](https://www.enochkorea.com/) (Netlify 배포)
