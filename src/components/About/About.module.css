@@ -19,6 +19,7 @@
 .About .about1 h1 {
     font-size: 2vw;
     margin-bottom: 2vw;
+    font-weight: 900;
 }
 .About .about1 .alltext {
     display: inline-block;
