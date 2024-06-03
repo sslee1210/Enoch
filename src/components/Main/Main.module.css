@@ -103,11 +103,13 @@
         height: 100%;
     }
     .main .product > h1 {
-        font-size: 7vw;
+        font-size: 5vw;
+        margin-bottom: 33px;
     }
     .main .product .product_container {
         flex-direction: column;
         align-items: center;
+        padding-bottom: 50px;
     }
     .main .product .product_container > a {
         /* max-width:  디자인 수정할 때, 수치 바꾸세요 */
@@ -116,7 +118,7 @@
     }
     .main .product .product_container > a > img {
         transform: translateY(-20px);
-        min-height: 205px;
+        min-height: 276px;
         object-fit: contain;
     }
 }
