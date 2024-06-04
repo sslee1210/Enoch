@@ -262,4 +262,4 @@ div {
 
 # 프로젝트 바로가기
 
-## [**🔗 이노치코리아 홈페이지**](https://www.enochkorea.com/) (Netlify 배포)
+## [**🔗 이노치코리아 홈페이지**](https://www.enochkorea.com/) (도메인 연결 후 Netlify 배포 중)
