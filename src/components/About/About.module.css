@@ -24,7 +24,6 @@
 .About .about1 .alltext {
     display: inline-block;
     box-sizing: border-box;
-
     margin: auto;
 }
 
@@ -40,7 +39,6 @@
     padding-bottom: 2vw;
     margin-left: 5vw;
     width: 70%;
-    text-align: center;
     white-space: wrap;
 }
 

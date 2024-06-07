@@ -61,8 +61,8 @@ const Robot = () => {
                     <div className={ProductStyles.sec1}>
                         <img src={process.env.PUBLIC_URL + '/images/robot01.png'} alt="Robot1" />
                         <div className={ProductStyles.tex}>
-                            <h2>Unstoppable operation in Extreme weather</h2>
-                            <p>Operate from -20°C to 55°C; IP67 protection.</p>
+                            <h2>조리용 로봇팔</h2>
+                            <p>조리 과정을 자동화하여 효율성과 정확성을 높이는 혁신적인 조리용 로봇팔</p>
                         </div>
                     </div>
                 </a>
