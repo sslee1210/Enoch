@@ -21,8 +21,21 @@
 
 .support .support1 p {
     color: #ddd;
-    text-align: center;
-    margin-top: 15vw;
+    margin-top: 2vw;
+}
+
+.support .support1 p button {
+    border: none;
+    background-color: #ececec;
+    border-radius: 15px;
+    padding: 0.4vw;
+    font-size: 0.9vw;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.support .support1 p button:hover {
+    background-color: #ddd;
 }
 
 @media screen and (max-width: 768px) {
@@ -41,5 +54,20 @@
         font-size: 5vw;
         margin-bottom: 4vw;
         margin-left: 2vw;
+    }
+
+    .support .support1 p {
+        color: #ddd;
+        margin-top: 2vw;
+    }
+
+    .support .support1 p button {
+        border: none;
+        background-color: #ececec;
+        border-radius: 15px;
+        padding: 0.8vw;
+        font-size: 2vw;
+        cursor: pointer;
+        transition: 0.3s;
     }
 }
