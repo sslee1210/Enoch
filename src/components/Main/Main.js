@@ -64,10 +64,17 @@ const Main = () => {
                 <h1>Product</h1>
                 <div className={MainStyles.product_container}>
                     <Link to="/product/robot">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-로봇.png' : '/images/로봇.png')}
-                            alt="로봇"
-                        />
+                        <div>
+                            <img
+                                src={process.env.PUBLIC_URL + (isMobile ? '/images/m-로봇.png' : '/images/로봇.png')}
+                                alt="로봇"
+                            />
+                            <p>
+                                Robot
+                                <br />
+                                로봇
+                            </p>
+                        </div>
                     </Link>
 
                     <Link to="/product/PC">

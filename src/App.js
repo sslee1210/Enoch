@@ -20,7 +20,7 @@ import Footer from './components/Subpage/Footer';
 import NewsDetail from './components/Community/NewsDetail';
 
 const TopNavLayout = ({ children }) => (
-    <div style={{ height: '100vh' }}>
+    <div>
         <TopNav />
         {children}
     </div>
