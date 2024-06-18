@@ -25,15 +25,10 @@ const Support = () => {
             <div className={SupportStyles.support1}>
                 <h1>Download File</h1>
                 <p>
-                    {isDownloading ? (
-                        <button className={SupportStyles.downloadButton} disabled>
-                            Opening...
-                        </button>
-                    ) : (
-                        <button className={SupportStyles.downloadButton} onClick={handleDownload}>
-                            1. 조리로봇 브로슈어
-                        </button>
-                    )}
+                    <button className={SupportStyles.button} onClick={handleDownload}>
+                        1. 조리로봇 브로슈어
+                        <img src="/images/down.png" alt="download" className={SupportStyles.download} />
+                    </button>
                 </p>
             </div>
         </div>

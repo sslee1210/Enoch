@@ -57,15 +57,22 @@ const Robot = () => {
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
-                    <div className={ProductStyles.sec1}>
-                        <img src={process.env.PUBLIC_URL + '/images/robot01.png'} alt="Robot1" />
-                        <div className={ProductStyles.tex}>
-                            <h2>조리용 로봇팔</h2>
-                            <p>조리 과정을 자동화하여 효율성과 정확성을 높이는 혁신적인 조리용 로봇팔</p>
-                        </div>
+                <div className={ProductStyles.sec1}>
+                    <img src={process.env.PUBLIC_URL + '/images/robot01.png'} alt="Robot1" />
+                    <div className={ProductStyles.tex}>
+                        <h2>조리용 로봇팔</h2>
+                        <p>조리 과정을 자동화하여 효율성과 정확성을 높이는 혁신적인 조리용 로봇팔</p>
                     </div>
-                </a>
+                    <div className={ProductStyles.rbtex}>
+                        <Link to="/Support" className={ProductStyles.rb}>
+                            브로슈어 보기
+                        </Link>
+                        <Link to="/support/guide" className={ProductStyles.rb}>
+                            설명법 보기
+                        </Link>
+                    </div>
+                </div>
+
                 <div className={ProductStyles.background}>
                     <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
                         <div className={ProductStyles.sec2}>
