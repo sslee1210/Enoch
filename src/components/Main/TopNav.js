@@ -11,6 +11,10 @@ const TopNav = () => {
         setIsOpen(!isOpen);
     };
 
+    const handleMenuClick = () => {
+        setIsOpen(false); // 메뉴 항목 클릭 시 메뉴 닫기
+    };
+
     return (
         <div className={TopNavstyles.nav}>
             <Link to="/" className={TopNavstyles.logo}>
@@ -35,7 +39,7 @@ const TopNav = () => {
             <nav ref={navListRef} className={`${TopNavstyles.navList} ${isOpen ? TopNavstyles.active : ''}`}>
                 <ul className={TopNavstyles.navItems}>
                     <li className={TopNavstyles.navItem}>
-                        <Link to="/about/intro" className={TopNavstyles.navLink}>
+                        <Link to="/about/intro" className={TopNavstyles.navLink} onClick={handleMenuClick}>
                             About
                         </Link>
                         <ul className={TopNavstyles.subMenu}>
@@ -62,7 +66,7 @@ const TopNav = () => {
                         </ul>
                     </li>
                     <li className={TopNavstyles.navItem}>
-                        <Link to="/community/news" className={TopNavstyles.navLink}>
+                        <Link to="/community/news" className={TopNavstyles.navLink} onClick={handleMenuClick}>
                             Community
                         </Link>
                         <ul className={TopNavstyles.subMenu}>
@@ -79,7 +83,7 @@ const TopNav = () => {
                         </ul>
                     </li>
                     <li className={TopNavstyles.navItem}>
-                        <Link to="/support" className={TopNavstyles.navLink}>
+                        <Link to="/support" className={TopNavstyles.navLink} onClick={handleMenuClick}>
                             Support
                         </Link>
                         <ul className={TopNavstyles.subMenu}>
@@ -101,6 +105,7 @@ const TopNav = () => {
                             target="_blank"
                             rel="noreferrer"
                             className={TopNavstyles.navLink}
+                            onClick={handleMenuClick}
                         >
                             Shop
                         </a>
