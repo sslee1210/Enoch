@@ -11,8 +11,10 @@ const TopNav = () => {
         setIsOpen(!isOpen);
     };
 
-    const handleMenuClick = () => {
-        setIsOpen(false); // 메뉴 항목 클릭 시 메뉴 닫기
+    const handleMenuClick = (event) => {
+        if (event.target.tagName === 'A') {
+            setIsOpen(false); // 메뉴 항목 클릭 시 메뉴 닫기
+        }
     };
 
     return (
@@ -36,7 +38,11 @@ const TopNav = () => {
                     <span></span>
                 </label>
             </div>
-            <nav ref={navListRef} className={`${TopNavstyles.navList} ${isOpen ? TopNavstyles.active : ''}`}>
+            <nav
+                ref={navListRef}
+                className={`${TopNavstyles.navList} ${isOpen ? TopNavstyles.active : ''}`}
+                onClick={handleMenuClick}
+            >
                 <ul className={TopNavstyles.navItems}>
                     <li className={TopNavstyles.navItem}>
                         <Link to="/about/intro" className={TopNavstyles.navLink} onClick={handleMenuClick}>

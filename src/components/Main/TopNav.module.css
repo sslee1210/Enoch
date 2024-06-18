@@ -202,7 +202,7 @@
     .navList.active ul a {
         color: #ffffff;
     }
-    .navList.active ul a:hover {
+    .navList.active .navLink:hover {
         color: rgb(255, 175, 71);
     }
 
