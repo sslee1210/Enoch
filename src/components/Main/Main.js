@@ -36,7 +36,9 @@ const Main = () => {
                         delay: 2000,
                         disableOnInteraction: false,
                     }}
+                    speed={1000} // 슬라이드 전환 속도를 1000ms로 설정
                     allowTouchMove={false}
+                    loop={true} // 슬라이드가 순환하도록 설정
                 >
                     <SwiperSlide>
                         <img
@@ -66,6 +68,10 @@ const Main = () => {
                             src={process.env.PUBLIC_URL + (isMobile ? '/images/m-로봇.png' : '/images/로봇.png')}
                             alt="로봇"
                         />
+                        <p>
+                            Robot
+                            <span>로봇</span>
+                        </p>
                     </Link>
 
                     <Link to="/product/PC">
@@ -73,20 +79,10 @@ const Main = () => {
                             src={process.env.PUBLIC_URL + (isMobile ? '/images/m-컴퓨터.png' : '/images/컴퓨터.png')}
                             alt="컴퓨터"
                         />
-                    </Link>
-
-                    <Link to="/product/Living">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-리빙.png' : '/images/생활.png')}
-                            alt="리빙"
-                        />
-                    </Link>
-
-                    <Link to="/product/Electronics">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-가전.png' : '/images/가전.png')}
-                            alt="생활가전"
-                        />
+                        <p>
+                            PC
+                            <span>컴퓨터</span>
+                        </p>
                     </Link>
 
                     <Link to="/product/Etc">
@@ -94,6 +90,29 @@ const Main = () => {
                             src={process.env.PUBLIC_URL + (isMobile ? '/images/m-기타.png' : '/images/기타.png')}
                             alt="기타"
                         />
+                        <p>A/V Products</p>
+                    </Link>
+
+                    <Link to="/product/Electronics">
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-가전.png' : '/images/가전.png')}
+                            alt="생활가전"
+                        />
+                        <p>
+                            Electronics
+                            <span>생활가전</span>
+                        </p>
+                    </Link>
+
+                    <Link to="/product/Living">
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-리빙.png' : '/images/생활.png')}
+                            alt="리빙"
+                        />
+                        <p>
+                            Living
+                            <span>생활용품</span>
+                        </p>
                     </Link>
                 </div>
             </div>

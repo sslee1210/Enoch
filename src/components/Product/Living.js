@@ -46,68 +46,51 @@ const Living = () => {
                         <Link to="/Product/pc">PC</Link>
                     </li>
                     <li>
-                        <Link to="/Product/living">Living Product</Link>
+                        <Link to="/Product/Etc">A/V Products</Link>
                     </li>
                     <li>
                         <Link to="/Product/Electronics">Electronics</Link>
                     </li>
                     <li>
-                        <Link to="/Product/Etc">etc</Link>
+                        <Link to="/Product/living">Living Product</Link>
                     </li>
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
-                    <div className={ProductStyles.sec1}>
-                        <img src={process.env.PUBLIC_URL + '/images/living1.png'} alt="Robot1" />
-                        <div className={ProductStyles.tex}>
-                            <h2>Unstoppable operation in Extreme weather</h2>
-                            <p>Operate from -20°C to 55°C; IP67 protection.</p>
-                        </div>
+                <div className={ProductStyles.sec1}>
+                    <img src={process.env.PUBLIC_URL + '/images/living1.png'} alt="living1" />
+                    <div className={ProductStyles.tex}>
+                        <h2>Folder Stroge Box</h2>
+                        <p>이동이 편리하고 공간 활용이 우수한 옷장</p>
                     </div>
-                </a>
-                <div className={ProductStyles.background}>
-                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
-                        <div className={ProductStyles.sec2}>
-                            <div className={ProductStyles.tex}>
-                                <h2>Rapidlysteadily surmount obstacles</h2>
-                                <p>
-                                    X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb
-                                    industrial stairs, respond to sudden task requirements the first time, and quickly
-                                    traverse into complex scenes.
-                                </p>
-                            </div>
-                            <img src={process.env.PUBLIC_URL + '/images/living2.png'} alt="Robot2" />
-                        </div>
-                    </a>
                 </div>
-                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
-                    <div className={ProductStyles.sec3}>
-                        <img src={process.env.PUBLIC_URL + '/images/living3.png'} alt="Robot3" />
-                        <div className={ProductStyles.tex}>
-                            <h2>Rapidlysteadily surmount obstacles</h2>
-                            <p>
-                                X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb industrial
-                                stairs, respond to sudden task requirements the first time, and quickly traverse into
-                                complex scenes.
-                            </p>
-                        </div>
-                    </div>
-                </a>
+
                 <div className={ProductStyles.background}>
-                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
-                        <div className={ProductStyles.sec4}>
-                            <div className={ProductStyles.tex}>
-                                <h2>Rapidlysteadily surmount obstacles</h2>
-                                <p>
-                                    X30 can flexibly climb up and down stairs at a 45° angle; it can stably climb
-                                    industrial stairs, respond to sudden task requirements the first time, and quickly
-                                    traverse into complex scenes.
-                                </p>
-                            </div>
-                            <img src={process.env.PUBLIC_URL + '/images/living4.png'} alt="Robot4" />
+                    <div className={ProductStyles.sec2}>
+                        <div className={ProductStyles.tex}>
+                            <h2>2단, 4단 수납장</h2>
+                            <p>세련된 디자인과 실용성을 갖춘 수납장</p>
                         </div>
-                    </a>
+                        <img src={process.env.PUBLIC_URL + '/images/living2.png'} alt="living2" />
+                    </div>
+                </div>
+
+                <div className={ProductStyles.sec3}>
+                    <img src={process.env.PUBLIC_URL + '/images/living3.jpg'} alt="living3" />
+                    <div className={ProductStyles.tex}>
+                        <h2>Heeling Wave</h2>
+                        <p>짧은 시간 내에 효과적인 운동이 가능한 진동운동기구</p>
+                    </div>
+                </div>
+
+                <div className={ProductStyles.background}>
+                    <div className={ProductStyles.sec4}>
+                        <div className={ProductStyles.tex}>
+                            <h2>미라클 샴푸기</h2>
+                            <p>장소에 구애받지 않고 머리를 감을 수 있는 샴푸기</p>
+                        </div>
+                        <img src={process.env.PUBLIC_URL + '/images/living4.png'} alt="living4" />
+                    </div>
                 </div>
             </div>
             <img

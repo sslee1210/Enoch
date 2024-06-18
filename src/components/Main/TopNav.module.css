@@ -3,14 +3,12 @@
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 9vw;
-    box-sizing: border-box;
-    height: 80px;
-    position: fixed;
+    position: absolute;
     z-index: 999;
-    background-color: #fff;
-    border-bottom: 1px solid #ebebeb;
-    top: 0;
+    padding: 10px 100px;
+    border-bottom: 1px solid #c5c5c5;
+    background-color: #ffffff;
+    box-sizing: border-box;
 }
 
 /*로고 스타일*/
@@ -131,7 +129,7 @@
 }
 
 .navLink {
-    color: #1d2d53db;
+    color: #171c33db;
     text-decoration: none;
     font-size: 1.3rem;
     padding: 35px;
@@ -139,7 +137,7 @@
 }
 
 .navLink:hover {
-    color: #f1c40f;
+    color: #f0ae35;
 }
 
 .navItem:hover .subMenu {
