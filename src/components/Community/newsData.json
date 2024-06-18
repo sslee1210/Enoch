@@ -8,7 +8,7 @@
     {
         "id": 2,
         "title": "ENO-Robot 출시 예정!",
-        "content": "<p style='text-wrap:pretty;line-height: 1.8;'>저희 회사에서는 조리 작업을 획기적으로 혁신할 'ENO-Robot' 조리 로봇을 새로 선보입니다.'ENO-Robot'는 사람의 손길을 완벽하게 모방하여 다양한 조리 작업을 자동으로 수행할 수 있습니다. 사용자가 레시피를 입력하면 로봇이 식재료 준비부터 조리 플레이팅까지 모든 과정을 정교하게 처리합니다.특히 'ENO-Robot'는 사용자의 취향과 입맛에 맞춰 조리 방식을 자동으로 조절할 수 있어 개인별 맞춤 요리를 제공합니다. 또한 최첨단 센서 기술을 통해 음식의 상태를 실시간으로 모니터링하여 최적의 맛과 질감을 구현합니다.뿐만 아니라 'ENO-Robot'는 위생적이고 효율적인 조리 환경을 제공합니다. 자동 세척 기능과 온도 및 습도 제어 시스템으로 항상 청결한 상태를 유지할 수 있으며 전문 셰프 수준의 일관된 요리 품질을 보장합니다.이처럼 'ENO-Robot'는 사용자의 편의성과 요리의 완성도를 획기적으로 높여줄 것입니다. 이제 누구나 쉽고 빠르게 맛있는 요리를 즐길 수 있습니다.</p><div style='text-align:center; margin-top:40px;'><video width='50%' height='auto' controls><source src='/videos/Cobot.mp4' type='video/mp4'>브라우저가 video 태그를 지원하지 않습니다.</video></div>",
+        "content": "<p style='text-wrap:pretty; line-height: 1.8;'>저희 회사에서는 조리 작업을 획기적으로 혁신할 'ENO-Robot' 조리 로봇을 새로 선보입니다.<br/>'ENO-Robot'는 사람의 손길을 완벽하게 모방하여 다양한 조리 작업을 자동으로 수행할 수 있습니다. 사용자가 레시피를 입력하면 로봇이 식재료 준비부터 조리 플레이팅까지 모든 과정을 정교하게 처리합니다.특히 'ENO-Robot'는 사용자의 취향과 입맛에 맞춰 조리 방식을 자동으로 조절할 수 있어 개인별 맞춤 요리를 제공합니다. 또한 최첨단 센서 기술을 통해 음식의 상태를 실시간으로 모니터링하여 최적의 맛과 질감을 구현합니다.뿐만 아니라 'ENO-Robot'는 위생적이고 효율적인 조리 환경을 제공합니다. 자동 세척 기능과 온도 및 습도 제어 시스템으로 항상 청결한 상태를 유지할 수 있으며 전문 셰프 수준의 일관된 요리 품질을 보장합니다.이처럼 'ENO-Robot'는 사용자의 편의성과 요리의 완성도를 획기적으로 높여줄 것입니다.<br/>이제 누구나 쉽고 빠르게 맛있는 요리를 즐길 수 있습니다.</p><div style='text-align:center; margin-top:40px; margin-bottom:40px;'><video width='50%' height='auto' controls><source src='/videos/Cobot.mp4' type='video/mp4'>브라우저가 video 태그를 지원하지 않습니다.</video></div>",
         "date": "2024-06-17"
     }
 ]

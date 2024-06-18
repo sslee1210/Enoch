@@ -1,13 +1,12 @@
 .qna {
-    margin-bottom: 100px;
-    height: calc(100vh - 100px);
     width: 100%;
+    height: 100%;
     flex-basis: 82%;
 }
 
 .qna .qna1 {
     width: 85%;
-    height: 80%;
+
     margin: auto;
     margin-top: 3.5vw;
     box-sizing: border-box;
@@ -59,7 +58,7 @@
 @media screen and (max-width: 768px) {
     .qna {
         margin: 0;
-        height: calc(100vh - 171px);
+        height: 90vh;
         display: inline-block;
         padding-top: 7vh;
     }

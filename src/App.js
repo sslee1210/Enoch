@@ -43,12 +43,9 @@ const NavBarLayout = ({ children }) => {
     return isMobile ? (
         <TopNavLayout>{children}</TopNavLayout>
     ) : (
-        <div style={{ display: 'flex', height: '100vh' }}>
+        <div style={{ display: 'flex' }}>
             <NavBar />
-            <div style={{ flex: 1 }}>
-                {children}
-                <Footer />
-            </div>
+            <div style={{ flex: 1 }}>{children}</div>
         </div>
     );
 };

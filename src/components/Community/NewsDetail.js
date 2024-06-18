@@ -33,7 +33,7 @@ const NewsDetail = () => {
                     <p dangerouslySetInnerHTML={createMarkup(item.content)}></p>
                 </div>
                 <div className={NewsStyles.navigation}>
-                    <p style={{ marginTop: '2vw' }}>다른 글</p>
+                    <p style={{ marginTop: '0.5vw' }}>다른 글</p>
                     <div className={NewsStyles.but}>
                         {nextItem && (
                             <p className={NewsStyles.next}>

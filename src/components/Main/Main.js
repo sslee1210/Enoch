@@ -36,9 +36,7 @@ const Main = () => {
                         delay: 2000,
                         disableOnInteraction: false,
                     }}
-                    speed={1000} // 슬라이드 전환 속도를 1000ms로 설정
                     allowTouchMove={false}
-                    loop={true} // 슬라이드가 순환하도록 설정
                 >
                     <SwiperSlide>
                         <img
@@ -64,17 +62,10 @@ const Main = () => {
                 <h1>Product</h1>
                 <div className={MainStyles.product_container}>
                     <Link to="/product/robot">
-                        <div>
-                            <img
-                                src={process.env.PUBLIC_URL + (isMobile ? '/images/m-로봇.png' : '/images/로봇.png')}
-                                alt="로봇"
-                            />
-                            <p>
-                                Robot
-                                <br />
-                                로봇
-                            </p>
-                        </div>
+                        <img
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-로봇.png' : '/images/로봇.png')}
+                            alt="로봇"
+                        />
                     </Link>
 
                     <Link to="/product/PC">
