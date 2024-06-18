@@ -78,13 +78,17 @@
 
 .news .news1 ul li {
     padding: 0.5vw;
-    border-bottom: 1px solid #dadada;
+}
+
+.news .news1 ul li:hover a {
+    color: #b4b4b4;
 }
 
 .news .news1 ul li a {
     color: #000;
     text-decoration: none;
     font-size: 1.3rem;
+    transition: 0.3s;
 }
 
 .news .news1 ul li a span {

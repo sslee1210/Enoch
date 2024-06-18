@@ -36,7 +36,9 @@ const Main = () => {
                         delay: 2000,
                         disableOnInteraction: false,
                     }}
+                    speed={1000} // 슬라이드 전환 속도를 1000ms로 설정
                     allowTouchMove={false}
+                    loop={true} // 슬라이드가 순환하도록 설정
                 >
                     <SwiperSlide>
                         <img
