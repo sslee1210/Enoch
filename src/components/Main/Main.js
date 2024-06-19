@@ -106,11 +106,11 @@ const Main = () => {
 
                     <Link to="/product/Living">
                         <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-리빙.png' : '/images/생활.png')}
+                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-생활.png' : '/images/생활.png')}
                             alt="리빙"
                         />
                         <p>
-                            Living
+                            Living Products
                             <span>생활용품</span>
                         </p>
                     </Link>

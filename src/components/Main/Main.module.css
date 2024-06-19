@@ -37,7 +37,8 @@
 }
 .main .product > h1 {
     font-size: 2vw;
-    font-family: 'notosans kr', sans-serif;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
     text-align: center;
     padding-bottom: 0.7vw;
     padding-top: 2.2vw;
@@ -70,6 +71,8 @@
 }
 .main .product .product_container > a:hover img {
     filter: brightness(0.5);
+    transform: translateY(-0.5vw) scale(1.1); /* 1.2는 이미지의 크기를 20% 늘립니다. */
+    transition: all 0.3s ease-in-out;
 }
 .main .product .product_container > a:hover p {
     color: rgb(253, 147, 47);
@@ -87,14 +90,14 @@
 }
 .main .product .product_container > a > p {
     font-size: 1.2vw;
-    font-weight: 700;
-    font-family: 'pretendard', sans-serif;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
     color: rgb(13, 21, 49);
 }
 .main .product .product_container > a span {
     display: block;
     font-size: 0.8vw;
-    font-weight: 100;
+    font-weight: bold;
     padding-top: 6px;
 }
 
