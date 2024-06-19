@@ -58,57 +58,11 @@ const Pc = () => {
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <div className={ProductStyles.sec1}>
+                <div className={ProductStyles.sec1} style={{ marginBottom: '70px' }}>
                     <img src={process.env.PUBLIC_URL + '/images/Pc1.png'} alt="Pc1" />
                     <div className={ProductStyles.tex}>
-                        <h2>Unlock it all with the touch of your finger.</h2>
-                        <p>
-                            The comfortable and quiet backlit Magic Keyboard comes with full-height function keys and
-                            Touch ID, which gives you a fast, easy, and secure way to unlock your Mac and sign in to
-                            apps and sites — all at the touch of a finger.
-                        </p>
-                    </div>
-                </div>
-
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec2}>
-                        <div className={ProductStyles.tex}>
-                            <h2>Designed to go places.</h2>
-                            <p>
-                                Superlight and under half an inch thin, MacBook Air fits easily into your life and is
-                                built with the planet in mind. MacBook Air with M3 is made with 50 percent recycled
-                                materials — an Apple first. And all MacBook Air laptops have a durable recycled aluminum
-                                enclosure.
-                            </p>
-                        </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Pc2.png'} alt="Pc2" />
-                    </div>
-                </div>
-
-                <div className={ProductStyles.sec3}>
-                    <img src={process.env.PUBLIC_URL + '/images/Pc3.png'} alt="Pc3" />
-                    <div className={ProductStyles.tex}>
-                        <h2>A chipload of power.</h2>
-                        <p>
-                            The moment you open your MacBook Air, it’s ready for whatever you throw at it. And no matter
-                            how intense the workload, it stays silent thanks to a fanless design. Whether you’re
-                            multitasking between apps, editing videos in iMovie, or playing Baldur’s Gate 3 in Game
-                            Mode, the M3 chip brings more speed and fluidity to everything you do.
-                        </p>
-                    </div>
-                </div>
-
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec4}>
-                        <div className={ProductStyles.tex}>
-                            <h2>Let’s be clear. It’s brilliant.</h2>
-                            <p>
-                                The Liquid Retina display on MacBook Air is a sight to behold, with support for 1
-                                billion colors and up to 2x the resolution of comparable PC laptops. Photos and videos
-                                pop with rich contrast and sharp detail, and text appears supercrisp for easy reading.
-                            </p>
-                        </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Pc4.png'} alt="Pc4" />
+                        <h2>All in One 27inch PC</h2>
+                        <p>27인치 올인원 베어본 시스템, 강력한 성능과 세련된 디자인을 자랑합니다.</p>
                     </div>
                 </div>
             </div>

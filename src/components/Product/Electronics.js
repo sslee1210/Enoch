@@ -57,35 +57,31 @@ const Electronics = () => {
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
-                    <div className={ProductStyles.sec1}>
-                        <img src={process.env.PUBLIC_URL + '/images/electronic3.png'} alt="Robot3" />
+                <div className={ProductStyles.sec1}>
+                    <img src={process.env.PUBLIC_URL + '/images/electronic3.png'} alt="Robot3" />
+                    <div className={ProductStyles.tex}>
+                        <h2>식기 세척기</h2>
+                        <p>
+                            특허받은 45&deg; 컵 스프레이와 360&deg; 회전 스프레이 세척 및 복합 린스 방식으로 살균율
+                            99.99%!
+                            <br />
+                            설거지, 건조, 저장까지 모두 가능한 모던한 외형의 식기세척기
+                        </p>
+                    </div>
+                </div>
+
+                <div className={ProductStyles.background}>
+                    <div className={ProductStyles.sec2}>
                         <div className={ProductStyles.tex}>
-                            <h2>Dish Washer</h2>
+                            <h2>제습기</h2>
                             <p>
-                                특허받은 45&deg; 컵 스프레이와 360&deg; 회전 스프레이 세척 및 복합 린스 방식으로 살균율
-                                99.99%!
+                                1.5L의 대용량 물탱크를 보유하고 강력한
                                 <br />
-                                설거지, 건조, 저장까지 모두 가능한 모던한 외형의 <br />
-                                식기세척기입니다.
+                                제습 효과를 자랑하는 제습기
                             </p>
                         </div>
+                        <img src={process.env.PUBLIC_URL + '/images/electronic4.png'} alt="Robot4" />
                     </div>
-                </a>
-                <div className={ProductStyles.background}>
-                    <a href="https://swit2019.cafe24.com/" target="_blank" rel="noreferrer">
-                        <div className={ProductStyles.sec2}>
-                            <div className={ProductStyles.tex}>
-                                <h2>Dehumidifier</h2>
-                                <p>
-                                    1.5L의 대용량 물탱크를 보유하고 강력한
-                                    <br />
-                                    제습 효과를 자랑하는 제습기입니다.
-                                </p>
-                            </div>
-                            <img src={process.env.PUBLIC_URL + '/images/electronic4.png'} alt="Robot4" />
-                        </div>
-                    </a>
                 </div>
             </div>
 
