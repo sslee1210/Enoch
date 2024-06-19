@@ -144,7 +144,7 @@
     color: #fff;
     background-color: #000;
     border-radius: 20px;
-    padding: 0.4vw;
+    padding: 0.5vw;
     transition: 0.3s;
     margin: 0.5vw;
 }
@@ -153,8 +153,26 @@
     color: #f1c40f;
 }
 
+.product .sec .avtex {
+    flex-direction: column;
+    display: flex;
+    margin-top: 1vw;
+}
+
+.product .sec .avtex .av {
+    color: #fff;
+    background-color: #000;
+    border-radius: 20px;
+    padding: 0.5vw;
+    transition: 0.3s;
+}
+
+.product .sec .avtex .av:hover {
+    color: #f1c40f;
+}
+
 .product .sec h2 {
-    margin-bottom: 50px;
+    margin-bottom: 22px;
     text-align: left;
     font-size: 2vw;
 }
@@ -163,6 +181,8 @@
     text-align: left;
     font-size: 1.3vw;
     font-weight: 400;
+    line-height: 1.5;
+    font-size: 1.1vw;
 }
 
 .product .sec .sec2,
@@ -176,6 +196,7 @@
 .product .sec .sec3 p {
     text-align: left;
     width: 100%;
+    line-height: 1.5;
 }
 
 .product .up {
@@ -264,6 +285,25 @@
         width: 80%;
         align-items: center;
         text-align: center;
+    }
+
+    .product .sec .avtex {
+        flex-direction: column;
+        display: flex;
+        margin-top: 1vw;
+    }
+
+    .product .sec .avtex .av {
+        color: #fff;
+        background-color: #000;
+        border-radius: 20px;
+        padding: 1vw;
+        transition: 0.3s;
+        font-size: 3vw;
+    }
+
+    .product .sec .avtex .av:hover {
+        color: #f1c40f;
     }
 
     .product .sec h2 {

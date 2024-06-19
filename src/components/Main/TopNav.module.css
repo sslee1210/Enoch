@@ -31,7 +31,7 @@
 /*햄버거 버튼 스타일링*/
 .hamburger {
     display: none;
-    position: fixed;
+    position: absolute;
     top: 20px;
     right: 40px;
     width: 40px;

@@ -6,9 +6,7 @@
 
 .support .support1 {
     width: 85%;
-
     margin: auto;
-
     box-sizing: border-box;
     padding-top: 40px;
 }
@@ -16,6 +14,34 @@
 .support .support1 h1 {
     font-size: 2vw;
     font-weight: 900;
+    padding-bottom: 2vw;
+}
+
+.support .support1 .supportText {
+    font-size: 1.3vw;
+    color: #696969;
+    position: relative;
+}
+
+.support .support1 .supportText::before,
+.support .support1 .supportText::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background-color: #696969;
+}
+
+.support .support1 .supportText::before {
+    left: 0;
+    width: 6%; /* 왼쪽 선의 길이를 짧게 조정합니다. */
+    transform: translateX(-120%) translateY(-50%);
+}
+
+.support .support1 .supportText::after {
+    right: 0;
+    width: 100%; /* 왼쪽 선의 길이를 짧게 조정합니다. */
+    transform: translateX(5%) translateY(-50%);
 }
 
 .support .support1 p {
@@ -53,10 +79,36 @@
         width: 95%;
         padding-top: 20px;
     }
+
     .support .support1 h1 {
         font-size: 5vw;
         margin-bottom: 4vw;
         margin-left: 2vw;
+    }
+
+    .support .support1 .supportText {
+        font-size: 4vw;
+    }
+
+    .support .support1 .supportText::before,
+    .support .support1 .supportText::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        background-color: #696969;
+    }
+
+    .support .support1 .supportText::before {
+        left: 0;
+        width: 6%; /* 왼쪽 선의 길이를 짧게 조정합니다. */
+        transform: translateX(-120%) translateY(-50%);
+    }
+
+    .support .support1 .supportText::after {
+        right: 0;
+        width: 90%; /* 왼쪽 선의 길이를 짧게 조정합니다. */
+        transform: translateX(1%) translateY(-50%);
     }
 
     .support .support1 p {

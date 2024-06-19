@@ -1,38 +1,142 @@
-.guide {
+.Guide {
     width: 100%;
     height: 100%;
     flex-basis: 82%;
 }
 
-.guide .guide1 {
+.Guide .Guide1 {
     width: 85%;
     margin: auto;
-
     box-sizing: border-box;
     padding-top: 40px;
 }
 
-.guide .guide1 h1 {
+.Guide .Guide1 h1 {
     font-size: 2vw;
     font-weight: 900;
+    padding-bottom: 2vw;
+}
+
+.Guide .Guide1 .GuideText {
+    font-size: 1.3vw;
+    color: #696969;
+    position: relative;
+}
+
+.Guide .Guide1 .GuideText::before,
+.Guide .Guide1 .GuideText::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    height: 1px;
+    background-color: #696969;
+}
+
+.Guide .Guide1 .GuideText::before {
+    left: 0;
+    width: 6%;
+    transform: translateX(-120%) translateY(-50%);
+}
+
+.Guide .Guide1 .GuideText::after {
+    right: 0;
+    width: 95%;
+    transform: translateX(5%) translateY(-50%);
+}
+
+.Guide .Guide1 .Guidep {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.Guide .Guide1 p {
+    margin-top: 2vw;
+}
+
+.Guide .Guide1 p button {
+    border: none;
+    background-color: #ebebeb;
+    border-radius: 15px;
+    padding: 0.5vw;
+    font-size: 0.8vw;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.Guide .Guide1 p button:hover {
+    background-color: #ddd;
+}
+
+.Guide .Guide1 .download {
+    width: 1.1vw;
+    padding-left: 2vw;
 }
 
 @media screen and (max-width: 768px) {
-    .guide {
+    .Guide {
         margin: 0;
-        display: inline-block;
         height: 90vh;
+        display: inline-block;
         padding-top: 7vh;
     }
 
-    .guide .guide1 {
+    .Guide .Guide1 {
         width: 95%;
         padding-top: 20px;
     }
 
-    .guide .guide1 h1 {
+    .Guide .Guide1 h1 {
         font-size: 5vw;
         margin-bottom: 4vw;
         margin-left: 2vw;
+    }
+
+    .Guide .Guide1 .GuideText {
+        font-size: 4vw;
+    }
+
+    .Guide .Guide1 .GuideText::before,
+    .Guide .Guide1 .GuideText::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        height: 1px;
+        background-color: #696969;
+    }
+
+    .Guide .Guide1 .GuideText::before {
+        left: 0;
+        width: 6%; /* 왼쪽 선의 길이를 짧게 조정합니다. */
+        transform: translateX(-120%) translateY(-50%);
+    }
+
+    .Guide .Guide1 .GuideText::after {
+        right: 0;
+        width: 79%; /* 왼쪽 선의 길이를 짧게 조정합니다. */
+        transform: translateX(1%) translateY(-50%);
+    }
+
+    .Guide .Guide1 .Guidep {
+        display: grid;
+        grid-template-columns: repeat(1, 2fr);
+    }
+
+    .Guide .Guide1 p {
+        color: #ddd;
+        margin-top: 2vw;
+    }
+
+    .Guide .Guide1 p button {
+        border: none;
+        border-radius: 15px;
+        padding: 0.8vw;
+        font-size: 2.5vw;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .Guide .Guide1 .download {
+        width: 2.2vw;
+        padding-left: 2vw;
     }
 }

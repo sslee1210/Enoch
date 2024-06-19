@@ -24,6 +24,7 @@ const Support = () => {
         <div className={SupportStyles.support}>
             <div className={SupportStyles.support1}>
                 <h1>Download File</h1>
+                <div className={SupportStyles.supportText}>로봇</div>
                 <p>
                     <button className={SupportStyles.button} onClick={handleDownload}>
                         1. 조리로봇 브로슈어
