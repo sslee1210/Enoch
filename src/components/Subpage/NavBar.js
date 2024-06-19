@@ -74,36 +74,6 @@ const NavBar = () => {
 
                     <li>
                         <NavLink
-                            to="/community/news"
-                            className={NavBarStyles.mainMenuItem}
-                            style={['/community/news', '/community/qna'].includes(location.pathname) ? activeStyle : {}}
-                        >
-                            Community
-                        </NavLink>
-                        <ol>
-                            <li>
-                                <NavLink
-                                    className={NavBarStyles.subMenuItem}
-                                    to="/community/news"
-                                    style={({ isActive }) => (isActive ? activeStyle : {})}
-                                >
-                                    회사 소식
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/community/qna"
-                                    className={NavBarStyles.subMenuItem}
-                                    style={({ isActive }) => (isActive ? activeStyle : {})}
-                                >
-                                    자주 묻는 질문
-                                </NavLink>
-                            </li>
-                        </ol>
-                    </li>
-
-                    <li>
-                        <NavLink
                             to="/support"
                             className={NavBarStyles.mainMenuItem}
                             style={['/support', '/support/guide'].includes(location.pathname) ? activeStyle : {}}

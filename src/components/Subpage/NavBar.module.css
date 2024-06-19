@@ -1,8 +1,9 @@
 .subnav {
-    width: 100%;
-    height: 100vh;
     background-color: #fff;
     flex-basis: 18%;
+    border-right: 1px solid #ddd;
+    width: 85%;
+    height: 100vh;
 }
 
 .subnav > .logo {
@@ -25,10 +26,8 @@
 }
 
 .subnav nav .menu {
-    margin-top: 6vh;
+    margin-top: 10vh;
     font-size: 1.1rem;
-    padding-bottom: 10vw;
-    border-right: 1px solid #ddd;
 }
 
 .subnav nav .menu li {

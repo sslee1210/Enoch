@@ -79,7 +79,7 @@ const Living = () => {
                     <img src={process.env.PUBLIC_URL + '/images/living3.jpg'} alt="living3" />
                     <div className={ProductStyles.tex}>
                         <h2>Heeling Wave</h2>
-                        <p>짧은 시간 내에 효과적인 운동이 가능한 진동운동기구</p>
+                        <p>집에서도 효과적인 운동이 가능한 진동운동기구</p>
                     </div>
                 </div>
 
@@ -100,67 +100,6 @@ const Living = () => {
                 style={{ opacity: opacity }} // 이 부분에서 스타일을 직접 적용하여 opacity를 조절합니다.
                 alt="Move to Top"
             />
-            <div
-                style={{
-                    display: 'flex',
-                    width: '100%',
-                    alignItems: 'center',
-                    justifyContent: 'space-between',
-                    padding: '20px 50px',
-                    boxSizing: 'border-box',
-                }}
-            >
-                <div
-                    style={{
-                        flex: '1 1',
-                        display: 'flex',
-                        flexDirection: 'column',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        상호명 : 이노치코리아 대표 : 정경영
-                    </p>
-                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        전화 : 02-2268-8770 팩스 : 0504-163-8775
-                    </p>
-                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        주소 : 서울특별시 금천구 가산디지털 2로 165, 백상스타타워 2차 14층 1406호
-                    </p>
-                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        문의가능시간 : 09:00 ~ 18:00 / 점심시간 : 11:30 ~ 12:30
-                    </p>
-                </div>
-                <div
-                    style={{
-                        flex: '1 1',
-
-                        display: 'flex',
-                        flexDirection: 'column',
-                        alignItems: 'flex-end',
-                        justifyContent: 'center',
-                    }}
-                >
-                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        사업자등록번호 : 716-88-01776 [사업자정보확인]
-                    </p>
-                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        통신판매업신고 : 제 2024-서울금천-0999호
-                    </p>
-                    <p style={{ fontSize: '0.7rem', lineHeight: 1.3, fontWeight: 500 }}>
-                        개인정보보호책임자 : 정경영 (michelky@naver.com)
-                    </p>
-                    <p
-                        style={{
-                            fontSize: '0.7rem',
-                            lineHeight: 1.3,
-                            fontWeight: 500,
-                        }}
-                    >
-                        &copy; 2024 Your Company Name. All rights reserved.
-                    </p>
-                </div>
-            </div>
         </div>
     );
 };

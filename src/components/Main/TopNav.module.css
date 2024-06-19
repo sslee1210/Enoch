@@ -1,12 +1,12 @@
 .nav {
     display: flex;
     width: 100%;
+    height: 80px;
     align-items: center;
     justify-content: space-between;
     position: absolute;
     z-index: 999;
-    padding: 10px 100px;
-    border-bottom: 1px solid #c5c5c5;
+    padding: 10px 80px;
     background-color: #ffffff;
     box-sizing: border-box;
 }
@@ -177,6 +177,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .nav {
+        padding-left: 50px;
+    }
     .nav > .logo {
         margin-left: 0;
     }

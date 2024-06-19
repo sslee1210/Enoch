@@ -14,11 +14,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 80px;
 }
 
 .main .SwiperSlide img {
     width: 100%;
-    object-fit: conta;
+    object-fit: cover;
     display: block;
 }
 
@@ -28,9 +29,10 @@
     justify-content: center;
     width: 92%;
     height: 30%;
-    margin: 90px auto;
+    margin: 20px auto;
+    margin-bottom: 50px;
     box-sizing: border-box;
-    padding: 40px;
+    padding: 20px;
     background-color: #ffffffdd;
 }
 .main .product > h1 {
@@ -38,7 +40,7 @@
     font-family: 'KBO-Dia-Gothic_bold', sans-serif;
     padding-bottom: 0.7vw;
     padding-top: 2.2vw;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     color: rgb(20, 21, 70);
 }
 
@@ -106,13 +108,12 @@
         display: block; /* 블록 레이아웃 적용 */
         height: auto; /* 높이 자동 조정 */
         width: 100%;
-        padding-top: 2.7vh;
     }
 
     .main .main .SwiperSlide {
         width: 100%;
         align-items: stretch;
-        padding: 0;
+        padding-top: 0;
     }
     .main .SwiperSlide img {
         width: 100%;
@@ -122,10 +123,12 @@
     .main .product {
         padding-top: 10vw;
         height: 100%;
+        margin: 20px auto;
     }
     .main .product > h1 {
         font-size: 5vw;
         margin-bottom: 33px;
+        text-align: center;
     }
     .main .product .product_container {
         flex-direction: column;

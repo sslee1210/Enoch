@@ -10,7 +10,7 @@
     width: 85%;
     height: 60%;
     margin: auto;
-    margin-top: 3.5vw;
+
     box-sizing: border-box;
     padding-top: 40px;
 }
@@ -39,6 +39,7 @@
     margin-left: 5vw;
     width: 70%;
     white-space: wrap;
+    font-weight: 400;
 }
 
 .About .about1 .alltext .RightText {
