@@ -71,7 +71,7 @@ const TopNav = () => {
                             </li>
                         </ul>
                     </li>
-                    <li className={TopNavstyles.navItem}>
+                    {/* <li className={TopNavstyles.navItem}>
                         <Link to="/community/news" className={TopNavstyles.navLink} onClick={handleMenuClick}>
                             Community
                         </Link>
@@ -87,7 +87,7 @@ const TopNav = () => {
                                 </Link>
                             </li>
                         </ul>
-                    </li>
+                    </li> */}
                     <li className={TopNavstyles.navItem}>
                         <Link to="/support" className={TopNavstyles.navLink} onClick={handleMenuClick}>
                             Support
