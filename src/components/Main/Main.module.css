@@ -37,7 +37,8 @@
 }
 .main .product > h1 {
     font-size: 2vw;
-    font-family: 'KBO-Dia-Gothic_bold', sans-serif;
+    font-family: 'notosans kr', sans-serif;
+    text-align: center;
     padding-bottom: 0.7vw;
     padding-top: 2.2vw;
     margin-bottom: 20px;
@@ -87,7 +88,7 @@
 .main .product .product_container > a > p {
     font-size: 1.2vw;
     font-weight: 700;
-    font-family: 'ChosunBg', sans-serif;
+    font-family: 'pretendard', sans-serif;
     color: rgb(13, 21, 49);
 }
 .main .product .product_container > a span {
