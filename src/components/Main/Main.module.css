@@ -35,13 +35,14 @@
 }
 
 .main .product .product_container > a {
-    border-radius: 15px 0 15px 0;
+    border-radius: 15px 15px;
     overflow: hidden;
     filter: brightness(1);
     transition: ease all 0.3s;
     margin-left: 0.9vw;
     margin-right: 0.9vw;
     width: 100%;
+    box-shadow: 0px 12px 40px 0px rgba(55, 126, 249, 0.18);
 }
 
 .main .product .product_container > a:nth-child(1) {
@@ -53,10 +54,10 @@
 }
 
 .main .product .product_container > a:hover img {
-    filter: brightness(0.5);
-    transform: translateY(-0.5vw) scale(1.1);
+    filter: brightness(0.8);
     transition: all 0.3s ease-in-out;
 }
+
 .main .product .product_container > a:hover p {
     color: rgb(253, 147, 47);
 }
@@ -71,15 +72,17 @@
     filter: brightness(0.7);
 }
 .main .product .product_container > a > p {
-    font-size: 1.2vw;
+    font-size: 0.9vw;
     font-weight: bold;
     font-family: 'Noto Sans KR', sans-serif;
     color: rgb(13, 21, 49);
+    padding-left: 0.5vw;
+    padding-bottom: 0.5vw;
 }
 .main .product .product_container > a span {
     display: block;
     font-size: 0.8vw;
-    font-weight: bold;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 1270px) {
@@ -113,27 +116,37 @@
     }
     .main .product .product_container {
         flex-direction: column;
+        margin: auto;
+        width: 70%;
     }
     .main .product .product_container > a {
-        margin: auto !important; /* 기존 마진 덮어쓰기 */
-        padding-bottom: 50px;
-        display: flex; /* 플렉스박스 사용 */
-        justify-content: center; /* 중앙 정렬 */
-        align-items: center; /* 중앙 정렬 */
-        margin-bottom: 10px; /* 요소 간 간격을 위해 추가 */
+        margin-left: 0 !important; /* 기존 마진 덮어쓰기 */
+        margin-right: 0 !important; /* 기존 마진 덮어쓰기 */
+        margin-bottom: 30px; /* 요소 간 간격을 위해 추가 */
     }
     .main .product .product_container > a > img {
-        width: 75%;
+        width: 100%;
         object-fit: contain;
     }
     .main .product .product_container > a:hover img {
         filter: none;
         transform: none;
-        scale: 1.1;
     }
 
     .main .product .product_container > a > p {
-        display: none;
+        font-size: 5vw;
+        padding-left: 2vw;
+        padding-bottom: 1vw;
+    }
+
+    .main .product .product_container > a span {
+        display: block;
+        font-size: 4vw;
+        font-weight: 500;
+    }
+    .main .product .product_container > a:hover img {
+        filter: brightness(0.8);
+        transition: all 0.3s ease-in-out;
     }
 }
 
