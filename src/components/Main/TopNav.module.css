@@ -80,7 +80,7 @@
 
 .hamburger_checkbox:checked + .hamburger_label span:nth-child(1) {
     transform: rotate(45deg);
-    top: 8px;
+    top: 14px;
     position: relative;
 }
 
@@ -90,7 +90,7 @@
 
 .hamburger_checkbox:checked + .hamburger_label span:nth-child(3) {
     transform: rotate(-45deg);
-    top: -20px;
+    top: -14px;
     position: relative;
 }
 
