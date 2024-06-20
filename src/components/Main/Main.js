@@ -45,18 +45,33 @@ const Main = () => {
                             src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너1.png' : '/images/배너1.png')}
                             alt="Image 1"
                         />
+                        <div className={MainStyles.bannerText}>
+                            <h2>이노치코리아</h2>
+                            <h3>For the shift up to further</h3>
+                            <p>당신의 삶을 더욱 풍요롭게 하는 이노치코리아의 혁신적인 제품을 경험해보세요</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img
                             src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너2.png' : '/images/배너2.png')}
                             alt="Image 2"
                         />
+                        <div className={MainStyles.bannerText}>
+                            <h2>이노치코리아</h2>
+                            <h3>Stepping Up to a Superior Lifestyle</h3>
+                            <p>이노치코리아는 삶의 질 향상과 즐거움을 제공하는 제품을 개발하고 있습니다.</p>
+                        </div>
                     </SwiperSlide>
                     <SwiperSlide>
                         <img
                             src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너3.png' : '/images/배너3.png')}
                             alt="Image 3"
                         />
+                        <div className={MainStyles.bannerText}>
+                            <h2>이노치코리아</h2>
+                            <h3>Advancing Your Everyday Experience</h3>
+                            <p>이노치코리아와 함께라면 삶의 질 향상과 일상의 즐거움이 바로 눈앞에 펼쳐집니다</p>
+                        </div>
                     </SwiperSlide>
                 </Swiper>
             </div>
