@@ -117,7 +117,7 @@
     .main .product .product_container {
         flex-direction: column;
         margin: auto;
-        width: 70%;
+        width: 78%;
     }
     .main .product .product_container > a {
         margin-left: 0 !important; /* 기존 마진 덮어쓰기 */
