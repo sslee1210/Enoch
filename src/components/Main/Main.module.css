@@ -34,7 +34,6 @@
     margin-bottom: 50px;
     box-sizing: border-box;
     padding: 20px;
-    background-color: #ffffffdd;
 }
 .main .product > h1 {
     font-size: 2vw;
@@ -131,7 +130,7 @@
         margin: 20px auto;
     }
     .main .product > h1 {
-        font-size: 5vw;
+        font-size: 8vw;
         margin-bottom: 33px;
         text-align: center;
     }
@@ -146,9 +145,14 @@
         max-height: 250px;
     }
     .main .product .product_container > a > img {
-        transform: translateY(-20px);
         min-height: 276px;
         object-fit: contain;
+    }
+    .main .product .product_container > a:hover img {
+        filter: none;
+        transform: none;
+
+        scale: 1.1;
     }
 }
 
