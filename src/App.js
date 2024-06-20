@@ -18,10 +18,10 @@ import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
 
 const TopNavLayout = ({ children }) => (
-    <div>
+    <>
         <TopNav />
         {children}
-    </div>
+    </>
 );
 
 const NavBarLayout = ({ children }) => {
@@ -57,6 +57,7 @@ const App = () => {
                     element={
                         <TopNavLayout>
                             <Main />
+
                             <Footer />
                         </TopNavLayout>
                     }
