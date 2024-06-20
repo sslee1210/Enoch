@@ -1,7 +1,6 @@
 .main {
+    flex: 1;
     padding-top: 80px;
-    height: 100vh;
-    width: 100%;
 }
 
 .main .SwiperSlide {
@@ -12,7 +11,6 @@
 
 .main .SwiperSlide img {
     width: 100%;
-
     object-fit: cover;
     display: block;
 }
@@ -32,6 +30,7 @@
 .main .product .product_container {
     display: flex;
     justify-content: center;
+    padding-bottom: 3vw;
 }
 
 .main .product .product_container > a {
@@ -93,7 +92,6 @@
 
 @media screen and (max-width: 768px) {
     .main {
-        height: 100%;
         display: block; /* 블록 레이아웃 적용 */
     }
 

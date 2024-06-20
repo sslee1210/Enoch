@@ -7,7 +7,6 @@ import About from './components/About/About';
 import History from './components/About/History';
 import Global from './components/About/Global';
 import Contact from './components/About/Contact';
-
 import Support from './components/Support/Support';
 import Guide from './components/Support/Guide';
 import Robot from './components/Product/Robot';
@@ -55,11 +54,12 @@ const App = () => {
                 <Route
                     path="/"
                     element={
-                        <TopNavLayout>
-                            <Main />
-
-                            <Footer />
-                        </TopNavLayout>
+                        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+                            <TopNavLayout>
+                                <Main />
+                                <Footer />
+                            </TopNavLayout>
+                        </div>
                     }
                 />
                 <Route
