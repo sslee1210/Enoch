@@ -8,7 +8,7 @@ const Support = () => {
         setIsDownloading(true);
 
         try {
-            const fileId = '19pZeKq52dKFjJMexcRjt1ICdcgV02J2k'; // 공유 링크의 파일 ID
+            const fileId = '19jgg_rqXHtQ8bkSv2C18huQ_KWUbLNKh'; // 공유 링크의 파일 ID
             const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
 
             // 새 창에서 Google Drive 공유 링크 열기
