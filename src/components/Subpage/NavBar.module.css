@@ -1,6 +1,6 @@
 .subnav {
     background-color: #fff;
-    flex-basis: 18%;
+    flex-basis: 15%;
     border-right: 1px solid #e9e9e9;
     width: 85%;
     height: 100vh;
@@ -10,7 +10,7 @@
     display: block;
     overflow: hidden;
     max-height: 30vw;
-    margin-left: 6.7vw;
+    margin-left: 5.7vw;
     margin-top: 2vw;
 }
 .subnav > .logo > img {
@@ -36,8 +36,8 @@
 .subnav nav .menu li .mainMenuItem {
     text-align: center;
     color: #000;
-    font-size: 1.3vw;
-
+    font-size: 1.4vw;
+    font-weight: 900;
     text-decoration: none; /* 텍스트 밑줄을 제거합니다. */
     display: block; /* 링크가 블록 요소처럼 동작하도록 설정합니다. */
     list-style: none;
@@ -46,7 +46,7 @@
 
 .subnav nav .menu li ol li {
     list-style: disc;
-    margin-left: 7.5vw;
+    margin-left: 4.5vw;
     margin-bottom: 1.5vw;
     border-right: none;
 }
@@ -55,6 +55,8 @@
     text-decoration: none;
     color: #000;
     font-size: 0.8vw;
+
+    font-weight: 600;
 }
 
 .subnav nav .menu li ol:last-child {

@@ -1,22 +1,21 @@
 .Contact {
     width: 100%;
     height: 100vh;
-    flex-basis: 82%;
+    flex-basis: 85%;
 }
 
 .Contact .Contact1 {
     width: 85%;
 
     margin: auto;
-
     box-sizing: border-box;
     padding-top: 40px;
 }
 
 .Contact .Contact1 h1 {
-    font-size: 2vw;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.7vw;
     margin-bottom: 100px;
-    font-weight: 900;
 }
 
 .Contact .Contact1 .ContactText {

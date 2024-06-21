@@ -71,23 +71,7 @@ const TopNav = () => {
                             </li>
                         </ul>
                     </li>
-                    {/* <li className={TopNavstyles.navItem}>
-                        <Link to="/community/news" className={TopNavstyles.navLink} onClick={handleMenuClick}>
-                            Community
-                        </Link>
-                        <ul className={TopNavstyles.subMenu}>
-                            <li className={TopNavstyles.subMenuItem}>
-                                <Link to="/community/news" className={TopNavstyles.subMenuLink}>
-                                    회사 소식
-                                </Link>
-                            </li>
-                            <li className={TopNavstyles.subMenuItem}>
-                                <Link to="/community/qna" className={TopNavstyles.subMenuLink}>
-                                    자주 묻는 질문
-                                </Link>
-                            </li>
-                        </ul>
-                    </li> */}
+
                     <li className={TopNavstyles.navItem}>
                         <Link to="/support" className={TopNavstyles.navLink} onClick={handleMenuClick}>
                             Support

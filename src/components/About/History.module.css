@@ -1,7 +1,7 @@
 .History {
     width: 100%;
     height: 100%;
-    flex-basis: 82%;
+    flex-basis: 85%;
 }
 .History h1 {
     width: 85%;
@@ -9,9 +9,9 @@
 
     box-sizing: border-box;
     padding-top: 40px;
-    font-size: 2.1vw;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.7vw;
     margin-bottom: 2vw;
-    font-weight: 900;
 }
 .History > img {
     width: 70%;
