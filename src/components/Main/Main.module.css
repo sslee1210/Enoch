@@ -132,20 +132,20 @@
     }
 
     .main .SwiperSlide .bannerText h2 {
-        font-size: 4vw;
+        font-size: 7vw;
         font-family: 'Noto Sans KR', sans-serif;
         padding-bottom: 0;
     }
 
     .main .SwiperSlide .bannerText h3 {
-        font-size: 2.5vw;
+        font-size: 4vw;
         font-family: 'Noto Sans KR', sans-serif;
-        white-space: wrap;
+        white-space: nowrap;
         padding-bottom: 10px;
     }
 
     .main .SwiperSlide .bannerText p {
-        font-size: 1.3vw;
+        font-size: 2vw;
         font-family: 'Noto Sans KR', sans-serif;
     }
 
