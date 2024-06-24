@@ -161,16 +161,17 @@
         object-fit: cover;
     }
     .main .product {
-        padding-top: 10vw;
+        padding-top: 6vw;
     }
     .main .product > h1 {
-        font-size: 8vw;
+        font-size: 5vw;
         text-align: center;
+        padding-bottom: 50px;
     }
     .main .product .product_container {
         flex-direction: column;
         margin: auto;
-        width: 78%;
+        width: 64%;
     }
     .main .product .product_container > a {
         margin-left: 0 !important; /* 기존 마진 덮어쓰기 */

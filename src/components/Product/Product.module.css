@@ -240,6 +240,8 @@
     .product .sec p {
         font-size: 3vw;
         text-align: center;
+        word-break: keep-all;
+        text-align: justify;
     }
 
     .product .up {

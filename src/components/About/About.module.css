@@ -34,7 +34,8 @@
     padding-bottom: 1.2vw;
     align-items: center;
     font-weight: 400;
-    word-break: break-all;
+    word-break: keep-all;
+    text-align: justify;
     font-family: 'Noto Sans KR', sans-serif;
     margin: auto; /* 중앙 정렬을 위해 추가된 부분 */
 }
