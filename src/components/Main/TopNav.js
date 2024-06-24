@@ -79,12 +79,7 @@ const TopNav = () => {
                         <ul className={TopNavstyles.subMenu}>
                             <li className={TopNavstyles.subMenuItem}>
                                 <Link to="/support" className={TopNavstyles.subMenuLink}>
-                                    Download File
-                                </Link>
-                            </li>
-                            <li className={TopNavstyles.subMenuItem}>
-                                <Link to="/support/guide" className={TopNavstyles.subMenuLink}>
-                                    사용설명법
+                                    사용설명서
                                 </Link>
                             </li>
                         </ul>

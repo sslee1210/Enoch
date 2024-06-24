@@ -22,15 +22,18 @@ const Support = () => {
 
     return (
         <div className={SupportStyles.support}>
-            <div className={SupportStyles.support1}>
-                <h1>Download File</h1>
-                <div className={SupportStyles.supportText}>로봇</div>
-                <p>
-                    <button className={SupportStyles.button} onClick={handleDownload}>
-                        1. 조리로봇 브로슈어
-                        <img src="/images/down.png" alt="download" className={SupportStyles.download} />
-                    </button>
-                </p>
+            <div className={SupportStyles.menu}>
+                <img src="/images/조리로봇 브로슈어 최종-01.png" />
+                <img src="/images/조리로봇 브로슈어 최종-02.png" />
+                <img src="/images/조리로봇 브로슈어 최종-03.png" />
+                <img src="/images/조리로봇 브로슈어 최종-04.png" />
+                <img src="/images/조리로봇 브로슈어 최종-05.png" />
+                <img src="/images/조리로봇 브로슈어 최종-06.png" />
+                <img src="/images/조리로봇 브로슈어 최종-07.png" />
+                <img src="/images/조리로봇 브로슈어 최종-08.png" />
+                <img src="/images/조리로봇 브로슈어 최종-09.png" />
+                <img src="/images/조리로봇 브로슈어 최종-10.png" />
+                <img src="/images/조리로봇 브로슈어 최종-11.png" />
             </div>
         </div>
     );

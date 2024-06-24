@@ -1,48 +1,44 @@
 .About {
-    width: 100%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
     flex-basis: 85%;
-    justify-content: center;
-    align-items: center;
 }
 
-.About .about1 {
+.About h1 {
     width: 85%;
-    height: 60%;
-    margin: auto;
+    margin: 0 auto;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.7vw;
     box-sizing: border-box;
     padding-top: 40px;
 }
-
-.About .about1 h1 {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.7vw;
-    margin-bottom: 2vw;
-}
-.About .about1 .alltext {
+.About .alltext {
+    width: 85%;
+    margin: 0 auto;
     display: inline-block;
     box-sizing: border-box;
 }
 
-.About .about1 .alltext h2 {
+.About .alltext h2 {
     font-size: 1.2vw;
     margin-bottom: 2vw;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
-.About .about1 .alltext p {
+.About .alltext p {
     font-size: 0.95vw;
     width: 65%;
-    margin: auto;
     line-height: 2.1;
     padding-bottom: 2vw;
     align-items: center;
-
     font-weight: 400;
     font-family: 'Noto Sans KR', sans-serif;
+    margin: 0 auto; /* 중앙 정렬을 위해 추가된 부분 */
+    text-align: center; /* 텍스트를 중앙에 정렬 */
 }
 
-.About .about1 .alltext .RightText {
+.About .alltext .RightText {
     font-size: 0.95vw;
     font-weight: bold;
     margin-left: 50vw;
@@ -63,13 +59,7 @@
         padding-top: 2vh;
     }
 
-    .About .about1 {
-        width: 100%;
-        height: auto;
-        margin: 0;
-    }
-
-    .About .about1 h1 {
+    .About h1 {
         font-size: 5vw;
         margin-bottom: 4vw;
         padding-top: 40px;
@@ -77,24 +67,24 @@
     }
 
     .About .alltext {
-        width: 80%;
     }
 
-    .About .about1 .alltext h2 {
+    .About .alltext h2 {
         font-size: 3.2vw;
         margin-left: 2vw;
         margin-bottom: 4vw;
     }
 
-    .About .about1 .alltext p {
+    .About .alltext p {
         font-size: 2.1vw;
         line-height: 1.8;
-        margin-left: 8vw;
-        width: 95%;
-        text-align: left;
+        margin-left: auto; /* 중앙 정렬을 위해 수정된 부분 */
+        margin-right: auto; /* 중앙 정렬을 위해 수정된 부분 */
+
+        text-align: center; /* 텍스트를 중앙에 정렬 */
     }
 
-    .About .about1 .alltext .RightText {
+    .About .alltext .RightText {
         font-size: 2.1vw;
         margin-left: 8vw;
         width: 28%;

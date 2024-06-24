@@ -8,7 +8,6 @@ import History from './components/About/History';
 import Global from './components/About/Global';
 import Contact from './components/About/Contact';
 import Support from './components/Support/Support';
-import Guide from './components/Support/Guide';
 import Robot from './components/Product/Robot';
 import Pc from './components/Product/Pc';
 import Living from './components/Product/Living';
@@ -40,7 +39,7 @@ const NavBarLayout = ({ children }) => {
     return isMobile ? (
         <TopNavLayout>{children}</TopNavLayout>
     ) : (
-        <div style={{ display: 'flex', height: '100%' }}>
+        <div style={{ display: 'flex', minHeight: '100vh' }}>
             <NavBar />
             <div style={{ flex: 1 }}>{children}</div>
         </div>
@@ -83,7 +82,6 @@ const App = () => {
                         <NavBarLayout>
                             <Routes>
                                 <Route path="" element={<Support />} />
-                                <Route path="guide" element={<Guide />} />
                             </Routes>
                             <Footer />
                         </NavBarLayout>

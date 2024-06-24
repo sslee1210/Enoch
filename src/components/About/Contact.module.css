@@ -4,32 +4,34 @@
     flex-basis: 85%;
 }
 
-.Contact .Contact1 {
+.Contact {
     width: 85%;
-
     margin: auto;
     box-sizing: border-box;
     padding-top: 40px;
 }
 
-.Contact .Contact1 h1 {
+.Contact h1 {
+    width: 85%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding-top: 40px;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.7vw;
-    margin-bottom: 100px;
+    margin-bottom: 10vw;
 }
 
-.Contact .Contact1 .ContactText {
-    display: inline-block;
-    position: relative;
-    top: 8vw;
+.Contact .ContactText {
+    margin: 0 auto;
+    width: 80%;
 }
 
-.Contact .Contact1 .ContactText h3 {
+.Contact .ContactText h3 {
     font-size: 1.3vw;
     margin-bottom: 1vw;
 }
 
-.Contact .Contact1 .ContactText p {
+.Contact .ContactText p {
     font-size: 1.1vw;
     line-height: 1.2;
 }
@@ -39,8 +41,8 @@
     height: 300px; /* 지도의 높이를 400px로 설정 */
     margin: 0 auto; /* 지도를 수평 중앙에 위치시킴 */
     position: relative; /* 위치 조정을 위한 상대 위치 설정 */
-    bottom: 5vw; /* 상단에서부터 50px 아래에 위치 */
-    left: 5vw; /* 왼쪽 정렬 */
+    bottom: 12vw; /* 상단에서부터 50px 아래에 위치 */
+    left: 10vw; /* 왼쪽 정렬 */
 }
 
 .CustomButton {

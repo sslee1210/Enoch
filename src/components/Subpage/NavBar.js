@@ -87,16 +87,7 @@ const NavBar = () => {
                                     className={NavBarStyles.subMenuItem}
                                     style={location.pathname === '/support' ? activeStyle : {}}
                                 >
-                                    Download File
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink
-                                    to="/support/guide"
-                                    className={NavBarStyles.subMenuItem}
-                                    style={location.pathname === '/support/guide' ? activeStyle : {}}
-                                >
-                                    사용 설명법
+                                    사용 설명서
                                 </NavLink>
                             </li>
                         </ol>

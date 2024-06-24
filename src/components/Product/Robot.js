@@ -57,50 +57,72 @@ const Robot = () => {
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <div className={ProductStyles.sec1}>
-                    <img src={process.env.PUBLIC_URL + '/images/Robot1.png'} alt="Robot1" />
-                    <div className={ProductStyles.tex}>
-                        <h2>조리용 로봇팔</h2>
-                        <p>
-                            조리 과정을 자동화하여 효율성과 정확성을
-                            <br />
-                            높이는 혁신적인 조리용 로봇팔
-                        </p>
-                    </div>
-                    <div className={ProductStyles.rbtex}>
-                        <Link to="/Support" className={ProductStyles.rb}>
-                            브로슈어 보기
-                        </Link>
-                        <Link to="/support/guide" className={ProductStyles.rb}>
-                            설명법 보기
-                        </Link>
-                    </div>
-                </div>
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec2}>
-                        <div className={ProductStyles.tex}>
-                            <h2>4족 로봇</h2>
-                            <p>
-                                점검, 조사, 보안, 측량을 포함한 여러 분야의
-                                <br />
-                                핵심 산업 요구를 충족하는 4족 로봇
-                            </p>
-                        </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Robot3.png'} alt="Robot3" />
-                    </div>
-                </div>
+                <ul>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Robot1.png'} alt="Robot1" />
+                            </div>
 
-                <div className={ProductStyles.sec3} style={{ marginBottom: '70px' }}>
-                    <img src={process.env.PUBLIC_URL + '/images/Robot2.jpg'} alt="Robot2" />
-                    <div className={ProductStyles.tex}>
-                        <h2>요요 A.I Robot</h2>
-                        <p>
-                            자연스러운 커뮤니케이션으로 아이와 대화하고
-                            <br />
-                            춤을 추는 인공지능 교감형 로봇!
-                        </p>
-                    </div>
-                </div>
+                            <div className={ProductStyles.text}>
+                                <h2>조리용 로봇팔</h2>
+                                <p>
+                                    조리 과정을 자동화하여 효율성과 정확성을
+                                    <br />
+                                    높이는 혁신적인 조리용 로봇팔
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Robot3.png'} alt="Robot3" />
+                            </div>
+
+                            <div className={ProductStyles.text}>
+                                <h2>4족 로봇</h2>
+                                <p>
+                                    점검, 조사, 보안, 측량을 포함한 여러 분야의
+                                    <br />
+                                    핵심 산업 요구를 충족하는 4족 로봇
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Robot2.jpg'} alt="Robot2" />
+                            </div>
+
+                            <div className={ProductStyles.text}>
+                                <h2>요요 A.I Robot</h2>
+                                <p>
+                                    자연스러운 커뮤니케이션으로 아이와 대화하고
+                                    <br />
+                                    춤을 추는 인공지능 교감형 로봇!
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/준비중.png'} alt="준비중" />
+                            </div>
+
+                            <div className={ProductStyles.text}>
+                                <h2>제품 준비중</h2>
+                                <p>
+                                    제품 준비중
+                                    <br />
+                                    제품 준비중
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <img

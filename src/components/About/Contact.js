@@ -62,16 +62,14 @@ const Contact = () => {
 
     return (
         <div className={ContactStyles.Contact}>
-            <div className={ContactStyles.Contact1}>
-                <h1>CONTACT US</h1>
-                <div className={ContactStyles.ContactText}>
-                    <h3 className={ContactStyles.ContactTitle}>
-                        서울특별시 금천구 <br /> 가산디지털로 백상스타타워2차 14층
-                    </h3>
-                    <p>TEL : 02-2268-8770 </p>
-                    <p>FAX : 0504-163-8775</p>
-                    <p>www.enokorea.com</p>
-                </div>
+            <h1>CONTACT US</h1>
+            <div className={ContactStyles.ContactText}>
+                <h3 className={ContactStyles.ContactTitle}>
+                    서울특별시 금천구 <br /> 가산디지털로 백상스타타워2차 14층
+                </h3>
+                <p>TEL : 02-2268-8770 </p>
+                <p>FAX : 0504-163-8775</p>
+                <p>www.enokorea.com</p>
                 <div id="myMap" className={ContactStyles.Map} />
             </div>
         </div>
