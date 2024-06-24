@@ -166,7 +166,7 @@
 
 @media screen and (max-width: 768px) {
     .product {
-        padding-top: 80px;
+        padding-top: 8.7vh;
     }
 
     .product .big {
@@ -180,7 +180,7 @@
 
     .product .big h2 {
         font-size: 2.3vw;
-        top: 35%;
+        top: 42%;
         left: 50%;
         transform: translate(-50%, -50%);
         padding: 5px;
@@ -220,7 +220,7 @@
     .product .sec ul {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 80%;
     }
     .product .sec ul > li {
         width: 80%;
@@ -228,7 +228,7 @@
 
     .product .sec ul > li > a {
         margin: auto;
-        max-width: 430px;
+        max-width: 360px;
     }
 
     .product .sec h2 {
@@ -239,13 +239,6 @@
 
     .product .sec p {
         font-size: 3vw;
-        text-align: center;
-    }
-
-    .product .sec .sec1 h2,
-    .product .sec .sec3 h2,
-    .product .sec .sec1 p,
-    .product .sec .sec3 p {
         text-align: center;
     }
 
