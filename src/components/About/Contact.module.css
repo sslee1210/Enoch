@@ -2,13 +2,10 @@
     width: 100%;
     height: 100vh;
     flex-basis: 85%;
-}
-
-.Contact {
-    width: 85%;
-    margin: auto;
-    box-sizing: border-box;
-    padding-top: 40px;
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    align-items: center; /* 가로 방향 중앙 정렬 */
+    box-sizing: border-box; /* padding과 border를 포함한 box 크기 계산 */
 }
 
 .Contact h1 {
@@ -22,8 +19,11 @@
 }
 
 .Contact .ContactText {
-    margin: 0 auto;
-    width: 80%;
+    width: 85%;
+    display: flex; /* Flexbox 레이아웃 사용 */
+    flex-direction: column; /* 세로 방향으로 정렬 */
+    box-sizing: border-box;
+    margin-top: 6vw;
 }
 
 .Contact .ContactText h3 {
@@ -34,14 +34,15 @@
 .Contact .ContactText p {
     font-size: 1.1vw;
     line-height: 1.2;
+    text-align: left;
 }
 
 .Map {
     width: 40%; /* 지도의 너비를 100%로 설정 */
-    height: 300px; /* 지도의 높이를 400px로 설정 */
+    height: 15vw; /* 지도의 높이를 400px로 설정 */
     margin: 0 auto; /* 지도를 수평 중앙에 위치시킴 */
     position: relative; /* 위치 조정을 위한 상대 위치 설정 */
-    bottom: 12vw; /* 상단에서부터 50px 아래에 위치 */
+    bottom: 10vw; /* 상단에서부터 50px 아래에 위치 */
     left: 10vw; /* 왼쪽 정렬 */
 }
 
@@ -67,39 +68,30 @@
 @media screen and (max-width: 768px) {
     .Contact {
         margin: 0;
-        height: 90vh;
-        display: inline-block;
-        padding-top: 7vh;
-        justify-content: flex-start;
-        align-items: flex-start;
-    }
 
-    .Contact .Contact1 {
         display: flex; /* Flexbox 레이아웃 사용 */
         flex-direction: column; /* 자식 요소들을 세로로 정렬 */
-        margin-top: 8vh;
-        height: 70vh;
-        width: 100%;
+        padding-top: 7vh;
     }
 
-    .Contact .Contact1 h1 {
+    .Contact h1 {
         font-size: 5vw;
-
         margin-left: 2vw;
     }
 
-    .Contact .Contact1 .ContactText {
-        margin-left: 10vw;
-        top: -2vw;
+    .Contact .ContactText {
+        align-items: center; /* 가로 방향 중앙 정렬 */
     }
 
-    .Contact .Contact1 .ContactText h3 {
-        font-size: 0.9rem;
+    .Contact .ContactText h3 {
+        font-size: 3vw;
         margin-bottom: 3vw;
+        align-self: flex-start;
     }
 
-    .Contact .Contact1 .ContactText p {
-        font-size: 0.7rem;
+    .Contact .ContactText p {
+        font-size: 2vw;
+        align-self: flex-start;
     }
 
     .Map {
@@ -107,7 +99,7 @@
         height: 200px;
         margin: 20px auto; /* 상단과 하단 마진 추가로 요소 간 간격 조정 */
         position: relative;
-        bottom: 0; /* 모바일 화면에서의 위치 조정을 위해 변경 */
+        bottom: -50px; /* 모바일 화면에서의 위치 조정을 위해 변경 */
         left: 0; /* 모바일 화면에서의 위치 조정을 위해 변경 */
     }
 

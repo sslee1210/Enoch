@@ -57,14 +57,22 @@ const Pc = () => {
                     </li>
                 </ul>
             </div>
+
             <div className={ProductStyles.sec}>
-                <div className={ProductStyles.sec1} style={{ marginBottom: '70px' }}>
-                    <img src={process.env.PUBLIC_URL + '/images/Pc1.png'} alt="Pc1" />
-                    <div className={ProductStyles.tex}>
-                        <h2>All in One 27inch PC</h2>
-                        <p>27인치 올인원 베어본 시스템, 강력한 성능과 세련된 디자인을 자랑합니다.</p>
-                    </div>
-                </div>
+                <ul>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Pc1.png'} alt="Pc1" />
+                            </div>
+
+                            <div className={ProductStyles.text}>
+                                <h2>All in One 27inch PC</h2>
+                                <p>27인치 올인원 베어본 시스템, 강력한 성능과 세련된 디자인을 자랑합니다.</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <img

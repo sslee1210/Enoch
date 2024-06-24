@@ -106,22 +106,6 @@ const Robot = () => {
                             </div>
                         </a>
                     </li>
-                    <li>
-                        <a>
-                            <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/준비중.png'} alt="준비중" />
-                            </div>
-
-                            <div className={ProductStyles.text}>
-                                <h2>제품 준비중</h2>
-                                <p>
-                                    제품 준비중
-                                    <br />
-                                    제품 준비중
-                                </p>
-                            </div>
-                        </a>
-                    </li>
                 </ul>
             </div>
 

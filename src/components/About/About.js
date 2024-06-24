@@ -5,6 +5,7 @@ const About = () => {
     return (
         <div className={AboutStyles.About}>
             <h1>회사 소개</h1>
+
             <div className={AboutStyles.alltext}>
                 <h2>최초가 되기 보다는 제대로 하는 기업</h2>
                 <p>

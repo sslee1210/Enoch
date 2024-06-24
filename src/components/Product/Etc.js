@@ -58,59 +58,64 @@ const Etc = () => {
                 </ul>
             </div>
             <div className={ProductStyles.sec}>
-                <div className={ProductStyles.sec1}>
-                    <img src={process.env.PUBLIC_URL + '/images/Etc1.jpg'} alt="Etc1" />
-                    <div className={ProductStyles.tex}>
-                        <h2>ENO-100</h2>
-                        <p>고감도 AID 무선 TWS 음성증폭 이어폰</p>
-                    </div>
-                </div>
-
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec2}>
-                        <div className={ProductStyles.tex}>
-                            <h2>TS-22</h2>
-                            <p>고감도 완전 무선 스테레오 음성 증폭 이어폰</p>
-                            <div className={ProductStyles.avtex}>
-                                <Link to="/support/guide" className={ProductStyles.av}>
-                                    사용설명서 보기
-                                </Link>
+                <ul>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Etc1.png'} alt="Etc1" />
                             </div>
-                        </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Etc2.jpg'} alt="Etc2" />
-                    </div>
-                </div>
 
-                <div className={ProductStyles.sec3}>
-                    <img src={process.env.PUBLIC_URL + '/images/Etc3.jpg'} alt="Etc3" />
-                    <div className={ProductStyles.tex}>
-                        <h2>TS-22 DELUX</h2>
-                        <p>
-                            이어폰 타입으로 양쪽 귀에 선명하고 또렷한 소리!
-                            <br />
-                            고감도 음성 증폭기
-                        </p>
-                        <div className={ProductStyles.avtex}>
-                            <Link to="/support/guide" className={ProductStyles.av}>
-                                사용설명서 보기
-                            </Link>
-                        </div>
-                    </div>
-                </div>
+                            <div className={ProductStyles.text}>
+                                <h2>ENO-100</h2>
+                                <p>고감도 AID 무선 TWS 음성증폭 이어폰</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Etc2.jpg'} alt="Etc2" />
+                            </div>
 
-                <div className={ProductStyles.background}>
-                    <div className={ProductStyles.sec4}>
-                        <div className={ProductStyles.tex}>
-                            <h2>ENO-777</h2>
-                            <p>
-                                이어폰과 스피커를 하나로!
-                                <br />
-                                세계 최초의 주크박스형 블루투스 무선 이어폰
-                            </p>
-                        </div>
-                        <img src={process.env.PUBLIC_URL + '/images/Etc4.png'} alt="Etc4" />
-                    </div>
-                </div>
+                            <div className={ProductStyles.text}>
+                                <h2>TS-22</h2>
+                                <p>고감도 완전 무선 스테레오 음성 증폭 이어폰</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Etc3.jpg'} alt="Etc3" />
+                            </div>
+
+                            <div className={ProductStyles.text}>
+                                <h2>TS-22 DELUX</h2>
+                                <p>
+                                    이어폰 타입으로 양쪽 귀에 선명하고 또렷한 소리!
+                                    <br />
+                                    고감도 음성 증폭기
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a>
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/Etc4.png'} alt="Etc4" />
+                            </div>
+
+                            <div className={ProductStyles.text}>
+                                <h2>ENO-777</h2>
+                                <p>
+                                    이어폰과 스피커를 하나로!
+                                    <br />
+                                    세계 최초의 주크박스형 블루투스 무선 이어폰
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <img

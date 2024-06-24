@@ -90,16 +90,18 @@ const App = () => {
                 <Route
                     path="/product/*"
                     element={
-                        <TopNavLayout>
-                            <Routes>
-                                <Route path="robot" element={<Robot />} />
-                                <Route path="pc" element={<Pc />} />
-                                <Route path="living" element={<Living />} />
-                                <Route path="electronics" element={<Electronics />} />
-                                <Route path="etc" element={<Etc />} />
-                            </Routes>
-                            <Footer />
-                        </TopNavLayout>
+                        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+                            <TopNavLayout>
+                                <Routes>
+                                    <Route path="robot" element={<Robot />} />
+                                    <Route path="pc" element={<Pc />} />
+                                    <Route path="living" element={<Living />} />
+                                    <Route path="electronics" element={<Electronics />} />
+                                    <Route path="etc" element={<Etc />} />
+                                </Routes>
+                                <Footer />
+                            </TopNavLayout>
+                        </div>
                     }
                 />
             </Routes>

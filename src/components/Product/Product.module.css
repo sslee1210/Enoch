@@ -1,3 +1,8 @@
+.product {
+    flex: 1;
+    padding-top: 80px;
+}
+
 .product a {
     color: #000;
 }
@@ -69,6 +74,7 @@
     color: #000000;
     font-weight: bold;
     padding: 20px;
+    font-size: 0.8rem;
 }
 
 .product .menu ul li:hover a {
@@ -78,8 +84,7 @@
 
 .product .sec {
     width: 100%;
-    height: 100%;
-    margin-bottom: 100px;
+    padding: 20px 0;
 }
 .product .sec ul {
     width: 70%;
@@ -91,34 +96,52 @@
     height: 100%;
 }
 .product .sec ul > li {
-    width: calc((100% - 84px) / 2);
+    width: calc((100% - 160px) / 3);
 }
 .product .sec ul > li > a {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(25, 47, 80, 0.315);
     width: 100%;
     height: 100%;
 }
 .product .sec .image {
-    height: calc(100% / 2);
     width: 100%;
-    border: 1px solid red;
+    height: 108px;
+    max-height: 40px;
+    padding-bottom: 80%; /* 16:9 비율을 유지하도록 설정 */
+    overflow: hidden;
+    position: relative;
 }
-.product .sec img {
-    object-fit: cover;
+
+.product .sec .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    filter: brightness(1);
+    transition: ease all 0.3s;
 }
+
+.product .sec img:hover {
+    filter: brightness(0.7);
+}
+
 .product .sec .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
     width: 100%;
-    border: 1px solid darkorange;
+    height: 100%;
+    padding: 10px 0;
+    border-top: 1px solid #dfdcdc36;
 }
 
 .product .sec h2 {
-    margin-bottom: 22px;
     text-align: left;
     font-size: 1.5vw;
 }
@@ -143,7 +166,7 @@
 
 @media screen and (max-width: 768px) {
     .product {
-        padding-top: 8.7vh;
+        padding-top: 80px;
     }
 
     .product .big {
@@ -185,76 +208,27 @@
 
     .product .menu ul li a {
         padding: 0;
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     .product .sec {
         gap: 30px;
         width: 100%;
+        padding-bottom: 66px;
     }
 
-    .product .sec .background {
+    .product .sec ul {
+        flex-direction: column;
+        align-items: center;
         width: 100%;
-        padding: 30px 0;
+    }
+    .product .sec ul > li {
+        width: 80%;
     }
 
-    .product .sec .sec1,
-    .product .sec .sec2,
-    .product .sec .sec3,
-    .product .sec .sec4 {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product .sec .sec1 img,
-    .product .sec .sec2 img,
-    .product .sec .sec3 img,
-    .product .sec .sec4 img {
-        width: 55vw;
-        margin: 20px;
-    }
-
-    .product .sec .tex {
-        width: 85%;
-        align-items: center;
-        text-align: center;
-    }
-
-    .product .sec .sec1 .rbtex {
-        flex-direction: column;
-        display: flex;
-    }
-
-    .product .sec .rbtex .rb {
-        color: #fff;
-        background-color: #000;
-        border-radius: 20px;
-        padding: 1vw;
-        transition: 0.3s;
-        font-size: 3vw;
-    }
-
-    .product .sec .rbtex .rb:hover {
-        color: #f1c40f;
-    }
-
-    .product .sec .avtex {
-        flex-direction: column;
-        display: flex;
-        margin-top: 1vw;
-    }
-
-    .product .sec .avtex .av {
-        color: #fff;
-        background-color: #000;
-        border-radius: 20px;
-        padding: 1vw;
-        transition: 0.3s;
-        font-size: 3vw;
-    }
-
-    .product .sec .avtex .av:hover {
-        color: #f1c40f;
+    .product .sec ul > li > a {
+        margin: auto;
+        max-width: 430px;
     }
 
     .product .sec h2 {

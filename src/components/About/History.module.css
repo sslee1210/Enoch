@@ -2,7 +2,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    flex-basis: 85%;
+    flex: 1;
 }
 .History h1 {
     width: 85%;

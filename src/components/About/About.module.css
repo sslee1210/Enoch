@@ -2,7 +2,6 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    flex-basis: 85%;
 }
 
 .About h1 {
@@ -15,14 +14,16 @@
 }
 .About .alltext {
     width: 85%;
-    margin: 0 auto;
     display: inline-block;
     box-sizing: border-box;
+    margin: 0 auto;
+    margin-top: 5vw;
 }
 
 .About .alltext h2 {
     font-size: 1.2vw;
     margin-bottom: 2vw;
+    margin-left: 3vw;
     font-family: 'Noto Sans KR', sans-serif;
 }
 
@@ -30,12 +31,12 @@
     font-size: 0.95vw;
     width: 65%;
     line-height: 2.1;
-    padding-bottom: 2vw;
+    padding-bottom: 1.2vw;
     align-items: center;
     font-weight: 400;
+    word-break: break-all;
     font-family: 'Noto Sans KR', sans-serif;
-    margin: 0 auto; /* 중앙 정렬을 위해 추가된 부분 */
-    text-align: center; /* 텍스트를 중앙에 정렬 */
+    margin: auto; /* 중앙 정렬을 위해 추가된 부분 */
 }
 
 .About .alltext .RightText {
@@ -55,8 +56,7 @@
         margin: 0;
         justify-content: flex-start;
         align-items: flex-start;
-        display: inline-block;
-        padding-top: 2vh;
+        padding-top: 80px;
     }
 
     .About h1 {
@@ -67,6 +67,9 @@
     }
 
     .About .alltext {
+        width: 80%;
+        margin-left: auto; /* 중앙 정렬을 위해 추가된 부분 */
+        margin-right: auto; /* 중앙 정렬을 위해 추가된 부분 */
     }
 
     .About .alltext h2 {
@@ -78,17 +81,19 @@
     .About .alltext p {
         font-size: 2.1vw;
         line-height: 1.8;
-        margin-left: auto; /* 중앙 정렬을 위해 수정된 부분 */
-        margin-right: auto; /* 중앙 정렬을 위해 수정된 부분 */
-
-        text-align: center; /* 텍스트를 중앙에 정렬 */
+        margin-left: auto;
+        margin-right: auto;
+        width: 95%;
     }
 
     .About .alltext .RightText {
-        font-size: 2.1vw;
-        margin-left: 8vw;
         width: 28%;
+        font-size: 2.1vw;
         text-align: left;
+        margin-left: 55vw;
+        margin-top: 5vw;
+
+        margin-right: 0;
         line-height: 1.3;
     }
 }

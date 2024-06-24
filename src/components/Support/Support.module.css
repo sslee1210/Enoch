@@ -1,8 +1,14 @@
 .support {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    flex-basis: 85%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.support video {
+    max-width: 100%;
+    height: auto;
 }
 
 .support .menu {
@@ -15,11 +21,32 @@
 .support .menu > img {
     width: 100%;
 }
+
 @media screen and (max-width: 768px) {
     .support {
         margin: 0;
-        height: 90vh;
-        display: inline-block;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
         padding-top: 7vh;
+    }
+
+    .support video {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .support .menu {
+        overflow: hidden;
+        overflow-x: visible;
+        width: 100%;
+        height: auto;
+    }
+
+    .support .menu > img {
+        width: 100%;
+        margin-bottom: 10px;
     }
 }
