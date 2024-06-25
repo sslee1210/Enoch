@@ -14,6 +14,7 @@ import Living from './components/Product/Living';
 import Electronics from './components/Product/Electronics';
 import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
+import ScrollToTop from './components/ScrollToTop'; // ScrollToTop 컴포넌트 임포트
 
 const TopNavLayout = ({ children }) => (
     <>
@@ -49,6 +50,7 @@ const NavBarLayout = ({ children }) => {
 const App = () => {
     return (
         <>
+            <ScrollToTop /> {/* ScrollToTop 컴포넌트 추가 */}
             <Routes>
                 <Route
                     path="/"
