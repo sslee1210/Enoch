@@ -91,11 +91,7 @@ const Etc = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>TS-22 DELUX</h2>
-                                <p>
-                                    이어폰 타입으로 양쪽 귀에 선명하고 또렷한 소리!
-                                    <br />
-                                    고감도 음성 증폭기
-                                </p>
+                                <p>이어폰 타입으로 양쪽 귀에 선명하고 또렷한 소리! 고감도 음성 증폭기</p>
                             </div>
                         </a>
                     </li>
@@ -107,11 +103,7 @@ const Etc = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>ENO-777</h2>
-                                <p>
-                                    이어폰과 스피커를 하나로!
-                                    <br />
-                                    세계 최초의 주크박스형 블루투스 무선 이어폰
-                                </p>
+                                <p>이어폰과 스피커를 하나로! 세계 최초의 주크박스형 블루투스 무선 이어폰</p>
                             </div>
                         </a>
                     </li>
