@@ -16,6 +16,12 @@ import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
 import ScrollToTop from './components/ScrollToTop'; // ScrollToTop 컴포넌트 임포트
 import Eno100 from './components/Product/Detail/Eno100';
+import RobotYOYO from './components/Product/Detail/RobotYOYO';
+import Shampoo from './components/Product/Detail/Shampoo';
+import Folderble from './components/Product/Detail/Folderble';
+import Healing from './components/Product/Detail/Healing';
+import DoubleFolder from './components/Product/Detail/DoubleFolder';
+import Eno777 from './components/Product/Detail/Eno777';
 
 const TopNavLayout = ({ children }) => (
     <>
@@ -115,6 +121,12 @@ const App = () => {
                                     <Route path="electronics" element={<Electronics />} />
                                     <Route path="etc" element={<Etc />} />
                                     <Route path="Eno100" element={<Eno100 />} />
+                                    <Route path="RobotYOYO" element={<RobotYOYO />} />
+                                    <Route path="Shampoo" element={<Shampoo />} />
+                                    <Route path="Folderble" element={<Folderble />} />
+                                    <Route path="Healing" element={<Healing />} />
+                                    <Route path="DoubleFolder" element={<DoubleFolder />} />
+                                    <Route path="Eno777" element={<Eno777 />} />
                                 </Routes>
                                 <Footer />
                             </TopNavLayout>

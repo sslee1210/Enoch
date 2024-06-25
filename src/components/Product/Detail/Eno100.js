@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import DetaleStyles from './Detail.module.css';
+
 const Eno100 = () => {
     const [opacity, setOpacity] = useState(0);
 
@@ -27,14 +29,36 @@ const Eno100 = () => {
     const MoveToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
+
     return (
         <div className={DetaleStyles.Detail}>
-            <img src="/images/eno100 page.png" alt="eno-100 상세페이지" />
+            <div className={DetaleStyles.menu}>
+                <ul>
+                    <li>
+                        <Link to="/Product/robot">Robot</Link>
+                    </li>
+                    <li>
+                        <Link to="/Product/pc">PC</Link>
+                    </li>
+                    <li>
+                        <Link to="/Product/Etc">A/V Products</Link>
+                    </li>
+                    <li>
+                        <Link to="/Product/Electronics">Electronics</Link>
+                    </li>
+                    <li>
+                        <Link to="/Product/living">Living Product</Link>
+                    </li>
+                </ul>
+            </div>
+            <div className={DetaleStyles.DetailImg}>
+                <img src="/images/eno100 page.png" alt="eno-100 상세페이지" />
+            </div>
             <img
                 src={process.env.PUBLIC_URL + '/images/Up.png'}
                 onClick={MoveToTop}
                 className={DetaleStyles.up}
-                style={{ opacity: opacity }} // 이 부분에서 스타일을 직접 적용하여 opacity를 조절합니다.
+                style={{ opacity: opacity }}
                 alt="Move to Top"
             />
         </div>

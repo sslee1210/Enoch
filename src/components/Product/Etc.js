@@ -95,7 +95,7 @@ const Etc = () => {
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/Product/Eno777">
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Etc4.png'} alt="Etc4" />
                             </div>
@@ -104,7 +104,7 @@ const Etc = () => {
                                 <h2>ENO-777</h2>
                                 <p>이어폰과 스피커를 하나로! 세계 최초의 주크박스형 블루투스 무선 이어폰</p>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

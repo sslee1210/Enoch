@@ -83,7 +83,7 @@ const Robot = () => {
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/Product/RobotYOYO">
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Robot2.jpg'} alt="Robot2" />
                             </div>
@@ -92,7 +92,7 @@ const Robot = () => {
                                 <h2>요요 A.I Robot</h2>
                                 <p>자연스러운 커뮤니케이션으로 아이와 대화하고 춤을 추는 인공지능 교감형 로봇!</p>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
