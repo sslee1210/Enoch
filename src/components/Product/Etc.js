@@ -83,7 +83,7 @@ const Etc = () => {
                         </a>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/Product/TS22delux">
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Etc3.jpg'} alt="Etc3" />
                             </div>
@@ -92,7 +92,7 @@ const Etc = () => {
                                 <h2>TS-22 DELUX</h2>
                                 <p>이어폰 타입으로 양쪽 귀에 선명하고 또렷한 소리! 고감도 음성 증폭기</p>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <Link to="/Product/Eno777">

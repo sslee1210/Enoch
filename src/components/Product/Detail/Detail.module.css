@@ -7,12 +7,13 @@
 }
 
 .Detail .DetailImg {
-    display: block; /* 블록 요소로 변경 */
-    margin: 0 auto; /* 자동으로 좌우 여백을 설정하여 가운데 정렬 */
+    display: flex; /* 블록 요소로 변경 */
+    flex-direction: column;
+    align-items: center;
 }
 
 .Detail .DetailImg img {
-    width: 35%;
+    width: 40%;
 }
 
 .Detail .up:hover {
@@ -23,7 +24,7 @@
 .Detail .menu {
     position: fixed; /* 메뉴를 고정시키기 위한 속성 */
     top: 50%;
-    left: 17%;
+    left: 15%;
     transform: translate(-50%, -50%);
     background-color: #fff;
     z-index: 1000; /* 다른 요소들보다 위에 위치하도록 설정 */

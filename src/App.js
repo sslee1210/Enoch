@@ -22,6 +22,7 @@ import Folderble from './components/Product/Detail/Folderble';
 import Healing from './components/Product/Detail/Healing';
 import DoubleFolder from './components/Product/Detail/DoubleFolder';
 import Eno777 from './components/Product/Detail/Eno777';
+import Ts22delux from './components/Product/Detail/Ts22delux';
 
 const TopNavLayout = ({ children }) => (
     <>
@@ -127,6 +128,7 @@ const App = () => {
                                     <Route path="Healing" element={<Healing />} />
                                     <Route path="DoubleFolder" element={<DoubleFolder />} />
                                     <Route path="Eno777" element={<Eno777 />} />
+                                    <Route path="Ts22delux" element={<Ts22delux />} />
                                 </Routes>
                                 <Footer />
                             </TopNavLayout>
