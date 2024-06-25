@@ -1,0 +1,31 @@
+.Detail {
+    background-color: #fbfbff;
+    margin: auto;
+    padding-top: 80px;
+}
+
+.Detail img {
+    width: 80%;
+}
+
+.Detail .up {
+    bottom: 25px;
+    right: 25px;
+    position: fixed;
+    width: 50px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.Detail .up:hover {
+    background-color: #f1c40f;
+    border-radius: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    .Detail img {
+        width: 100%;
+    }
+}

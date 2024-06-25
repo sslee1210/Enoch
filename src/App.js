@@ -15,6 +15,7 @@ import Electronics from './components/Product/Electronics';
 import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
 import ScrollToTop from './components/ScrollToTop'; // ScrollToTop 컴포넌트 임포트
+import Eno100 from './components/Product/Detail/Eno100';
 
 const TopNavLayout = ({ children }) => (
     <>
@@ -50,12 +51,18 @@ const NavBarLayout = ({ children }) => {
 const App = () => {
     return (
         <>
-            <ScrollToTop /> {/* ScrollToTop 컴포넌트 추가 */}
+            <ScrollToTop />
             <Routes>
                 <Route
                     path="/"
                     element={
-                        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                minHeight: '100vh',
+                            }}
+                        >
                             <TopNavLayout>
                                 <Main />
                                 <Footer />
@@ -92,7 +99,14 @@ const App = () => {
                 <Route
                     path="/product/*"
                     element={
-                        <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+                        <div
+                            style={{
+                                display: 'flex',
+                                flexDirection: 'column',
+                                minHeight: '100vh',
+                                backgroundColor: '#fbfbff',
+                            }}
+                        >
                             <TopNavLayout>
                                 <Routes>
                                     <Route path="robot" element={<Robot />} />
@@ -100,6 +114,7 @@ const App = () => {
                                     <Route path="living" element={<Living />} />
                                     <Route path="electronics" element={<Electronics />} />
                                     <Route path="etc" element={<Etc />} />
+                                    <Route path="Eno100" element={<Eno100 />} />
                                 </Routes>
                                 <Footer />
                             </TopNavLayout>

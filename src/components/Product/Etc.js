@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
-import FooterStyles from '../Subpage/Footer.module.css';
 
 const Etc = () => {
     const [opacity, setOpacity] = useState(0);
@@ -60,7 +59,7 @@ const Etc = () => {
             <div className={ProductStyles.sec}>
                 <ul>
                     <li>
-                        <a>
+                        <Link to="/Product/Eno100">
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Etc1.png'} alt="Etc1" />
                             </div>
@@ -69,7 +68,7 @@ const Etc = () => {
                                 <h2>ENO-100</h2>
                                 <p>고감도 AID 무선 TWS 음성증폭 이어폰</p>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a>

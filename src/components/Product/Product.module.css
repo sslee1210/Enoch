@@ -163,8 +163,14 @@
     right: 25px;
     position: fixed;
     width: 50px;
-    opacity: 0;
+    background-color: #fff;
+    border-radius: 50%;
     transition: opacity 0.5s ease-in-out;
+}
+
+.product .up:hover {
+    background-color: #f1c40f;
+    border-radius: 50%;
 }
 
 @media screen and (max-width: 768px) {
