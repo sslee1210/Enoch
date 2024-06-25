@@ -13,7 +13,7 @@
 }
 
 .Detail .DetailImg img {
-    width: 40%;
+    width: 35%;
 }
 
 .Detail .up:hover {
@@ -22,12 +22,12 @@
 }
 
 .Detail .menu {
-    position: fixed; /* 메뉴를 고정시키기 위한 속성 */
+    position: fixed;
     top: 50%;
     left: 15%;
     transform: translate(-50%, -50%);
     background-color: #fff;
-    z-index: 1000; /* 다른 요소들보다 위에 위치하도록 설정 */
+    z-index: 1000;
     box-shadow: 10px 10px 15px rgba(30, 30, 71, 0.1);
 }
 
