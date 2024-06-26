@@ -78,7 +78,6 @@ const Electronics = () => {
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/electronic4.png'} alt="Robot4" />
                             </div>
-
                             <div className={ProductStyles.text}>
                                 <h2>제습기</h2>
                                 <p>1.5L의 대용량 물탱크를 보유하고 강력한 제습 효과를 자랑하는 제습기</p>

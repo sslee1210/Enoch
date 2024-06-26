@@ -89,16 +89,17 @@
     padding-bottom: 70px;
 }
 .product .sec ul {
-    width: 69%;
+    width: 75%;
     display: flex;
-    gap: 120px;
     margin: auto;
     list-style: none;
     flex-wrap: wrap;
     height: 100%;
 }
+
 .product .sec ul > li {
-    width: calc((100% - 240px) / 3);
+    width: calc(100% / 3);
+    padding-bottom: 1.5vw;
 }
 
 .product .sec ul > li:hover img {
@@ -109,8 +110,9 @@
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    width: 100%;
+    width: 78%;
     height: 100%;
+    margin: auto;
 }
 .product .sec .image {
     width: 100%;
