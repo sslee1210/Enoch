@@ -31,6 +31,7 @@
 .languageMenu {
     position: relative;
     display: inline-block;
+    margin: auto;
 }
 
 .languageButton {
@@ -235,6 +236,58 @@
 
 .subMenu li:hover {
     background-color: #f1c40f;
+}
+
+@media screen and (max-width: 1200px) {
+    .languageMenu {
+        position: relative;
+        display: inline-block;
+    }
+
+    .languageButton {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 0.7vw;
+        font-size: 0.8vw;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        border: 1px solid #000;
+    }
+
+    .languageButton:hover {
+        background-color: #ddd;
+    }
+
+    .languageOptions {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        text-align: center;
+        min-width: 3vw;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .languageMenu:hover .languageOptions {
+        display: block;
+    }
+
+    .languageOptions li {
+        color: #262a63;
+        text-decoration: none;
+        font-size: 1vw;
+        list-style: none;
+        min-width: 3vw;
+        padding: 1vw;
+        font-weight: 900;
+        transition: color 0.3s ease;
+        cursor: pointer;
+    }
+
+    .languageOptions li:hover {
+        background-color: #ddd;
+    }
 }
 
 @media screen and (max-width: 768px) {
