@@ -1,8 +1,11 @@
 import React from 'react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 import NavBarStyles from './NavBar.module.css';
+import i18n from '../../lacale/i18n';
+import { useTranslation } from 'react-i18next';
 
 const NavBar = () => {
+    const { t } = useTranslation();
     const activeStyle = {
         color: '#f1c40f',
         fontWeight: 'bold',
@@ -39,7 +42,7 @@ const NavBar = () => {
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
-                                    회사소개
+                                    {t('회사 소개')}
                                 </NavLink>
                             </li>
                             <li>
@@ -57,7 +60,7 @@ const NavBar = () => {
                                     className={NavBarStyles.subMenuItem}
                                     style={({ isActive }) => (isActive ? activeStyle : {})}
                                 >
-                                    해외법인
+                                    {t('해외 법인')}
                                 </NavLink>
                             </li>
                             <li>
@@ -87,7 +90,7 @@ const NavBar = () => {
                                     className={NavBarStyles.subMenuItem}
                                     style={location.pathname === '/support' ? activeStyle : {}}
                                 >
-                                    사용 설명서
+                                    {t('사용설명서')}
                                 </NavLink>
                             </li>
                         </ol>

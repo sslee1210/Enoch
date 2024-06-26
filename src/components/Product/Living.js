@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
+import i18n from '../../lacale/i18n';
+import { useTranslation } from 'react-i18next';
 
 const Living = () => {
+    const { t } = useTranslation();
     const [opacity, setOpacity] = useState(0);
 
     useEffect(() => {
@@ -35,7 +38,7 @@ const Living = () => {
             <div className={ProductStyles.big}>
                 <img src={process.env.PUBLIC_URL + '/images/Living.png'} alt="closet" />
                 <h2>Living Product</h2>
-                <p>이노치 코리아만의 감성 생활 제품</p>
+                <p>{t('이노치 코리아만의 감성 생활 제품')}</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -66,7 +69,7 @@ const Living = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>Folder Stroge Box</h2>
-                                <p>이동이 편리하고 공간 활용이 우수한 옷장</p>
+                                <p>{t('이동이 편리하고 공간 활용이 우수한 옷장')}</p>
                             </div>
                         </Link>
                     </li>
@@ -76,8 +79,8 @@ const Living = () => {
                                 <img src={process.env.PUBLIC_URL + '/images/living2.png'} alt="living2" />
                             </div>
                             <div className={ProductStyles.text}>
-                                <h2>2단, 4단 수납장</h2>
-                                <p>세련된 디자인과 실용성을 갖춘 수납장</p>
+                                <h2>{t('2단, 4단 수납장')}</h2>
+                                <p>{t('세련된 디자인과 실용성을 갖춘 수납장')}</p>
                             </div>
                         </Link>
                     </li>
@@ -89,7 +92,7 @@ const Living = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>Heeling Wave</h2>
-                                <p>집에서도 효과적인 운동이 가능한 진동운동기구</p>
+                                <p>{t('집에서도 효과적인 운동이 가능한 진동운동기구')}</p>
                             </div>
                         </Link>
                     </li>
@@ -100,8 +103,8 @@ const Living = () => {
                             </div>
 
                             <div className={ProductStyles.text}>
-                                <h2>미라클 샴푸기</h2>
-                                <p>장소에 구애받지 않고 머리를 감을 수 있는 샴푸기</p>
+                                <h2>{t('미라클 샴푸기')}</h2>
+                                <p>{t('장소에 구애받지 않고 머리를 감을 수 있는 샴푸기')}</p>
                             </div>
                         </Link>
                     </li>

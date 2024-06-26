@@ -14,7 +14,7 @@ import Living from './components/Product/Living';
 import Electronics from './components/Product/Electronics';
 import Etc from './components/Product/Etc';
 import Footer from './components/Subpage/Footer';
-import ScrollToTop from './components/ScrollToTop'; // ScrollToTop 컴포넌트 임포트
+import ScrollToTop from './components/ScrollToTop';
 import Eno100 from './components/Product/Detail/Eno100';
 import RobotYOYO from './components/Product/Detail/RobotYOYO';
 import Shampoo from './components/Product/Detail/Shampoo';
@@ -24,6 +24,8 @@ import DoubleFolder from './components/Product/Detail/DoubleFolder';
 import Eno777 from './components/Product/Detail/Eno777';
 import Ts22delux from './components/Product/Detail/Ts22delux';
 import Petdry from './components/Product/Detail/Petdry';
+
+import { useTranslation } from 'react-i18next';
 
 const TopNavLayout = ({ children }) => (
     <>
@@ -57,6 +59,9 @@ const NavBarLayout = ({ children }) => {
 };
 
 const App = () => {
+    const { i18n } = useTranslation();
+    const [isEnglish, setIsEnglish] = useState(localStorage.getItem('lang') === 'english');
+
     return (
         <>
             <ScrollToTop />

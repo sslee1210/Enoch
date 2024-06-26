@@ -151,7 +151,7 @@
 
     .main .SwiperSlide .bannerText p {
         font-size: 2vw;
-        white-space: nowrap;
+        white-space: wrap;
         font-family: 'Noto Sans KR', sans-serif;
     }
 

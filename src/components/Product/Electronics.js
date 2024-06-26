@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
+import i18n from '../../lacale/i18n';
+import { useTranslation } from 'react-i18next';
 
 const Electronics = () => {
+    const { t } = useTranslation();
     const [opacity, setOpacity] = useState(0);
 
     useEffect(() => {
@@ -35,7 +38,7 @@ const Electronics = () => {
             <div className={ProductStyles.big}>
                 <img src={process.env.PUBLIC_URL + '/images/Electronic.png'} alt="Robot" />
                 <h2>Electronics</h2>
-                <p>이노치 코리아에서 추천하는 생활 가전</p>
+                <p>{t('이노치 코리아에서 추천하는 생활 가전')}</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -65,10 +68,11 @@ const Electronics = () => {
                             </div>
 
                             <div className={ProductStyles.text}>
-                                <h2>식기 세척기</h2>
+                                <h2>{t('식기 세척기')}</h2>
                                 <p>
-                                    특허받은 45&deg; 컵 스프레이와 360&deg; 회전 스프레이 세척 및 복합 린스 방식으로
-                                    살균율 99.99%! 설거지, 건조, 저장까지 모두 가능한 모던한 외형의 식기세척기
+                                    {t(
+                                        '특허받은 45도 컵 스프레이와 360도 회전 스프레이 세척 및 복합 린스 방식으로 살균율 99.99%! 설거지, 건조, 저장까지 모두 가능한 모던한 외형의 식기세척기'
+                                    )}
                                 </p>
                             </div>
                         </a>
@@ -79,8 +83,8 @@ const Electronics = () => {
                                 <img src={process.env.PUBLIC_URL + '/images/electronic4.png'} alt="electronic2" />
                             </div>
                             <div className={ProductStyles.text}>
-                                <h2>제습기</h2>
-                                <p>1.5L의 대용량 물탱크를 보유하고 강력한 제습 효과를 자랑하는 제습기</p>
+                                <h2>{t('제습기')}</h2>
+                                <p>{t('1.5L의 대용량 물탱크를 보유하고 강력한 제습 효과를 자랑하는 제습기')}</p>
                             </div>
                         </a>
                     </li>
@@ -90,8 +94,8 @@ const Electronics = () => {
                                 <img src={process.env.PUBLIC_URL + '/images/electronic5.png'} alt="electronic3" />
                             </div>
                             <div className={ProductStyles.text}>
-                                <h2>펫 드라이기</h2>
-                                <p>건강하고 스마트하게!! 우리 가족을 위한 스마트한 선택</p>
+                                <h2>{t('펫 드라이기')}</h2>
+                                <p>{t('건강하고 스마트하게!! 우리 가족을 위한 스마트한 선택')}</p>
                             </div>
                         </Link>
                     </li>

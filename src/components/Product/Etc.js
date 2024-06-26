@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
+import i18n from '../../lacale/i18n';
+import { useTranslation } from 'react-i18next';
 
 const Etc = () => {
+    const { t } = useTranslation();
     const [opacity, setOpacity] = useState(0);
 
     useEffect(() => {
@@ -35,7 +38,7 @@ const Etc = () => {
             <div className={ProductStyles.big}>
                 <img src={process.env.PUBLIC_URL + '/images/Etc.png'} alt="Etc" />
                 <h2>A / V Products</h2>
-                <p>각종 장비와 제품들</p>
+                <p>{t('각종 장비와 제품들')}</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -66,7 +69,7 @@ const Etc = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>ENO-100</h2>
-                                <p>고감도 AID 무선 TWS 음성증폭 이어폰</p>
+                                <p>{t('고감도 AID 무선 TWS 음성증폭 이어폰')}</p>
                             </div>
                         </Link>
                     </li>
@@ -78,7 +81,7 @@ const Etc = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>TS-22</h2>
-                                <p>고감도 완전 무선 스테레오 음성 증폭 이어폰</p>
+                                <p>{t('고감도 완전 무선 스테레오 음성 증폭 이어폰')}</p>
                             </div>
                         </a>
                     </li>
@@ -90,7 +93,7 @@ const Etc = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>TS-22 DELUX</h2>
-                                <p>이어폰 타입으로 양쪽 귀에 선명하고 또렷한 소리! 고감도 음성 증폭기</p>
+                                <p>{t('이어폰 타입으로 양쪽 귀에 선명하고 또렷한 소리! 고감도 음성증폭기')}</p>
                             </div>
                         </Link>
                     </li>
@@ -102,7 +105,7 @@ const Etc = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>ENO-777</h2>
-                                <p>이어폰과 스피커를 하나로! 세계 최초의 주크박스형 블루투스 무선 이어폰</p>
+                                <p>{t('이어폰과 스피커를 하나로! 세계 최초의 주크박스형 블루투스 무선 이어폰')}</p>
                             </div>
                         </Link>
                     </li>

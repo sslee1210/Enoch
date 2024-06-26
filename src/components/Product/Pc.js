@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
-import FooterStyles from '../Subpage/Footer.module.css';
+import i18n from '../../lacale/i18n';
+import { useTranslation } from 'react-i18next';
 
 const Pc = () => {
+    const { t } = useTranslation();
     const [opacity, setOpacity] = useState(0);
 
     useEffect(() => {
@@ -36,7 +38,7 @@ const Pc = () => {
             <div className={ProductStyles.big}>
                 <img src={process.env.PUBLIC_URL + '/images/PC.png'} alt="Pc" />
                 <h2>PC</h2>
-                <p>최신 기술과 혁신적인 디자인이 결합된 고성능 PC</p>
+                <p>{t('최신 기술과 혁신적인 디자인이 결합된 고성능 PC')}</p>
             </div>
             <div className={ProductStyles.menu}>
                 <ul>
@@ -68,7 +70,7 @@ const Pc = () => {
 
                             <div className={ProductStyles.text}>
                                 <h2>All in One 27inch PC</h2>
-                                <p>27인치 올인원 베어본 시스템, 강력한 성능과 세련된 디자인을 자랑합니다.</p>
+                                <p>{t('27인치 올인원 베어본 시스템, 강력한 성능과 세련된 디자인을 자랑합니다.')}</p>
                             </div>
                         </a>
                     </li>
