@@ -23,6 +23,7 @@ import Healing from './components/Product/Detail/Healing';
 import DoubleFolder from './components/Product/Detail/DoubleFolder';
 import Eno777 from './components/Product/Detail/Eno777';
 import Ts22delux from './components/Product/Detail/Ts22delux';
+import Petdry from './components/Product/Detail/Petdry';
 
 const TopNavLayout = ({ children }) => (
     <>
@@ -129,6 +130,7 @@ const App = () => {
                                     <Route path="DoubleFolder" element={<DoubleFolder />} />
                                     <Route path="Eno777" element={<Eno777 />} />
                                     <Route path="Ts22delux" element={<Ts22delux />} />
+                                    <Route path="Petdry" element={<Petdry />} />
                                 </Routes>
                                 <Footer />
                             </TopNavLayout>

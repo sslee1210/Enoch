@@ -61,7 +61,7 @@ const Electronics = () => {
                     <li>
                         <a>
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/electronic3.png'} alt="Robot3" />
+                                <img src={process.env.PUBLIC_URL + '/images/electronic3.png'} alt="electronic1" />
                             </div>
 
                             <div className={ProductStyles.text}>
@@ -76,13 +76,24 @@ const Electronics = () => {
                     <li>
                         <a>
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/electronic4.png'} alt="Robot4" />
+                                <img src={process.env.PUBLIC_URL + '/images/electronic4.png'} alt="electronic2" />
                             </div>
                             <div className={ProductStyles.text}>
                                 <h2>제습기</h2>
                                 <p>1.5L의 대용량 물탱크를 보유하고 강력한 제습 효과를 자랑하는 제습기</p>
                             </div>
                         </a>
+                    </li>
+                    <li>
+                        <Link to="/Product/Petdry">
+                            <div className={ProductStyles.image}>
+                                <img src={process.env.PUBLIC_URL + '/images/electronic5.png'} alt="electronic3" />
+                            </div>
+                            <div className={ProductStyles.text}>
+                                <h2>펫 드라이기</h2>
+                                <p>건강하고 스마트하게!! 우리 가족을 위한 스마트한 선택</p>
+                            </div>
+                        </Link>
                     </li>
                 </ul>
             </div>
