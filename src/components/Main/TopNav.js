@@ -76,17 +76,6 @@ const TopNav = () => {
                 className={`${TopNavstyles.navList} ${isOpen ? TopNavstyles.active : ''}`}
                 onClick={handleMenuClick}
             >
-                <div className={TopNavstyles.languageMenu} ref={languageMenuRef}>
-                    <button onClick={toggleLanguageMenu} className={TopNavstyles.languageButton}>
-                        Language
-                    </button>
-                    {isLanguageMenuOpen && (
-                        <ul className={TopNavstyles.languageOptions}>
-                            <li onClick={() => changeLanguage('en')}>English</li>
-                            <li onClick={() => changeLanguage('ko')}>한국어</li>
-                        </ul>
-                    )}
-                </div>
                 <ul className={TopNavstyles.navItems}>
                     <li className={TopNavstyles.navItem}>
                         <Link to="/about/intro" className={TopNavstyles.navLink}>
@@ -139,6 +128,22 @@ const TopNav = () => {
                         </a>
                     </li>
                 </ul>
+                <div className={TopNavstyles.languageMenu} ref={languageMenuRef}>
+                    <table className={TopNavstyles.languageButton}>
+                        <tr>
+                            <td valign="top">
+                                <select
+                                    name="items1"
+                                    value={isEnglish ? 'en' : 'ko'}
+                                    onChange={(e) => changeLanguage(e.target.value)}
+                                >
+                                    <option value="ko">한국어</option>
+                                    <option value="en">English</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </nav>
         </div>
     );
