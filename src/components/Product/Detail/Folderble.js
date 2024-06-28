@@ -52,7 +52,8 @@ const Folderble = () => {
                 </ul>
             </div>
             <div className={DetaleStyles.DetailImg}>
-                <img src="/images/Folderble page.png" alt="Shampoo 상세페이지" />
+                <img src="/images/접이식 옷장GIF.gif" alt="접이식 옷장 GIF" />
+                <img src="/images/Folderble page.png" alt="접이식 옷장 상세페이지" />
             </div>
             <img
                 src={process.env.PUBLIC_URL + '/images/Up.png'}

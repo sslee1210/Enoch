@@ -56,8 +56,8 @@ const Ts22 = () => {
                 <img src="/images/Ts22-2.jpg" alt="TS-22-2" />
                 <img src="/images/Ts22-3.jpg" alt="TS-22-3" />
                 <img src="/images/Ts22-4.jpg" alt="TS-22-4" />
-                <img src="/images/Ts22-5.jpg" alt="TS-22-5" />
-                <img src="/images/Ts22-6.jpg" alt="TS-22-6" />
+                <img src="/images/Ts22-5.gif" alt="TS-22-5" />
+                <img src="/images/Ts22-6.gif" alt="TS-22-6" />
                 <img src="/images/Ts22-7.jpg" alt="TS-22-7" />
                 <img src="/images/Ts22-8.jpg" alt="TS-22-8" />
                 <img src="/images/Ts22-9.jpg" alt="TS-22-9" />
