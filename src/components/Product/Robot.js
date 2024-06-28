@@ -66,7 +66,6 @@ const Robot = () => {
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Robot1.png'} alt="Robot1" />
                             </div>
-
                             <div className={ProductStyles.text}>
                                 <h2>{t('조리용 로봇팔')}</h2>
                                 <p>{t('조리 과정을 자동화하여 효율성과 정확성을 높이는 혁신적인 조리용 로봇팔')}</p>
@@ -74,11 +73,13 @@ const Robot = () => {
                         </Link>
                     </li>
                     <li>
-                        <a>
+                        <a
+                            href="https://drive.google.com/file/d/1TQ2aGZWFb4Vz269ca3Fe3YHYa-XM99vE/view?usp=sharing"
+                            target="_blank"
+                        >
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Robot3.png'} alt="Robot3" />
                             </div>
-
                             <div className={ProductStyles.text}>
                                 <h2>{t('4족 로봇')}</h2>
                                 <p>

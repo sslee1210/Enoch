@@ -24,6 +24,7 @@ import DoubleFolder from './components/Product/Detail/DoubleFolder';
 import Eno777 from './components/Product/Detail/Eno777';
 import Ts22delux from './components/Product/Detail/Ts22delux';
 import Petdry from './components/Product/Detail/Petdry';
+import Ts22 from './components/Product/Detail/Ts22';
 
 import { useTranslation } from 'react-i18next';
 
@@ -136,6 +137,7 @@ const App = () => {
                                     <Route path="Eno777" element={<Eno777 />} />
                                     <Route path="Ts22delux" element={<Ts22delux />} />
                                     <Route path="Petdry" element={<Petdry />} />
+                                    <Route path="Ts22" element={<Ts22 />} />
                                 </Routes>
                                 <Footer />
                             </TopNavLayout>

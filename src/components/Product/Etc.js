@@ -74,7 +74,7 @@ const Etc = () => {
                         </Link>
                     </li>
                     <li>
-                        <a>
+                        <Link to="/Product/Ts22">
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Etc2.jpg'} alt="Etc2" />
                             </div>
@@ -83,7 +83,7 @@ const Etc = () => {
                                 <h2>TS-22</h2>
                                 <p>{t('고감도 완전 무선 스테레오 음성 증폭 이어폰')}</p>
                             </div>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <Link to="/Product/TS22delux">
