@@ -52,7 +52,7 @@ const RobotYOYO = () => {
                 </ul>
             </div>
             <div className={DetaleStyles.DetailImg}>
-                <img src="/images/YOYO page.jpg" alt="YOYO 상세페이지" />
+                <img src="/images/YOYO page.png" alt="YOYO 상세페이지" />
             </div>
             <img
                 src={process.env.PUBLIC_URL + '/images/Up.png'}
