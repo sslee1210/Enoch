@@ -16,7 +16,7 @@ const Footer = () => {
                     <p> 통신판매업신고 : 제 2024-서울금천-0999호</p>
 
                     <p>개인정보보호책임자 : 정경영 (michelky@naver.com)</p>
-                    <p className={FooterStyles.copylight}>&copy; 2024 Your Company Name. All rights reserved.</p>
+                    <p className={FooterStyles.copylight}>&copy; 2024 Enoch Korea. All rights reserved.</p>
                 </div>
             </div>
         </div>
