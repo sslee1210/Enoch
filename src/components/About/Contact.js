@@ -70,7 +70,7 @@ const Contact = () => {
                 <h3 className={ContactStyles.ContactTitle}>
                     {t('서울특별시 금천구')}
                     <br />
-                    {t('가산디지털로 백상스타타워2차 14층')}
+                    {t('가산디지털2로 165 백상스타타워 2차 1406호')}
                 </h3>
                 <p>TEL : 02-2268-8770 </p>
                 <p>FAX : 0504-163-8775</p>
