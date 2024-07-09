@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
-import i18n from '../../lacale/i18n';
 import { useTranslation } from 'react-i18next';
 
 const Pc = () => {
     const { t } = useTranslation();
     const [opacity, setOpacity] = useState(0);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -29,14 +29,35 @@ const Pc = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const imageUrls = ['/images/PC.png', '/images/Pc1.png', '/images/Up.png'];
+
+        const loadImage = (url) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = process.env.PUBLIC_URL + url;
+                img.onload = resolve;
+                img.onerror = reject;
+            });
+        };
+
+        Promise.all(imageUrls.map(loadImage))
+            .then(() => setImagesLoaded(true))
+            .catch((error) => console.error('Failed to load images', error));
+    }, []);
+
     const MoveToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    if (!imagesLoaded) {
+        return <div>Loading...</div>; // 로딩 인디케이터
+    }
+
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
-                <img src={process.env.PUBLIC_URL + '/images/PC.png'} alt="Pc" />
+                <img src={process.env.PUBLIC_URL + '/images/PC.png'} alt="Pc" loading="lazy" />
                 <h2>PC</h2>
                 <p>{t('최신 기술과 혁신적인 디자인이 결합된 고성능 PC')}</p>
             </div>
@@ -65,7 +86,7 @@ const Pc = () => {
                     <li>
                         <a>
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/Pc1.png'} alt="Pc1" />
+                                <img src={process.env.PUBLIC_URL + '/images/Pc1.png'} alt="Pc1" loading="lazy" />
                             </div>
 
                             <div className={ProductStyles.text}>
@@ -81,8 +102,9 @@ const Pc = () => {
                 src={process.env.PUBLIC_URL + '/images/Up.png'}
                 onClick={MoveToTop}
                 className={ProductStyles.up}
-                style={{ opacity: opacity }} // 이 부분에서 스타일을 직접 적용하여 opacity를 조절합니다.
+                style={{ opacity: opacity }}
                 alt="Move to Top"
+                loading="lazy"
             />
         </div>
     );

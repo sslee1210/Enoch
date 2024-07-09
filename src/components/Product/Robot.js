@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next';
 const Robot = () => {
     const { t } = useTranslation();
     const [opacity, setOpacity] = useState(0);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -15,7 +16,7 @@ const Robot = () => {
             const fullHeight = document.documentElement.scrollHeight;
 
             if (scrollPosition + windowHeight >= fullHeight) {
-                setOpacity(0); // Hide the arrow when at the bottom
+                setOpacity(0);
             } else if (scrollPosition > 84) {
                 setOpacity(1);
             } else {
@@ -29,14 +30,41 @@ const Robot = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const imageUrls = [
+            '/images/Robot.png',
+            '/images/Robot1.png',
+            '/images/Robot2.jpg',
+            '/images/Robot3.png',
+            '/images/Up.png',
+        ];
+
+        const loadImage = (url) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = process.env.PUBLIC_URL + url;
+                img.onload = resolve;
+                img.onerror = reject;
+            });
+        };
+
+        Promise.all(imageUrls.map(loadImage))
+            .then(() => setImagesLoaded(true))
+            .catch((error) => console.error('Failed to load images', error));
+    }, []);
+
     const MoveToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    if (!imagesLoaded) {
+        return <div>Loading...</div>; // 로딩 인디케이터
+    }
+
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
-                <img src={process.env.PUBLIC_URL + '/images/Robot.png'} alt="Robot" />
+                <img src={process.env.PUBLIC_URL + '/images/Robot.png'} alt="Robot" loading="lazy" />
                 <h2>Robot</h2>
                 <p>{t('첨단 기술로 일상에 혁신을 더하는 스마트 로봇')}</p>
             </div>
@@ -64,7 +92,7 @@ const Robot = () => {
                     <li>
                         <Link to="/support">
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/Robot1.png'} alt="Robot1" />
+                                <img src={process.env.PUBLIC_URL + '/images/Robot1.png'} alt="Robot1" loading="lazy" />
                             </div>
                             <div className={ProductStyles.text}>
                                 <h2>{t('조리용 로봇팔')}</h2>
@@ -76,9 +104,10 @@ const Robot = () => {
                         <a
                             href="https://drive.google.com/file/d/1TQ2aGZWFb4Vz269ca3Fe3YHYa-XM99vE/view?usp=sharing"
                             target="_blank"
+                            rel="noopener noreferrer"
                         >
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/Robot3.png'} alt="Robot3" />
+                                <img src={process.env.PUBLIC_URL + '/images/Robot3.png'} alt="Robot3" loading="lazy" />
                             </div>
                             <div className={ProductStyles.text}>
                                 <h2>{t('4족 로봇')}</h2>
@@ -93,9 +122,8 @@ const Robot = () => {
                     <li>
                         <Link to="/Product/RobotYOYO">
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/Robot2.jpg'} alt="Robot2" />
+                                <img src={process.env.PUBLIC_URL + '/images/Robot2.jpg'} alt="Robot2" loading="lazy" />
                             </div>
-
                             <div className={ProductStyles.text}>
                                 <h2>{t('요요 A.I Robot')}</h2>
                                 <p>
@@ -111,8 +139,9 @@ const Robot = () => {
                 src={process.env.PUBLIC_URL + '/images/Up.png'}
                 onClick={MoveToTop}
                 className={ProductStyles.up}
-                style={{ opacity: opacity }} // 이 부분에서 스타일을 직접 적용하여 opacity를 조절합니다.
+                style={{ opacity: opacity }}
                 alt="Move to Top"
+                loading="lazy"
             />
         </div>
     );

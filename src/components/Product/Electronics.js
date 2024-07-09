@@ -1,42 +1,69 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ProductStyles from './Product.module.css';
-import i18n from '../../lacale/i18n';
 import { useTranslation } from 'react-i18next';
 
 const Electronics = () => {
     const { t } = useTranslation();
     const [opacity, setOpacity] = useState(0);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
+
+    const handleScroll = useCallback(() => {
+        const scrollPosition = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition > 84 && scrollPosition + windowHeight < documentHeight - 84) {
+            setOpacity(1);
+        } else if (scrollPosition + windowHeight >= documentHeight - 84) {
+            setOpacity(0);
+        } else {
+            setOpacity(scrollPosition / 84);
+        }
+    }, []);
 
     useEffect(() => {
-        const handleScroll = () => {
-            const scrollPosition = window.scrollY;
-            const windowHeight = window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-
-            if (scrollPosition > 84 && scrollPosition + windowHeight < documentHeight - 84) {
-                setOpacity(1);
-            } else if (scrollPosition + windowHeight >= documentHeight - 84) {
-                setOpacity(0);
-            } else {
-                setOpacity(scrollPosition / 84);
-            }
-        };
-
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
+    }, [handleScroll]);
+
+    useEffect(() => {
+        const imageUrls = [
+            '/images/Electronic.png',
+            '/images/electronic3.png',
+            '/images/electronic4.png',
+            '/images/electronic5.png',
+            '/images/Up.png',
+        ];
+
+        const loadImage = (url) => {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.src = process.env.PUBLIC_URL + url;
+                img.onload = resolve;
+                img.onerror = reject;
+            });
+        };
+
+        Promise.all(imageUrls.map(loadImage))
+            .then(() => setImagesLoaded(true))
+            .catch((error) => console.error('Failed to load images', error));
     }, []);
 
     const MoveToTop = () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
+    if (!imagesLoaded) {
+        return <div>Loading...</div>; // 로딩 인디케이터
+    }
+
     return (
         <div className={ProductStyles.product}>
             <div className={ProductStyles.big}>
-                <img src={process.env.PUBLIC_URL + '/images/Electronic.png'} alt="Robot" />
+                <img src={process.env.PUBLIC_URL + '/images/Electronic.png'} alt="Electronics" loading="lazy" />
                 <h2>Electronics</h2>
                 <p>{t('이노치 코리아에서 추천하는 생활 가전')}</p>
             </div>
@@ -64,9 +91,12 @@ const Electronics = () => {
                     <li>
                         <a>
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/electronic3.png'} alt="electronic1" />
+                                <img
+                                    src={process.env.PUBLIC_URL + '/images/electronic3.png'}
+                                    alt="electronic1"
+                                    loading="lazy"
+                                />
                             </div>
-
                             <div className={ProductStyles.text}>
                                 <h2>{t('식기 세척기')}</h2>
                                 <p>
@@ -80,7 +110,11 @@ const Electronics = () => {
                     <li>
                         <a>
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/electronic4.png'} alt="electronic2" />
+                                <img
+                                    src={process.env.PUBLIC_URL + '/images/electronic4.png'}
+                                    alt="electronic2"
+                                    loading="lazy"
+                                />
                             </div>
                             <div className={ProductStyles.text}>
                                 <h2>{t('제습기')}</h2>
@@ -91,7 +125,11 @@ const Electronics = () => {
                     <li>
                         <Link to="/Product/Petdry">
                             <div className={ProductStyles.image}>
-                                <img src={process.env.PUBLIC_URL + '/images/electronic5.png'} alt="electronic3" />
+                                <img
+                                    src={process.env.PUBLIC_URL + '/images/electronic5.png'}
+                                    alt="electronic3"
+                                    loading="lazy"
+                                />
                             </div>
                             <div className={ProductStyles.text}>
                                 <h2>{t('펫 드라이기')}</h2>
@@ -108,6 +146,7 @@ const Electronics = () => {
                 className={ProductStyles.up}
                 style={{ opacity: opacity }}
                 alt="Move to Top"
+                loading="lazy"
             />
         </div>
     );
