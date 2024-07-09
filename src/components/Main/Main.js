@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback, lazy, Suspense } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -6,136 +6,141 @@ import 'swiper/css/autoplay';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router-dom';
 import MainStyles from './Main.module.css';
-import i18n from '../../lacale/i18n';
 import { useTranslation } from 'react-i18next';
+
+const ProductLink = lazy(() => import('./ProductLink'));
 
 const Main = () => {
     const { t } = useTranslation();
     const [isMobile, setIsMobile] = useState(false);
 
-    useEffect(() => {
-        const handleResize = () => {
-            setIsMobile(window.innerWidth <= 768);
-        };
+    const handleResize = useCallback(() => {
+        setIsMobile(window.innerWidth <= 768);
+    }, []);
 
+    useEffect(() => {
         window.addEventListener('resize', handleResize);
-        handleResize(); // 초기 실행 시 한 번 체크
+        handleResize();
 
         return () => {
             window.removeEventListener('resize', handleResize);
         };
-    }, []);
+    }, [handleResize]);
+
+    const swiperConfig = useMemo(
+        () => ({
+            modules: [Pagination, Autoplay],
+            spaceBetween: 50,
+            slidesPerView: 1,
+            navigation: true,
+            pagination: { clickable: true },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            speed: 1500,
+            allowTouchMove: false,
+            loop: true,
+        }),
+        []
+    );
+
+    const bannerSlides = useMemo(
+        () => [
+            {
+                imageSrc: isMobile ? '/images/m-배너1.webp' : '/images/배너1.webp',
+                alt: 'Image 1',
+                title: t('이노치코리아'),
+                subtitle: 'For the shift up to further',
+                description: t('당신의 삶을 더욱 풍요롭게 하는 이노치코리아의 혁신적인 제품을 경험해보세요'),
+            },
+            {
+                imageSrc: isMobile ? '/images/m-배너2.webp' : '/images/배너2.webp',
+                alt: 'Image 2',
+                title: t('이노치코리아'),
+                subtitle: 'Stepping Up to a Superior Lifestyle',
+                description: t('이노치코리아는 삶의 질 향상과 즐거움을 제공하는 제품을 개발하고 있습니다'),
+            },
+            {
+                imageSrc: isMobile ? '/images/m-배너3.webp' : '/images/배너3.webp',
+                alt: 'Image 3',
+                title: t('이노치코리아'),
+                subtitle: 'Advancing Your Everyday Experience',
+                description: t('이노치코리아와 함께라면 삶의 질 향상과 일상의 즐거움이 바로 눈앞에 펼쳐집니다'),
+            },
+        ],
+        [isMobile, t]
+    );
+
+    const productLinks = useMemo(
+        () => [
+            {
+                to: '/product/robot',
+                imageSrc: isMobile ? '/images/m-로봇.webp' : '/images/로봇.webp',
+                alt: '로봇',
+                title: 'Robot',
+                subtitle: '로봇',
+            },
+            {
+                to: '/product/PC',
+                imageSrc: isMobile ? '/images/m-컴퓨터.webp' : '/images/컴퓨터.webp',
+                alt: '컴퓨터',
+                title: 'PC',
+                subtitle: '컴퓨터',
+            },
+            {
+                to: '/product/Etc',
+                imageSrc: isMobile ? '/images/m-기타.webp' : '/images/기타.webp',
+                alt: '기타',
+                title: 'A/V Products',
+                subtitle: '',
+            },
+            {
+                to: '/product/Electronics',
+                imageSrc: isMobile ? '/images/m-가전.webp' : '/images/가전.webp',
+                alt: '생활가전',
+                title: 'Electronics',
+                subtitle: '생활가전',
+            },
+            {
+                to: '/product/Living',
+                imageSrc: isMobile ? '/images/m-생활.webp' : '/images/생활.webp',
+                alt: '리빙',
+                title: 'Living Products',
+                subtitle: '생활용품',
+            },
+        ],
+        [isMobile]
+    );
 
     return (
         <div className={MainStyles.main}>
             <div className={MainStyles.SwiperSlide}>
-                <Swiper
-                    modules={[Pagination, Autoplay]}
-                    spaceBetween={50}
-                    slidesPerView={1}
-                    navigation
-                    pagination={{ clickable: true }}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
-                    speed={1500} // 슬라이드 전환 속도를 1000ms로 설정
-                    allowTouchMove={false}
-                    loop={true} // 슬라이드가 순환하도록 설정
-                >
-                    <SwiperSlide>
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너1.png' : '/images/배너1.png')}
-                            alt="Image 1"
-                        />
-                        <div className={MainStyles.bannerText}>
-                            <h2>{t('이노치코리아')}</h2>
-                            <h3>For the shift up to further</h3>
-                            <p>{t('당신의 삶을 더욱 풍요롭게 하는 이노치코리아의 혁신적인 제품을 경험해보세요')}</p>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너2.png' : '/images/배너2.png')}
-                            alt="Image 2"
-                        />
-                        <div className={MainStyles.bannerText}>
-                            <h2>{t('이노치코리아')}</h2>
-                            <h3>Stepping Up to a Superior Lifestyle</h3>
-                            <p>{t('이노치코리아는 삶의 질 향상과 즐거움을 제공하는 제품을 개발하고 있습니다')}</p>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-배너3.png' : '/images/배너3.png')}
-                            alt="Image 3"
-                        />
-                        <div className={MainStyles.bannerText}>
-                            <h2>{t('이노치코리아')}</h2>
-                            <h3>Advancing Your Everyday Experience</h3>
-                            <p>{t('이노치코리아와 함께라면 삶의 질 향상과 일상의 즐거움이 바로 눈앞에 펼쳐집니다')}</p>
-                        </div>
-                    </SwiperSlide>
+                <Swiper {...swiperConfig}>
+                    {bannerSlides.map((slide, index) => (
+                        <SwiperSlide key={index}>
+                            <img src={process.env.PUBLIC_URL + slide.imageSrc} alt={slide.alt} loading="lazy" />
+                            <div className={MainStyles.bannerText}>
+                                <h2>{slide.title}</h2>
+                                <h3>{slide.subtitle}</h3>
+                                <p>{slide.description}</p>
+                            </div>
+                        </SwiperSlide>
+                    ))}
                 </Swiper>
             </div>
             <div className={MainStyles.product}>
                 <h1>Product</h1>
                 <div className={MainStyles.product_container}>
-                    <Link to="/product/robot">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-로봇.png' : '/images/로봇.png')}
-                            alt="로봇"
-                        />
-                        <p>
-                            Robot
-                            <span>로봇</span>
-                        </p>
-                    </Link>
-
-                    <Link to="/product/PC">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-컴퓨터.png' : '/images/컴퓨터.png')}
-                            alt="컴퓨터"
-                        />
-                        <p>
-                            PC
-                            <span>컴퓨터</span>
-                        </p>
-                    </Link>
-
-                    <Link to="/product/Etc">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-기타.png' : '/images/기타.png')}
-                            alt="기타"
-                        />
-                        <p>A/V Products</p>
-                    </Link>
-
-                    <Link to="/product/Electronics">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-가전.png' : '/images/가전.png')}
-                            alt="생활가전"
-                        />
-                        <p>
-                            Electronics
-                            <span>생활가전</span>
-                        </p>
-                    </Link>
-
-                    <Link to="/product/Living">
-                        <img
-                            src={process.env.PUBLIC_URL + (isMobile ? '/images/m-생활.png' : '/images/생활.png')}
-                            alt="리빙"
-                        />
-                        <p>
-                            Living Products
-                            <span>생활용품</span>
-                        </p>
-                    </Link>
+                    <Suspense fallback={<div>Loading...</div>}>
+                        {productLinks.map((link, index) => (
+                            <ProductLink key={index} {...link} />
+                        ))}
+                    </Suspense>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Main;
+export default React.memo(Main);
