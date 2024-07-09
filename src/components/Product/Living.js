@@ -105,7 +105,11 @@ const Living = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Product/DoubleFolder">
+                        <a
+                            href="https://smartstore.naver.com/enokorea/products/10321900278?NaPm=ct%3Dlye0qyr4%7Cci%3D1c72179e67f9da9f5ee7ddbe1f1e51858962bec1%7Ctr%3Dslsl%7Csn%3D1520799%7Chk%3D404611a87006c012280796bca44c84cff9c4879e"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <div className={ProductStyles.image}>
                                 <img
                                     src={process.env.PUBLIC_URL + '/images/living2.png'}
@@ -117,7 +121,7 @@ const Living = () => {
                                 <h2>{t('2단, 4단 수납장')}</h2>
                                 <p>{t('세련된 디자인과 실용성을 갖춘 수납장')}</p>
                             </div>
-                        </Link>
+                        </a>
                     </li>
                     <li>
                         <Link to="/Product/Healing">
@@ -135,7 +139,11 @@ const Living = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Product/Shampoo">
+                        <a
+                            href="https://smartstore.naver.com/enokorea/products/10325206162?NaPm=ct%3Dlye0pw68%7Cci%3D9ec71d6bbfa399ce43a2ad6034088c0339c2b949%7Ctr%3Dslsl%7Csn%3D1520799%7Chk%3D40d22a69faac39e15f7ed8afe1c9e8546f3c335bf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <div className={ProductStyles.image}>
                                 <img
                                     src={process.env.PUBLIC_URL + '/images/living4.png'}
@@ -147,7 +155,27 @@ const Living = () => {
                                 <h2>{t('미라클 샴푸기')}</h2>
                                 <p>{t('장소에 구애받지 않고 머리를 감을 수 있는 샴푸기')}</p>
                             </div>
-                        </Link>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://smartstore.naver.com/enokorea/products/10392408042?NaPm=ct%3Dlye0thsw%7Cci%3D018e820f3242ed21b946fbb8370a392f9f409143%7Ctr%3Dslsl%7Csn%3D1520799%7Chk%3Dee45880f9b6eb3fdcec77c254fff0c8e5ebd6d9e"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
+                            <div className={ProductStyles.image}>
+                                <img
+                                    src={process.env.PUBLIC_URL + '/images/living5.jpg'}
+                                    alt="living5"
+                                    loading="lazy"
+                                />
+                            </div>
+                            <div className={ProductStyles.text}>
+                                <h2>{t('z플립 3,4 가죽 케이스')}</h2>
+                                <p>{t('편안한 그립감과 세련된 스타일의 가죽 케이스')}</p>
+                            </div>
+                        </a>
                     </li>
                 </ul>
             </div>

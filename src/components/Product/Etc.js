@@ -90,7 +90,11 @@ const Etc = () => {
             <div className={ProductStyles.sec}>
                 <ul>
                     <li>
-                        <Link to="/Product/Eno100">
+                        <a
+                            href="https://smartstore.naver.com/enokorea/products/10269464783?NaPm=ct%3Dlye0ode0%7Cci%3D8b57d1243b22a8b29575635873e7de96e6194a52%7Ctr%3Dslsl%7Csn%3D1520799%7Chk%3D25713eb510321870b4eaf43ec2eace7296582510"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Etc1.png'} alt="Etc1" loading="lazy" />
                             </div>
@@ -98,7 +102,7 @@ const Etc = () => {
                                 <h2>ENO-100</h2>
                                 <p>{t('고감도 AID 무선 TWS 음성증폭 이어폰')}</p>
                             </div>
-                        </Link>
+                        </a>
                     </li>
                     <li>
                         <Link to="/Product/Ts22">
@@ -123,7 +127,11 @@ const Etc = () => {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/Product/Eno777">
+                        <a
+                            href="https://smartstore.naver.com/enokorea/products/10394009112?NaPm=ct%3Dlye0pbc8%7Cci%3D6c4fc74fe6c5fa02e43cef45259b29f6a06bb991%7Ctr%3Dslsl%7Csn%3D1520799%7Chk%3D5b0968b4c59d28b666cab9e73c0046bde5719caf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                        >
                             <div className={ProductStyles.image}>
                                 <img src={process.env.PUBLIC_URL + '/images/Etc4.png'} alt="Etc4" loading="lazy" />
                             </div>
@@ -131,7 +139,7 @@ const Etc = () => {
                                 <h2>ENO-777</h2>
                                 <p>{t('이어폰과 스피커를 하나로! 세계 최초의 주크박스형 블루투스 무선 이어폰')}</p>
                             </div>
-                        </Link>
+                        </a>
                     </li>
                 </ul>
             </div>
