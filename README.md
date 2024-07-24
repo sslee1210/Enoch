@@ -10,7 +10,7 @@
 
 #### **TOOL:** `Github` `Google spread sheet` `Figma` `Adobe Illustrator` `Adobe photoShop` `Netlify`
 
-#### **WEB FRAMEWORK:** `HTML5` `CSS3` `JavaScript`
+#### **WEB FRAMEWORK:** `React` `HTML5` `CSS3` `JavaScript`
 
 #### **LIBRARY:** 
 
