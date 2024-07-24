@@ -23,7 +23,7 @@
 | 페이지       | 목표                                                                                           | 이미지                                                                                                                                                 |
 | ------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Home**     | 명시성 중요<br/>회사가 추구하는 방향성을 돋보이게<br/>스크롤, 복잡한 이벤트 사용 x             | <p align="center"><img src="https://github.com/user-attachments/assets/3b96e51b-8b85-4701-bc47-0d6966f35d80"  width="300" height="auto"/></p> |
-| **Sub Page** | Box형 틀, 최대한 basic하게                                                                     | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/a9fcb6ef-8b15-49f2-a3ed-612e8fcae360"  width="300" height="auto"/></p> |
+| **Sub Page** | Box형 틀, 최대한 basic하게                                                                     | <p align="center"><img src="https://github.com/user-attachments/assets/0cfe20a7-a6ec-4ecd-b825-5d058114da11"  width="300" height="auto"/></p> |
 | **Product**  | 사용자의 눈높이에 맞게<br/>목적 의식에 맞게 실용성과 편의성 챙기기 <br/>심플하고 깔끔하게 | <p align="center"><img src="https://github.com/user-attachments/assets/60ef5375-b755-4bf1-ba68-c086b4bb61ad"  width="300" height="auto"/></p> |
 
 ---
@@ -76,7 +76,7 @@
 
 ### - 이노치 코리아 서브 페이지
 
-<img src="https://github.com/sslee1210/Enoch/assets/142865231/9a4ab87a-fdef-4315-9c6c-c48e3d32cd39"  width="350" height="auto"/></p>
+<img src="https://github.com/user-attachments/assets/0cfe20a7-a6ec-4ecd-b825-5d058114da11"  width="350" height="auto"/></p>
 
 ### - 이노치 코리아 Product
 
