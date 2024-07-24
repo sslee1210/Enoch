@@ -8,7 +8,7 @@
 
 ## 🛠 사용 기술 및 도구
 
-#### **TOOL:** `Github` `Google spread sheet` `Figma` `Adobe Illustrator` `Adobe photoShop` `Netlify`
+#### **TOOL:** `Github` `Notion` `Google spread sheet` `Figma` `Adobe Illustrator` `Adobe photoShop` `Netlify`
 
 #### **WEB FRAMEWORK:** `React` `HTML5` `CSS3` `JavaScript`
 
