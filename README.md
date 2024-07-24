@@ -12,7 +12,7 @@
 
 #### **WEB FRAMEWORK:** `React` `HTML5` `CSS3` `JavaScript`
 
-#### **LIBRARY:** 
+#### **LIBRARY:** `React` `React DOM` `React Router DOM` `Axios` `i18next` `react-i18next` `Styled Components` `Swiper` `React Scroll` `gh-pages` `web-vitals` 
 
 ---
 
