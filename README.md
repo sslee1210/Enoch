@@ -24,7 +24,7 @@
 | ------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Home**     | 명시성 중요<br/>회사가 추구하는 방향성을 돋보이게<br/>스크롤, 복잡한 이벤트 사용 x             | <p align="center"><img src="https://github.com/user-attachments/assets/3b96e51b-8b85-4701-bc47-0d6966f35d80"  width="300" height="auto"/></p> |
 | **Sub Page** | Box형 틀, 최대한 basic하게                                                                     | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/a9fcb6ef-8b15-49f2-a3ed-612e8fcae360"  width="300" height="auto"/></p> |
-| **Product**  | 사용자의 눈높이에 맞게<br/>목적 의식에 맞게 실용성과 편의성 챙기기 <br/>심플하고 깔끔하게 | <p align="center"><img src="https://github.com/sslee1210/Enoch/assets/142865231/e8c13936-4189-429d-8378-1eb523ae1663"  width="300" height="auto"/></p> |
+| **Product**  | 사용자의 눈높이에 맞게<br/>목적 의식에 맞게 실용성과 편의성 챙기기 <br/>심플하고 깔끔하게 | <p align="center"><img src="https://github.com/user-attachments/assets/60ef5375-b755-4bf1-ba68-c086b4bb61ad"  width="300" height="auto"/></p> |
 
 ---
 
@@ -72,7 +72,7 @@
 
 ### - 이노치 코리아 메인 페이지
 
-<img src="https://github.com/sslee1210/Enoch/assets/142865231/8958b47a-41ae-4e47-8ba5-1e1bf88f5563"  width="350" height="auto"/></p>
+<img src="https://github.com/user-attachments/assets/3b96e51b-8b85-4701-bc47-0d6966f35d80"  width="350" height="auto"/></p>
 
 ### - 이노치 코리아 서브 페이지
 
@@ -80,7 +80,7 @@
 
 ### - 이노치 코리아 Product
 
-<img src="https://github.com/sslee1210/Enoch/assets/142865231/e8c13936-4189-429d-8378-1eb523ae1663"  width="350" height="auto"/></p>
+<img src="https://github.com/user-attachments/assets/60ef5375-b755-4bf1-ba68-c086b4bb61ad"  width="350" height="auto"/></p>
 
 ---
 
@@ -216,6 +216,7 @@ const NavBar = () => {
 -   #### 문제 발생: 스크롤이 생기지 않게 웹 페이지를 만들어야 되지만 반응형 웹을 스크롤이 없이 만들기가 쉽지 않고 브라우저 창을 키우거나 줄이면 요소가 넘쳐 스크롤이 생김
 -   #### 원인 파악: 구글링을 통해 테스트 파일을 만들어 적용시켜보고 문제 없다는걸 보고 그대로 적용 시킴
 -   #### 문제 해결: 모든 컴포넌트를 감싸는 전체 div에 height: 100%를 주고 바로 밑엔 height: 100vh를 줌. 그리고 그 밑 요소엔 width: 100%와 height: calc(100vh - 200px); 그리고 margin-bottom: 100px;을 주면 해결. (200px은 TopNav와 Footer의 높이를 합친것이고  margin-bottom: 100px;은 Footer 높이이다. 마진을 줘야 내용이 Footer와 겹치지 않는다.)
+-   #### 문제 해결2: 대표님이 스크롤이 있어도 상관없다고 하심
 
 `index.css`
 
@@ -249,12 +250,10 @@ div {
 
 # 프로젝트 완료 리뷰
 
--   ### 아쉬웠던 점:
-    #### 1. ``
-    #### 2. ``
--   ### 잘한 점:
-    #### 1. ``
-    #### 2. ``
+-   ### 아쉬웠던 점: css 스타일링을 최신 트렌드에 맞게 디자인과 다양한 이벤트 효과를 넣고 싶었지만 대표님의 지시사항은 그러지 않아서 한편으로 아쉬웠다.
+
+-   ### 잘한 점: 해외에 출장도 많이 나가고 해외 업체와 미팅을 하는 경우도 많아 영문 지원 기능도 추가하였다 ^^..
+
 
 # 작업일지 바로가기
 
